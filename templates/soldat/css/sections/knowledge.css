@@ -24,6 +24,7 @@
 	z-index:1;
 }
 .know__soldier img{width:100%;height:100%}
+.know__soldier-mob{display:none}   /* отдельный кадр для мобильного макета */
 
 .know__card{
 	position:absolute;
