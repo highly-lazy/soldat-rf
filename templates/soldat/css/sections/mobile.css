@@ -227,7 +227,7 @@
 	top:1117px;                               /* макет: фото на y=3453 */
 	width:564px;height:375px;
 }
-.terms__bg img{left:132.5px;top:-15.5px;width:526px;height:368px;object-fit:fill}
+.terms__bg img{left:-109px;top:-15.5px;width:884px;height:619px;object-fit:fill}
 
 .terms__grid{
 	grid-template-columns:1fr;
@@ -407,9 +407,9 @@
 }
 /* в мобильном макете это отдельная белая карточка с фото */
 .know__soldier img{
-	width:492px;height:428px;
+	width:628px;height:546px;
 	max-width:none;
-	margin:-11px 0 0 -142px;
+	margin:-21px 0 0 -168px;
 }
 .know__card{position:relative;left:auto;top:auto;order:2;margin-block-start:23px}   /* макет: карточки с y=9010 */
 .know__card--red{left:auto;top:auto;width:100%;height:309px;padding:27px 18px 0;border-radius:30px}
