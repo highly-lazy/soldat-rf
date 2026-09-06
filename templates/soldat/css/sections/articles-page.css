@@ -27,7 +27,6 @@
 	height: 36px;
 	border-radius: 50%;
 	background: var(--blue);
-	transform: rotate(45deg);
 }
 
 .back__icon svg {

@@ -6,7 +6,7 @@
 
 			<a class="post__back" href="{home}/stati.html">
 				<span class="post__back-icon" aria-hidden="true">
-					<svg viewBox="0 0 12 12" fill="none"><path d="M2.5 2.5v7h7" stroke="#0257D5" stroke-width="2" stroke-linejoin="bevel"/><path d="M2.5 9.5 9.9 2.1" stroke="#0257D5" stroke-width="2" stroke-linejoin="round"/></svg>
+					<svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M7.6 2.2 3.4 6l4.2 3.8" stroke="#0257D5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 				</span>
 				Назад
 			</a>
