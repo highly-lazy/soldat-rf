@@ -193,7 +193,7 @@
 
 .post__faq-row+.post__faq-row {
 	padding-block-start: 23px;
-	border-block-start: 1px solid #e9e8f0;
+	border-block-start: 1px solid #8C8DB9;
 }
 
 .post__faq dt {
@@ -215,7 +215,7 @@
 }
 
 .post__faq dd a {
-	color: var(--blue);
+	color: #333;
 	text-decoration: underline
 }
 
