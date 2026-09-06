@@ -1,7 +1,7 @@
 <footer class="footer">
 	<div class="container footer__inner">
 		<a class="footer__logo" href="{home}/" aria-label="солдат.рф — на главную">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/e11e938b761fbff026f2e1fc125893e81aef3faa.svg" alt="солдат.рф" width="173" height="30" decoding="async">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/e11e938b761fbff026f2e1fc125893e81aef3faa.svg" alt="солдат.рф" width="173" height="30" decoding="async" loading="lazy">
 		</a>
 
 		<p class="footer__copy">

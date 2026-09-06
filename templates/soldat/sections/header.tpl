@@ -16,16 +16,16 @@
 
 			<div class="header__contacts">
 				<a class="header__phone" href="tel:+74954450117">
-					<img class="header__phone-icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-phone-out.svg" alt="" width="21" height="21" decoding="async">
+					<img class="header__phone-icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-phone-out.svg" alt="" width="21" height="21" decoding="async" loading="lazy">
 					<span>8 (495) 445-01-17</span>
 				</a>
 				<p class="header__hint">Горячая линия <br>по вопросам</p>
 				<span class="header__divider" aria-hidden="true"></span>
 				<p class="header__hint">Задайте вопрос, <br>мы онлайн:</p>
 				<ul class="header__messengers">
-					<li><a href="https://t.me/" aria-label="Telegram"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/c316a0f5f6f66f80438b3f3d045975ec59203071.svg" alt="" width="22" height="18" decoding="async"></a></li>
-					<li><a href="https://max.ru/" aria-label="MAX"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/bb4bc44beae62cee7f05affb58ad7de114456bb1.svg" alt="" width="20" height="19" decoding="async"></a></li>
-					<li><a href="https://wa.me/74954450117" aria-label="WhatsApp"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/9188d41760be46f8c69424d90dbc6fed9bbf5bc5.svg" alt="" width="20" height="20" decoding="async"></a></li>
+					<li><a href="https://t.me/" aria-label="Telegram"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/c316a0f5f6f66f80438b3f3d045975ec59203071.svg" alt="" width="22" height="18" decoding="async" loading="lazy"></a></li>
+					<li><a href="https://max.ru/" aria-label="MAX"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/bb4bc44beae62cee7f05affb58ad7de114456bb1.svg" alt="" width="20" height="19" decoding="async" loading="lazy"></a></li>
+					<li><a href="https://wa.me/74954450117" aria-label="WhatsApp"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/9188d41760be46f8c69424d90dbc6fed9bbf5bc5.svg" alt="" width="20" height="20" decoding="async" loading="lazy"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -35,7 +35,7 @@
 	<div class="header__bar">
 		<div class="container header__bar-inner">
 			<a class="header__logo" href="{home}/" aria-label="солдат.рф — на главную">
-				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/701d6379446ea0530b8df274333ef4977ff983af.svg" alt="солдат.рф" width="173" height="30" decoding="async">
+				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/701d6379446ea0530b8df274333ef4977ff983af.svg" alt="солдат.рф" width="173" height="30" decoding="async" loading="lazy">
 			</a>
 
 			<nav class="header__nav" id="site-nav" aria-label="Основная навигация">

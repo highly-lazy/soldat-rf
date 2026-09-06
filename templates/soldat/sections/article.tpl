@@ -1,7 +1,7 @@
 <article class="post">
 	<div class="container">
 		<div class="post__cover">
-			<img class="post__cover-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/42cb660ec135f319beddf9eb2163e9188eca5946.webp" alt="" width="1800" height="1084" decoding="async">
+			<img class="post__cover-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/42cb660ec135f319beddf9eb2163e9188eca5946.webp" alt="" width="880" height="530" decoding="async" loading="lazy">
 			<span class="post__veil" aria-hidden="true"></span>
 
 			<a class="post__back" href="{home}/stati.html">

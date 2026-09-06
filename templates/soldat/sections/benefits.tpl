@@ -11,7 +11,7 @@
 			<p class="benefits__text benefits__text--narrow">Участвуй в накопительно-ипотечной системе Минобороны и приобрети квартиру на выгодных условиях.</p>
 			</div>
 			<figure class="benefits__photo">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/6926351683999bbf5714f5394ba4eaca26caa69a.webp" alt="" width="1800" height="1450" decoding="async">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/6926351683999bbf5714f5394ba4eaca26caa69a.webp" alt="" width="878" height="707" decoding="async" loading="lazy">
 			</figure>
 			</article>
 			<article class="benefits__item">
@@ -21,7 +21,7 @@
 			<p class="benefits__text">Гарантированное обеспечение жильём — либо предоставление квартиры, либо ежемесячная выплата на наём.</p>
 			</div>
 			<figure class="benefits__photo benefits__photo--crop2">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/4d6fd6797c7f8727fd15d76b2e6deb703565e62a.webp" alt="" width="1800" height="1450" decoding="async">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/4d6fd6797c7f8727fd15d76b2e6deb703565e62a.webp" alt="" width="1238" height="997" decoding="async" loading="lazy">
 			</figure>
 			</article>
 			<article class="benefits__item">
@@ -31,7 +31,7 @@
 			<p class="benefits__text">Медицинское обслуживание в профильных военных госпиталях и центрах восстановительной терапии.</p>
 			</div>
 			<figure class="benefits__photo">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/855d7f7f42dc524aea00b3c7ed775305a6134640.webp" alt="" width="1800" height="1450" decoding="async">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/855d7f7f42dc524aea00b3c7ed775305a6134640.webp" alt="" width="880" height="709" decoding="async" loading="lazy">
 			</figure>
 			</article>
 			<article class="benefits__item">
@@ -41,7 +41,7 @@
 			<p class="benefits__text">Оплачиваемый отдых не реже двух раз в год, чтобы восстановить силы и провести время с близкими.</p>
 			</div>
 			<figure class="benefits__photo">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/aa4b375018ab463ac7e8b6f22b89f3c1ac300777.webp" alt="" width="1800" height="1450" decoding="async">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/aa4b375018ab463ac7e8b6f22b89f3c1ac300777.webp" alt="" width="878" height="707" decoding="async" loading="lazy">
 			</figure>
 			</article>
 			<article class="benefits__item">
@@ -51,7 +51,7 @@
 			<p class="benefits__text">Обеспечь стабильное будущее: выйди на пенсию раньше, получая гарантированные государственные выплаты.</p>
 			</div>
 			<figure class="benefits__photo benefits__photo--crop5">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/af2b407ee53cf82f5ef1d12de65e6b2c9713a6b9.webp" alt="" width="1800" height="1450" decoding="async">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/af2b407ee53cf82f5ef1d12de65e6b2c9713a6b9.webp" alt="" width="1086" height="875" decoding="async" loading="lazy">
 			</figure>
 			</article>
 			<article class="benefits__item">
@@ -61,7 +61,7 @@
 			<p class="benefits__text">Жизнь и здоровье военнослужащего застрахованы государством — защита действует с первого дня контракта.</p>
 			</div>
 			<figure class="benefits__photo">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/979d46fe10de243ba3a8f5a65fe2755541d9bfed.webp" alt="" width="1800" height="1263" decoding="async">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/979d46fe10de243ba3a8f5a65fe2755541d9bfed.webp" alt="" width="880" height="617" decoding="async" loading="lazy">
 			</figure>
 			</article>
 			</div>

@@ -1,6 +1,6 @@
 <section class="terms" id="terms" aria-labelledby="terms-title">
 	<div class="terms__bg" aria-hidden="true">
-		<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/a41bc04703025b324ecf7477177520b1e5bd739b.webp" alt="" width="1800" height="1260" decoding="async">
+		<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/a41bc04703025b324ecf7477177520b1e5bd739b.webp" alt="" width="1800" height="1260" decoding="async" loading="lazy">
 	</div>
 
 	<div class="container terms__inner">

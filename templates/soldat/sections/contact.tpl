@@ -1,7 +1,7 @@
 <section class="contact" id="contact" aria-labelledby="contact-title">
 	<div class="container">
 		<div class="contact__panel">
-			<img class="contact__photo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/7adf34a019bd1bb1af7dd8da1f9e260bf182c79d.webp" alt="" width="1800" height="823" decoding="async">
+			<img class="contact__photo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/7adf34a019bd1bb1af7dd8da1f9e260bf182c79d.webp" alt="" width="1800" height="823" decoding="async" loading="lazy">
 
 			<div class="contact__body">
 				<h2 class="contact__title" id="contact-title">Оставь заявку <br>на контрактную <br>службу в армии РФ</h2>

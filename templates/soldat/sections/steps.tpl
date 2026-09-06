@@ -4,7 +4,7 @@
 
 		<ol class="steps__grid">
 			<li class="steps__card">
-				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-1.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-1.svg" alt="" width="33" height="33" decoding="async" loading="lazy"></span>
 				<span class="steps__num" aria-hidden="true">1</span>
 				<span class="steps__total" aria-hidden="true">/8</span>
 				<div class="steps__body">
@@ -13,7 +13,7 @@
 				</div>
 			</li>
 			<li class="steps__card">
-				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-2.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-2.svg" alt="" width="26" height="38" decoding="async" loading="lazy"></span>
 				<span class="steps__num" aria-hidden="true">2</span>
 				<span class="steps__total" aria-hidden="true">/8</span>
 				<div class="steps__body">
@@ -22,7 +22,7 @@
 				</div>
 			</li>
 			<li class="steps__card">
-				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-3.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-3.svg" alt="" width="37" height="28" decoding="async" loading="lazy"></span>
 				<span class="steps__num" aria-hidden="true">3</span>
 				<span class="steps__total" aria-hidden="true">/8</span>
 				<div class="steps__body">
@@ -31,7 +31,7 @@
 				</div>
 			</li>
 			<li class="steps__card">
-				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-4.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-4.svg" alt="" width="40" height="36" decoding="async" loading="lazy"></span>
 				<span class="steps__num" aria-hidden="true">4</span>
 				<span class="steps__total" aria-hidden="true">/8</span>
 				<div class="steps__body">
@@ -40,7 +40,7 @@
 				</div>
 			</li>
 			<li class="steps__card">
-				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-5.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-5.svg" alt="" width="43" height="38" decoding="async" loading="lazy"></span>
 				<span class="steps__num" aria-hidden="true">5</span>
 				<span class="steps__total" aria-hidden="true">/8</span>
 				<div class="steps__body">
@@ -49,7 +49,7 @@
 				</div>
 			</li>
 			<li class="steps__card">
-				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-6.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-6.svg" alt="" width="38" height="34" decoding="async" loading="lazy"></span>
 				<span class="steps__num" aria-hidden="true">6</span>
 				<span class="steps__total" aria-hidden="true">/8</span>
 				<div class="steps__body">
@@ -58,7 +58,7 @@
 				</div>
 			</li>
 			<li class="steps__card">
-				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-7.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-7.svg" alt="" width="36" height="42" decoding="async" loading="lazy"></span>
 				<span class="steps__num" aria-hidden="true">7</span>
 				<span class="steps__total" aria-hidden="true">/8</span>
 				<div class="steps__body">
@@ -67,7 +67,7 @@
 				</div>
 			</li>
 			<li class="steps__card">
-				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-8.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/icon-step-8.svg" alt="" width="48" height="23" decoding="async" loading="lazy"></span>
 				<span class="steps__num" aria-hidden="true">8</span>
 				<span class="steps__total" aria-hidden="true">/8</span>
 				<div class="steps__body">

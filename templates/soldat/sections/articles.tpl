@@ -5,7 +5,7 @@
 		<ul class="art__grid">
 			<li class="art__card">
 				<a class="art__link" href="{home}/statya.html">
-					<span class="art__photo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/42cb660ec135f319beddf9eb2163e9188eca5946.webp" alt="" width="1800" height="1084" decoding="async"></span>
+					<span class="art__photo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/42cb660ec135f319beddf9eb2163e9188eca5946.webp" alt="" width="880" height="530" decoding="async" loading="lazy"></span>
 					<span class="art__body">
 						<span class="art__date">10 июль 2026</span>
 						<span class="art__name">Где выгоднее подписать контракт в 2026 году: как сравнивать выплаты по регионам</span>
@@ -15,7 +15,7 @@
 			</li>
 			<li class="art__card">
 				<a class="art__link" href="{home}/statya.html">
-					<span class="art__photo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/a40b59b4c0fb9e18fa04e7d64e0993d2fa531bf2.webp" alt="" width="1800" height="1084" decoding="async"></span>
+					<span class="art__photo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/a40b59b4c0fb9e18fa04e7d64e0993d2fa531bf2.webp" alt="" width="880" height="530" decoding="async" loading="lazy"></span>
 					<span class="art__body">
 						<span class="art__date">10 июль 2026</span>
 						<span class="art__name">Выплаты по контракту в Анадыре и на Чукотке в 2026 году</span>
@@ -25,7 +25,7 @@
 			</li>
 			<li class="art__card">
 				<a class="art__link" href="{home}/statya.html">
-					<span class="art__photo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/42eb6287c3e342b3600a3129b0b1d42b2ac9a9fd.webp" alt="" width="1800" height="1084" decoding="async"></span>
+					<span class="art__photo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/42eb6287c3e342b3600a3129b0b1d42b2ac9a9fd.webp" alt="" width="880" height="530" decoding="async" loading="lazy"></span>
 					<span class="art__body">
 						<span class="art__date">10 июль 2026</span>
 						<span class="art__name">Выплаты по контракту в Балашихе в 2026 году: Подмосковье, документы и пункт отбора</span>

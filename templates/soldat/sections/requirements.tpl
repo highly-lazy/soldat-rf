@@ -32,7 +32,7 @@
 		</div>
 
 		<div class="req__jet" aria-hidden="true">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/299ec2eaa627dea38a01cbe89ef25b5456b41271.webp" alt="" width="1800" height="1327" decoding="async">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/299ec2eaa627dea38a01cbe89ef25b5456b41271.webp" alt="" width="1762" height="1299" decoding="async" loading="lazy">
 		</div>
 	</div>
 </section>

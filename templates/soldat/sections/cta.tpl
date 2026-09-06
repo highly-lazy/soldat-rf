@@ -1,7 +1,7 @@
 <section class="cta" aria-labelledby="cta-title">
 	<div class="container">
 		<div class="cta__panel">
-			<img class="cta__photo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/c1757e045b59787a268300f1ca4f2da2b65b3553.webp" alt="" width="1800" height="630" decoding="async">
+			<img class="cta__photo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/c1757e045b59787a268300f1ca4f2da2b65b3553.webp" alt="" width="1800" height="630" decoding="async" loading="lazy">
 
 			<div class="cta__body">
 				<h2 class="cta__title" id="cta-title">Остались вопросы?</h2>
