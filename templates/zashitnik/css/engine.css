@@ -1,0 +1,102 @@
+/* ==========================================================================
+   engine.css — служебные стили движка DLE
+   ========================================================================== */
+
+/* --- Внутренние страницы --- */
+.page--inner{padding-block:140px 80px}
+.inner{max-width:900px}
+.inner h1,.inner h2{font-family:var(--font-display);color:var(--navy);margin-block:1em .5em}
+.inner p{margin-block-end:1em}
+.inner a{color:var(--teal);text-decoration:underline}
+
+/* --- Хлебные крошки (speedbar) --- */
+.speedbar{margin-block-end:24px;font-size:14px;color:rgba(51,51,51,.6)}
+.speedbar a{color:var(--teal)}
+
+/* --- Системные сообщения DLE --- */
+.berrors,.wsuccess,.winfo{
+	padding:16px 20px;margin-block-end:24px;
+	border-radius:var(--r-md);border-inline-start:4px solid;
+	font-size:16px;
+}
+.berrors{background:#fdecec;border-color:var(--red);color:#7a1210}
+.wsuccess{background:#e8f5ef;border-color:#1f9d63;color:#14603d}
+.winfo{background:var(--mint);border-color:var(--teal);color:var(--teal-deep)}
+
+/* --- Пагинация --- */
+.navigation{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-block:40px}
+.navigation a,.navigation span{
+	min-width:40px;padding:8px 12px;
+	display:inline-flex;align-items:center;justify-content:center;
+	border:1px solid rgba(22,40,72,.15);border-radius:var(--r-sm);
+	font-size:15px;color:var(--navy);
+}
+.navigation a:hover{border-color:var(--teal);color:var(--teal)}
+.navigation span{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* --- Формы движка --- */
+.dle-form{display:grid;gap:16px;max-width:560px}
+.dle-form label{font-size:15px;font-weight:500;color:var(--navy)}
+.dle-form input[type=text],
+.dle-form input[type=email],
+.dle-form input[type=password],
+.dle-form textarea,
+.dle-form select{
+	width:100%;padding:12px 16px;
+	border:1px solid rgba(22,40,72,.15);border-radius:var(--r-md);
+	background:#fff;font-size:16px;
+}
+.dle-form textarea{min-height:140px;resize:vertical}
+.dle-form input:focus,.dle-form textarea:focus,.dle-form select:focus{border-color:var(--teal);outline:none}
+
+/* --- Комментарии --- */
+#dle-comments-list{display:grid;gap:24px;margin-block-start:32px}
+.comment{padding:24px;background:#fff;border:1px solid rgba(22,40,72,.08);border-radius:var(--r-lg)}
+.comment__head{display:flex;align-items:center;gap:12px;margin-block-end:12px}
+.comment__author{font-weight:600;color:var(--navy)}
+.comment__date{font-size:13px;color:rgba(51,51,51,.5)}
+
+/* --- Поиск --- */
+.searchtable{display:flex;gap:8px;max-width:520px}
+.searchtable input[type=text]{flex:1}
+
+/* --- Утилиты движка --- */
+.clr{clear:both}
+.hidden{display:none!important}
+.quote{padding:16px 20px;margin-block:16px;background:var(--mint);border-radius:var(--r-md);font-style:italic}
+.title_spoiler{cursor:pointer;color:var(--teal)}
+.text_spoiler{padding:12px 16px;border:1px solid rgba(22,40,72,.12);border-radius:var(--r-sm)}
+
+/* --- Карточка новости (shortstory) --- */
+.post-card{display:flex;flex-direction:column;background:#fff;border:1px solid rgba(22,40,72,.08);border-radius:var(--r-lg);overflow:hidden}
+.post-card__media img{width:100%;aspect-ratio:5/3;object-fit:cover}
+.post-card__body{display:flex;flex-direction:column;gap:12px;padding:24px}
+.post-card__meta{display:flex;gap:16px;font-size:13px;color:rgba(51,51,51,.5)}
+.post-card__more{align-self:flex-start;margin-block-start:8px}
+
+/* --- Полная новость (fullstory) --- */
+.post__meta{display:flex;flex-wrap:wrap;gap:16px;margin-block:12px 24px;font-size:14px;color:rgba(51,51,51,.55)}
+.post__cover{width:100%;border-radius:var(--r-lg);margin-block-end:32px}
+.post__body{font-size:18px;line-height:1.65}
+.post__body img{border-radius:var(--r-md);margin-block:16px}
+.post__related{margin-block-start:48px}
+.post__related ul{display:grid;gap:8px;margin-block-start:16px;list-style:disc;padding-inline-start:20px}
+.post__related a{color:var(--teal)}
+
+/* --- Логин --- */
+.login{max-width:420px}
+.login__remember{display:flex;align-items:center;gap:8px;font-weight:400}
+.login__lost{font-size:14px;color:var(--teal)}
+.login--user{display:flex;align-items:center;gap:16px}
+.login__name{font-weight:600;color:var(--navy)}
+
+/* --- Полная новость на шаблоне «статья» --- */
+.page--inner{padding-block:0}
+.page--inner > .container.inner{padding-block:140px 80px}
+.article__body img{max-width:100%;height:auto;border-radius:var(--r-md);margin-block:20px}
+.article__body ul,.article__body ol{margin-block:16px;padding-inline-start:24px;list-style:disc}
+.article__body ol{list-style:decimal}
+.article__body li{margin-block-end:8px}
+.article__body a{color:var(--teal);text-decoration:underline}
+.article__body h2{margin-block:32px 12px;font-family:var(--font-display);font-size:30px;color:var(--navy)}
+.article__body h3{margin-block:24px 10px;font-family:var(--font-display);font-size:24px;color:var(--navy)}

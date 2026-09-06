@@ -1,0 +1,55 @@
+/* ===== Marquee — running band with duplicated content for a seamless loop ===== */
+.marquee{
+	background:var(--teal);
+	overflow:hidden;
+	padding-block:43px;
+}
+.marquee__track{
+	display:flex;
+	width:max-content;
+	animation:marquee-scroll 32s linear infinite;
+}
+.marquee__group{
+	display:flex;
+	align-items:center;
+	gap:40px;
+	padding-inline-end:40px;
+	white-space:nowrap;
+}
+.marquee__group li{
+	font-family:var(--font-display);
+	font-weight:700;
+	font-size:36px;
+	line-height:1.1;
+	letter-spacing:.06em;
+	text-transform:uppercase;
+	color:#fff;
+}
+.marquee__sep{display:flex;align-items:center;justify-content:center}
+.marquee__sep img{width:55px;height:55px}
+
+@keyframes marquee-scroll{
+	from{transform:translateX(0)}
+	to{transform:translateX(-50%)}
+}
+@media (prefers-reduced-motion:reduce){
+	.marquee__track{animation:none}
+}
+
+@media (max-width:1200px){
+	.marquee__group li{font-size:28px}
+	.marquee{padding-block:33px}
+	.marquee__sep img{width:43px;height:43px}
+}
+@media (max-width:900px){
+	.marquee__group li{font-size:22px}
+	.marquee__group{gap:28px;padding-inline-end:28px}
+	.marquee{padding-block:26px}
+	.marquee__sep img{width:34px;height:34px}
+}
+@media (max-width:600px){
+	.marquee__group li{font-size:32px}
+	.marquee{padding-block:38px}
+	.marquee__group{gap:32px;padding-inline-end:32px}
+	.marquee__sep img{width:42px;height:42px}
+}

@@ -1,0 +1,248 @@
+/* ==========================================================================
+   Hero — 1:1 с макетом (нода 9:41, кадр 1600×900)
+   Опорные координаты Figma: карточка 101/153 573×558, солдат 482/97 887×1112,
+   плашки 1283/421 217×209 и 1283/654 217×207, подпись 101/842.
+   ========================================================================== */
+.hero{position:relative;height:900px;overflow:hidden;isolation:isolate}
+
+/* --- фон --- */
+.hero__bg{position:absolute;inset:0;z-index:-2}
+.hero__bg-img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero__bg-veil{position:absolute;inset:0;background:rgba(255,255,255,.44)}
+
+/* --- солдат: доля от кадра 1600×900, поэтому масштабируется вместе с ним --- */
+.hero__soldier{
+	position:absolute;z-index:-1;
+	left:30.125%;              /* 482 / 1600 */
+	top:10.7778%;              /* 97 / 900   */
+	width:55.4375%;            /* 887 / 1600 */
+	height:123.5556%;          /* 1112 / 900 */
+	object-fit:cover;
+	pointer-events:none;
+}
+
+/* --- система координат = контент-контейнер 1400px --- */
+.hero__inner{position:relative;height:100%}
+
+/* ==========================================================================
+   Стеклянная карточка
+   ========================================================================== */
+.hero__card{
+	position:absolute;
+	left:21px;top:153px;      /* 20px паддинга контейнера + 1px = x 101 */
+	width:573px;height:558px;
+	padding:60px;
+	border-radius:24px;
+	background:rgba(215,229,228,.3);
+	backdrop-filter:blur(10px);
+	-webkit-backdrop-filter:blur(10px);
+	box-shadow:
+		0 8px 12px 0 rgba(0,0,0,.08),
+		inset 0 1px 1px 0 rgba(255,255,255,.68),
+		inset 0 -1px 1px 0 rgba(255,255,255,.6);
+	overflow:hidden;
+}
+
+.hero__title{
+	width:452px;
+	margin:0;
+	font-family:var(--font-display);
+	font-weight:700;
+	font-size:50px;
+	line-height:1.1;
+	background-image:linear-gradient(248.008deg,#01698e 6.16%,#162848 98.247%);
+	-webkit-background-clip:text;background-clip:text;
+	color:transparent;
+}
+.hero__title span{display:block}
+
+.hero__text{
+	width:470px;
+	margin-block-start:15px;  /* низ заголовка 378 → верх текста 393 (макет 240 от карточки) */
+	font-size:18px;
+	line-height:23px;   /* блок 161px на 7 строк, как в макете */
+	color:var(--text);
+}
+.hero__list{list-style:none;padding:0;margin:0}
+.hero__list li{position:relative;margin-inline-start:29px}
+.hero__list li::before{
+	content:"";position:absolute;left:-18px;top:9px;
+	width:5px;height:5px;border-radius:50%;background:currentColor;
+}
+
+.hero__btn{
+	display:flex;
+	align-items:center;
+	gap:10px;
+	width:276px;
+	margin:24px 0 0 -1px;     /* верх кнопки 578, левый край 160 — как в макете */
+	padding:14px 36px 13px;   /* + 1px нижней рамки = высота 64 */
+	border-radius:999px;
+	border-bottom:1px solid var(--navy-2);
+	background:linear-gradient(180deg,#162848 0%,#00698e 100%);
+	color:#fff;
+	overflow:hidden;
+	transition:filter .2s;
+}
+.hero__btn:hover{filter:brightness(1.12)}
+.hero__btn-label{
+	display:flex;align-items:center;height:36px;
+	font-family:var(--font-display);font-weight:600;
+	font-size:16px;line-height:24px;
+	letter-spacing:.96px;text-transform:uppercase;white-space:nowrap;
+}
+.hero__btn-icon{
+	flex:0 0 36px;width:36px;height:36px;
+	display:grid;place-items:center;
+	border-radius:50%;
+	border:1px solid rgba(255,255,255,.4);   /* в макете круг — контур, не заливка */
+	color:#fff;
+}
+
+/* ==========================================================================
+   Плашки с суммами
+   ========================================================================== */
+.hero__stats{
+	position:absolute;
+	right:20px;top:421px;   /* 1283 + 217 = 1500 = правый край контента */
+	width:217px;
+	display:grid;
+	gap:24px;               /* 654 − 630 */
+	margin:0;padding:0;
+}
+.hero__stat{
+	position:relative;
+	margin-block-start:50px;  /* круг выступает над карточкой на 50px */
+	padding:67px 21px 21px 36px;   /* Frame 2 макета: x 36, y 67 */
+	min-height:159px;
+	border-radius:24px;
+	background:rgba(215,229,228,.3);
+	backdrop-filter:blur(10px);
+	-webkit-backdrop-filter:blur(10px);
+	box-shadow:
+		0 8px 12px 0 rgba(0,0,0,.08),
+		inset 0 1px 1px 0 rgba(255,255,255,.68),
+		inset 0 -1px 1px 0 rgba(255,255,255,.6);
+}
+.hero__stat-icon{
+	position:absolute;
+	left:57px;top:-50px;      /* 1340 − 1283 = 57; круг начинается на 50px выше карточки */
+	width:103px;height:103px;
+	display:grid;place-items:center;
+	border-radius:50%;
+	background:var(--teal);
+}
+.hero__stat-icon img{width:auto;height:auto;max-width:53px}
+.hero__stat-value{
+	display:block;
+	font-family:var(--font-display);font-weight:700;
+	font-size:24px;line-height:1.1;
+	color:var(--teal);
+	white-space:nowrap;
+}
+.hero__stat-label{
+	display:block;margin-block-start:3px;
+	font-size:16px;line-height:1;
+	color:var(--text);
+}
+
+/* ==========================================================================
+   Подпись под карточкой
+   ========================================================================== */
+.hero__note{
+	position:absolute;
+	left:21px;top:842px;
+	display:flex;align-items:center;gap:10px;
+	font-size:14px;line-height:normal;color:#000;
+	white-space:nowrap;
+}
+.hero__note img{width:39px;height:19px}
+
+/* ==========================================================================
+   Адаптив
+   ========================================================================== */
+@media (max-width:1439px){
+	/* контейнер сжимается — карточка и плашки остаются прижатыми к его краям */
+	.hero__card{left:20px}
+	.hero__note{left:20px}
+}
+@media (max-width:1200px){
+	.hero{height:760px}
+	.hero__card{top:120px;width:500px;height:auto;min-height:470px;padding:44px}
+	.hero__title{width:100%;font-size:40px}
+	.hero__text{width:100%;font-size:17px}
+	.hero__stats{top:330px}
+	.hero__note{top:auto;bottom:32px}
+	.hero__soldier{left:34%;width:60%}
+}
+@media (max-width:1000px){
+	.hero__stats{display:none}
+}
+@media (max-width:900px){
+	.hero{height:auto;display:flex;flex-direction:column;padding-block:96px 32px}
+	.hero__soldier{position:relative;order:2;left:auto;top:auto;width:100%;max-width:460px;height:auto;margin:8px auto -32px}
+	.hero__inner{order:1;height:auto;display:flex;flex-direction:column;gap:24px}
+	.hero__card{position:static;width:100%;height:auto;min-height:0;padding:32px 24px}
+	.hero__stats{position:static;display:grid;grid-template-columns:1fr 1fr;width:100%;margin-block-start:56px}
+	.hero__stat{margin-block-start:0;padding:60px 20px 20px 24px;min-height:0}
+	.hero__stat-icon{left:20px;top:-36px;width:80px;height:80px}
+	.hero__stat-icon img{max-width:40px}
+	.hero__note{position:static;flex-wrap:wrap;white-space:normal;font-size:13px}
+	.hero__note span{min-width:0;flex:1 1 auto}
+}
+
+/* ==========================================================================
+   Мобильный макет (фрейм Figma «Mob», 370×10985) — 1:1
+   ========================================================================== */
+@media (max-width:600px){
+	.hero{height:942px;display:block;padding:0;overflow:hidden}
+
+	/* солдат: 54/489 565×453 в кадре 370×942 */
+	.hero__soldier{
+		position:absolute;order:0;
+		left:30.1%;top:52.27%;
+		width:124%;height:61.9%;   /* точный размер кадра (пропорция исходника), низ обрезается .hero */
+		max-width:none;margin:0;
+		object-fit:fill;             /* размер уже задан по пропорции — кроп не нужен */
+	}
+
+	.hero__inner{position:relative;height:100%;display:block;padding-block:0;gap:0}
+
+	/* карточка: 21/104 329×406 */
+	.hero__card{
+		position:absolute;left:21px;top:104px;   /* +20px паддинга контейнера */
+		width:329px;max-width:calc(100% - 40px);height:406px;
+		padding:15px 20px 0;
+		border-radius:24px;
+	}
+	.hero__title{width:289px;max-width:100%;font-size:30px;line-height:1.1;margin-bottom:0}
+	.hero__text{width:auto;margin-block-start:22px;font-size:16px;line-height:19px}
+	.hero__text br{display:none}   /* на мобильном абзац переносится сам: 3 строки, как в макете */
+	.hero__list li{margin-inline-start:26px}
+	.hero__list li::before{left:-16px;top:8px;width:4px;height:4px}
+	.hero__btn{
+		position:absolute;left:25px;top:321px;
+		width:276px;max-width:calc(100% - 50px);height:64px;
+		margin:0;padding:14px 30px 13px;justify-content:flex-start;
+	}
+	.hero__btn-label{flex:1 1 auto}
+
+	/* плашки: 20/539 180×169 и 20/731 180×172, круг 80px */
+	.hero__stats{
+		position:absolute;left:20px;top:539px;right:auto;
+		display:grid;grid-template-columns:1fr;gap:23px;
+		width:180px;margin:0;
+	}
+	.hero__stat{
+		margin-block-start:36px;   /* круг выступает на 36px над карточкой */
+		min-height:133px;height:133px;
+		padding:59px 10px 0 21px;
+		justify-content:flex-start;
+	}
+	.hero__stat-icon{left:47px;top:-36px;width:80px;height:80px}
+	.hero__stat-icon img{max-width:41px}
+	.hero__stat-value{font-size:20px;line-height:1.1}
+	.hero__stat-label{margin-block-start:3px;font-size:14px;line-height:14px}
+
+	.hero__note{display:none}   /* в мобильном макете подписи с флагом нет */
+}

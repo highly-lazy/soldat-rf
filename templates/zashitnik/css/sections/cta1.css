@@ -1,0 +1,193 @@
+/* ==========================================================================
+   cta1 — "Остались вопросы?" (тёмный блок с быстрыми контактами)
+   ========================================================================== */
+.cta1__panel {
+	position: relative;
+	overflow: visible;
+	border-radius: var(--r-lg);
+	background: linear-gradient(180deg, var(--teal) 0%, var(--mint) 100%);
+	height: 446px;
+}
+
+.cta1__content {
+	position: absolute;
+	left: 55px;
+	top: 72px;
+	width: 635px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	color: var(--white);
+}
+
+.cta1__title {
+	font-family: var(--font-display);
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 1.1;
+	margin: 0;
+}
+
+.cta1__text {
+	font-size: 18px;
+	line-height: 1.3;
+	margin: 0;
+	max-width: 633px;
+}
+
+.cta1__contacts {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 24px;
+	margin-top: 27px;
+}
+
+.cta1__contact-item {
+	display: flex;
+}
+
+.cta1__contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	width: 106px;
+	height: 106px;
+	border-radius: var(--r-md);
+	background: linear-gradient(180deg, var(--navy) 0%, var(--teal) 100%);
+	border-bottom: 1px solid var(--navy);
+	transition: transform .15s, box-shadow .2s;
+}
+
+.cta1__contact:hover,
+.cta1__contact:focus-visible {
+	transform: translateY(-2px);
+	box-shadow: var(--shadow-card);
+}
+
+.cta1__contact-icon {
+	display: grid;
+	place-items: center;
+	width: 29px;
+	height: 29px;
+}
+
+.cta1__contact-icon img {
+	width: 100%;
+	height: 100%;
+}
+
+.cta1__contact-label {
+	font-size: 12px;
+	line-height: 1.1;
+	color: var(--white);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.cta1__photo {
+	position: absolute;
+	right: 0;
+	top: -132px;
+	width: 689px;
+	height: 689px;
+	object-fit: cover;
+}
+
+/* ==========================================================================
+   Адаптив
+   ========================================================================== */
+@media (max-width:1200px) {
+	.cta1__panel {
+		height: auto;
+		padding: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+	}
+
+	.cta1__content {
+		position: static;
+		width: auto;
+		max-width: 635px
+	}
+
+	.cta1__title {
+		font-size: 44px
+	}
+
+	.cta1__photo {
+		position: static;
+		flex: 0 0 320px;
+		width: 320px;
+		height: 320px
+	}
+}
+
+@media (max-width:900px) {
+	.section.cta1 {
+		padding-block: 48px
+	}
+
+	.cta1__panel {
+		flex-direction: column;
+		align-items: stretch;
+		padding: 48px 40px;
+		height: auto;
+	}
+
+	.cta1__photo {
+		flex-basis: auto;
+		width: 100%;
+		height: auto;
+		max-width: 340px;
+		aspect-ratio: 1/1;
+		margin: 24px auto 0;
+	}
+
+	.cta1__content {
+		max-width: none
+	}
+
+	.cta1__title {
+		font-size: 36px
+	}
+}
+
+@media (max-width:600px) {
+	.cta1__panel {
+		padding: 32px 24px
+	}
+
+	.cta1__title {
+		font-size: 32px
+	}
+
+	.cta1__text {
+		font-size: 16px
+	}
+
+	.cta1__contacts {
+		gap: 16px
+	}
+
+	.cta1__contact {
+		width: 80px;
+		height: 80px
+	}
+
+	.cta1__contacts{margin-top:0}   /* макет: текст → плитки 18px */
+	.cta1__photo {
+		/* макет: панель 329×664, снимок свисает под неё на 76px и не обрезается */
+		max-width: none;
+		width: calc(100% + 68px);
+		height: 325px;
+		aspect-ratio: auto;
+		margin: -24px -34px -115px;
+		object-fit: contain;
+	}
+}
