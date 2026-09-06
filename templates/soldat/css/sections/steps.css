@@ -1,0 +1,92 @@
+/* ==========================================================================
+   «Этапы подготовки к службе» (нода 882:7599)
+   Восемь карточек 320×327; чётные колонки опущены на 60px.
+   ========================================================================== */
+.steps{padding-block:64px 60px}   /* нижние 60px — сдвиг чётных колонок */                 /* макет: заголовок на y=7721 */
+
+.steps__nav{display:none}
+
+.steps__title{
+	margin:0;
+	width:680px;
+	font-weight:700;
+	font-size:56px;
+	line-height:62px;
+	color:var(--ink);
+}
+
+.steps__grid{
+	display:grid;
+	grid-template-columns:repeat(4,320px);
+	column-gap:40px;
+	row-gap:63px;                                /* макет: строки на 7892 и 8282 */
+	margin-block-start:47px;
+}
+.steps__card{
+	position:relative;
+	width:320px;
+	height:327px;
+	border-radius:30px;
+	overflow:hidden;
+}
+/* в макете белая подложка есть только у 1, 3, 6 и 8-й карточек */
+.steps__card:nth-child(1),
+.steps__card:nth-child(3),
+.steps__card:nth-child(6),
+.steps__card:nth-child(8){background:var(--white)}
+.steps__card:nth-child(2n){top:60px}                    /* макет: 2-я и 4-я колонки ниже */
+.steps__card:nth-child(4n){margin-inline-start:1px}     /* макет: 4-я колонка на x=1181 */
+
+.steps__icon{
+	position:absolute;
+	left:39px;top:28px;
+	display:grid;
+	place-items:center;
+	width:68px;height:68px;
+	border-radius:12px;
+	background:var(--blue);
+}
+.steps__icon img{width:auto;height:auto}
+
+.steps__num{
+	position:absolute;
+	left:224px;top:34px;
+	width:33px;
+	font-weight:800;
+	font-size:50px;
+	line-height:57px;
+	text-align:right;
+	color:transparent;
+	-webkit-text-stroke:1.5px var(--red);
+}
+.steps__total{
+	position:absolute;
+	left:260px;top:41px;
+	width:21px;
+	font-weight:300;
+	font-size:18px;
+	line-height:20px;
+	text-align:center;
+	color:var(--red);
+}
+
+.steps__body{
+	position:absolute;
+	left:39px;top:113px;
+	display:flex;
+	flex-direction:column;
+	gap:14px;
+	width:241px;
+}
+.steps__name{
+	font-weight:600;
+	font-size:24px;
+	line-height:1.1;
+	color:var(--text);
+}
+.steps__text{
+	width:241px;
+	font-size:16px;
+	line-height:21px;
+	color:var(--text);
+}

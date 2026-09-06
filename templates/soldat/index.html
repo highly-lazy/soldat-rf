@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>солдат.рф — военная служба по контракту</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/engine.css">
+</head><body class="">
+<header class="header">
+	<!-- верхняя строка: город, телефон, мессенджеры (макет y 0…50) -->
+	<div class="header__top">
+		<div class="container header__top-inner">
+			<button class="header__city" type="button" aria-label="Выбрать город">
+				<svg class="header__city-pin" viewBox="0 0 15 21" fill="none" aria-hidden="true">
+					<path d="M7.5 20s6.5-7.2 6.5-12.2A6.5 6.5 0 0 0 1 7.8C1 12.8 7.5 20 7.5 20Z" stroke="currentColor" stroke-width="1.6"/>
+					<circle cx="7.5" cy="7.8" r="2.4" stroke="currentColor" stroke-width="1.6"/>
+				</svg>
+				<span class="header__city-label">Город:</span>
+				<span class="header__city-value">Москва</span>
+				<svg class="header__city-caret" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+					<path d="M7.71 3.75 12.96 9l-5.25 5.25" stroke="currentColor" stroke-width="1.6" stroke-linejoin="bevel"/>
+				</svg>
+			</button>
+
+			<div class="header__contacts">
+				<a class="header__phone" href="tel:+74954450117">
+					<img class="header__phone-icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-phone-out.svg" alt="" width="21" height="21" decoding="async">
+					<span>8 (495) 445-01-17</span>
+				</a>
+				<p class="header__hint">Горячая линия <br>по вопросам</p>
+				<span class="header__divider" aria-hidden="true"></span>
+				<p class="header__hint">Задайте вопрос, <br>мы онлайн:</p>
+				<ul class="header__messengers">
+					<li><a href="https://t.me/" aria-label="Telegram"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/c316a0f5f6f66f80438b3f3d045975ec59203071.svg" alt="" width="22" height="18" decoding="async"></a></li>
+					<li><a href="https://max.ru/" aria-label="MAX"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/bb4bc44beae62cee7f05affb58ad7de114456bb1.svg" alt="" width="20" height="19" decoding="async"></a></li>
+					<li><a href="https://wa.me/74954450117" aria-label="WhatsApp"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/9188d41760be46f8c69424d90dbc6fed9bbf5bc5.svg" alt="" width="20" height="20" decoding="async"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- панель навигации (макет y 51…121, полупрозрачная с размытием) -->
+	<div class="header__bar">
+		<div class="container header__bar-inner">
+			<a class="header__logo" href="./" aria-label="солдат.рф — на главную">
+				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/701d6379446ea0530b8df274333ef4977ff983af.svg" alt="солдат.рф" width="173" height="30" decoding="async">
+			</a>
+
+			<nav class="header__nav" id="site-nav" aria-label="Основная навигация">
+				<!-- город и кнопка показываются только в мобильном меню -->
+				<span class="header__nav-city">
+					<svg class="header__city-pin" viewBox="0 0 15 21" fill="none" aria-hidden="true">
+						<path d="M7.5 20s6.5-7.2 6.5-12.2A6.5 6.5 0 0 0 1 7.8C1 12.8 7.5 20 7.5 20Z" stroke="currentColor" stroke-width="1.6"/>
+						<circle cx="7.5" cy="7.8" r="2.4" stroke="currentColor" stroke-width="1.6"/>
+					</svg>
+					<span class="header__city-label">Город:</span>
+					<span class="header__city-value">Москва</span>
+					<svg class="header__city-caret" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+						<path d="M7.71 3.75 12.96 9l-5.25 5.25" stroke="currentColor" stroke-width="1.6" stroke-linejoin="bevel"/>
+					</svg>
+				</span>
+
+				<a class="btn btn--sm header__nav-cta" href="#contact">
+					Получить консультацию
+					<span class="btn__arrow">
+						<svg class="icon-arrow-ne" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+							<path d="M1.65 10.35 10.35 1.65" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+							<path d="M3.05 1.65h7.3v7.3" stroke="currentColor" stroke-width="1.3" stroke-linejoin="bevel"/>
+						</svg>
+					</span>
+				</a>
+
+				<ul class="header__menu">
+					<li><a href="./#terms">Условия</a></li>
+					<li><a href="./#benefits">Льготы</a></li>
+					<li><a href="./#support">Поддержка</a></li>
+					<li><a href="./#articles">Статьи</a></li>
+					<li><a href="./otvety.html">Ответы на вопросы</a></li>
+					<li><a href="./#contact">Контакты</a></li>
+				</ul>
+			</nav>
+
+			<a class="btn btn--sm header__cta" href="#contact">
+				Получить консультацию
+				<span class="btn__arrow">
+					<svg class="icon-arrow-ne" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+						<path d="M1.65 10.35 10.35 1.65" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+						<path d="M3.05 1.65h7.3v7.3" stroke="currentColor" stroke-width="1.3" stroke-linejoin="bevel"/>
+					</svg>
+				</span>
+			</a>
+
+			<button class="header__burger" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Меню">
+				<span class="header__burger-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+			</button>
+		</div>
+	</div>
+</header>
+
+<section class="hero" aria-labelledby="hero-title">
+	<div class="container hero__inner">
+		<div class="hero__card">
+			<h1 class="hero__title" id="hero-title">Военная служба <br>по контракту — профессия для настоящих мужчин</h1>
+			<p class="hero__lead">Получай достойное денежное довольствие, льготы и уверенность в завтрашнем дне.</p>
+			<a class="btn btn--lg hero__btn" href="#contact">
+				Оставить заявку
+				<span class="btn__arrow">
+					<svg class="icon-arrow-ne" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+						<path d="M2 14 14 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+						<path d="M3.46 2H14v10.54" stroke="currentColor" stroke-width="2" stroke-linejoin="bevel"/>
+					</svg>
+				</span>
+			</a>
+		</div>
+
+		<div class="hero__figure">
+			<img class="hero__photo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/b3e9bb37aa1b898400df579a313bf4d58bfb5d1d.webp" alt="Военнослужащий по контракту" width="1600" height="1600" decoding="async">
+
+			<div class="hero__badge">
+				<div class="hero__badge-item">
+					<span class="hero__badge-icon hero__badge-icon--pay">
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/9e61d37ae71fd4587ef34586bb84778ac693acb9.svg" alt="" width="62" height="57" decoding="async">
+					</span>
+					<b class="hero__badge-value">2 300 000 ₽</b>
+					<span class="hero__badge-label">Единовременная выплата</span>
+				</div>
+				<div class="hero__badge-item">
+					<span class="hero__badge-icon hero__badge-icon--card">
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/b77f5274ed0d7b5aba526351464b9c44da6e043b.svg" alt="" width="60" height="43" decoding="async">
+					</span>
+					<b class="hero__badge-value">от 260 000 ₽</b>
+					<span class="hero__badge-label">Ежемесячное довольствие</span>
+				</div>
+			</div>
+
+			<div class="hero__accent" aria-hidden="true">
+				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/a646493dc65da0953a661575039d1c1856afe4b0.webp" alt="" width="1686" height="2528" decoding="async">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="benefits" id="benefits" aria-labelledby="benefits-title">
+	<div class="container">
+		<h2 class="section-title benefits__title" id="benefits-title">Преимущества <br>контрактной службы</h2>
+
+		<div class="benefits__slider">
+			<div class="benefits__grid">
+			<article class="benefits__item">
+			<div class="benefits__body">
+			<span class="benefits__num" aria-hidden="true">1</span>
+			<h3 class="benefits__name">Собственное жильё <br>с поддержкой государства</h3>
+			<p class="benefits__text benefits__text--narrow">Участвуй в накопительно-ипотечной системе Минобороны и приобрети квартиру на выгодных условиях.</p>
+			</div>
+			<figure class="benefits__photo">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/6926351683999bbf5714f5394ba4eaca26caa69a.webp" alt="" width="1800" height="1450" decoding="async">
+			</figure>
+			</article>
+			<article class="benefits__item">
+			<div class="benefits__body">
+			<span class="benefits__num" aria-hidden="true">2</span>
+			<h3 class="benefits__name">Служебное жильё <br>или компенсация за аренду</h3>
+			<p class="benefits__text">Гарантированное обеспечение жильём — либо предоставление квартиры, либо ежемесячная выплата на наём.</p>
+			</div>
+			<figure class="benefits__photo benefits__photo--crop2">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/4d6fd6797c7f8727fd15d76b2e6deb703565e62a.webp" alt="" width="1800" height="1450" decoding="async">
+			</figure>
+			</article>
+			<article class="benefits__item">
+			<div class="benefits__body">
+			<span class="benefits__num" aria-hidden="true">3</span>
+			<h3 class="benefits__name">Полный медицинский уход <br>и реабилитация</h3>
+			<p class="benefits__text">Медицинское обслуживание в профильных военных госпиталях и центрах восстановительной терапии.</p>
+			</div>
+			<figure class="benefits__photo">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/855d7f7f42dc524aea00b3c7ed775305a6134640.webp" alt="" width="1800" height="1450" decoding="async">
+			</figure>
+			</article>
+			<article class="benefits__item">
+			<div class="benefits__body">
+			<span class="benefits__num" aria-hidden="true">4</span>
+			<h3 class="benefits__name">Регулярный оплачиваемый отпуск</h3>
+			<p class="benefits__text">Оплачиваемый отдых не реже двух раз в год, чтобы восстановить силы и провести время с близкими.</p>
+			</div>
+			<figure class="benefits__photo">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/aa4b375018ab463ac7e8b6f22b89f3c1ac300777.webp" alt="" width="1800" height="1450" decoding="async">
+			</figure>
+			</article>
+			<article class="benefits__item">
+			<div class="benefits__body">
+			<span class="benefits__num" aria-hidden="true">5</span>
+			<h3 class="benefits__name">Досрочная военная пенсия по выслуге</h3>
+			<p class="benefits__text">Обеспечь стабильное будущее: выйди на пенсию раньше, получая гарантированные государственные выплаты.</p>
+			</div>
+			<figure class="benefits__photo benefits__photo--crop5">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/af2b407ee53cf82f5ef1d12de65e6b2c9713a6b9.webp" alt="" width="1800" height="1450" decoding="async">
+			</figure>
+			</article>
+			<article class="benefits__item">
+			<div class="benefits__body">
+			<span class="benefits__num" aria-hidden="true">6</span>
+			<h3 class="benefits__name">Полное страхование жизни <br>и здоровья</h3>
+			<p class="benefits__text">Жизнь и здоровье военнослужащего застрахованы государством — защита действует с первого дня контракта.</p>
+			</div>
+			<figure class="benefits__photo">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/979d46fe10de243ba3a8f5a65fe2755541d9bfed.webp" alt="" width="1800" height="1263" decoding="async">
+			</figure>
+			</article>
+			</div>
+		</div>
+
+		<div class="benefits__nav" hidden>
+			<button class="slider-btn slider-btn--prev" type="button" aria-label="Предыдущий слайд">
+				<svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11.29 3.75 6.04 9l5.25 5.25" stroke="currentColor" stroke-width="2" stroke-linejoin="bevel"/></svg>
+			</button>
+			<button class="slider-btn slider-btn--next" type="button" aria-label="Следующий слайд">
+				<svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M6.71 3.75 11.96 9l-5.25 5.25" stroke="currentColor" stroke-width="2" stroke-linejoin="bevel"/></svg>
+			</button>
+		</div>
+	</div>
+</section>
+
+<section class="req" id="requirements" aria-labelledby="req-title">
+	<div class="container req__inner">
+		<div class="req__panel">
+			<h2 class="req__title" id="req-title">Требования к кандидатам <br>на службу по контракту</h2>
+
+			<ul class="req__list">
+				<li class="req__item">
+					<span class="req__check" aria-hidden="true">
+						<svg viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="7" fill="#0257D5"/><path d="M28.567 16.395 23.981 20.981 19.395 25.567 14 20.172" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>
+					</span>
+					<p>мужчины в возрасте <br>от 18 до 65 лет <br>без инвалидности</p>
+				</li>
+				<li class="req__item">
+					<span class="req__check" aria-hidden="true">
+						<svg viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="7" fill="#0257D5"/><path d="M28.567 16.395 23.981 20.981 19.395 25.567 14 20.172" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>
+					</span>
+					<p>Отсутствие серьезных судимостей по статьям <br>УК РФ</p>
+				</li>
+				<li class="req__item">
+					<span class="req__check" aria-hidden="true">
+						<svg viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="7" fill="#0257D5"/><path d="M28.567 16.395 23.981 20.981 19.395 25.567 14 20.172" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>
+					</span>
+					<p>граждане РФ <br>и иностранцы</p>
+				</li>
+				<li class="req__item">
+					<span class="req__check" aria-hidden="true">
+						<svg viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="7" fill="#0257D5"/><path d="M28.567 16.395 23.981 20.981 19.395 25.567 14 20.172" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>
+					</span>
+					<p>с опытом военной <br>службы и без него</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="req__jet" aria-hidden="true">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/299ec2eaa627dea38a01cbe89ef25b5456b41271.webp" alt="" width="1800" height="1327" decoding="async">
+		</div>
+	</div>
+</section>
+
+<section class="terms" id="terms" aria-labelledby="terms-title">
+	<div class="terms__bg" aria-hidden="true">
+		<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/a41bc04703025b324ecf7477177520b1e5bd739b.webp" alt="" width="1800" height="1260" decoding="async">
+	</div>
+
+	<div class="container terms__inner">
+		<h2 class="terms__title" id="terms-title">Условия службы <br>по контракту</h2>
+
+		<ul class="terms__grid">
+			<li class="terms__card">
+				<span class="terms__panel"></span>
+				<span class="terms__mark" aria-hidden="true">
+					<svg viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="7" fill="#E31E24"/><path d="M28.78 15.7 19.61 24.87 14.22 19.48" stroke="#fff" stroke-width="3" stroke-linejoin="bevel"/></svg>
+				</span>
+				<p class="terms__text">Организованный за счёт государства переезд <br>из <b>любого региона России</b></p>
+			</li>
+			<li class="terms__card">
+				<span class="terms__panel"></span>
+				<span class="terms__mark" aria-hidden="true">
+					<svg viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="7" fill="#E31E24"/><path d="M28.78 15.7 19.61 24.87 14.22 19.48" stroke="#fff" stroke-width="3" stroke-linejoin="bevel"/></svg>
+				</span>
+				<p class="terms__text"><b>Бесплатное</b> проживание <br>и питание на весь период медкомиссии</p>
+			</li>
+			<li class="terms__card">
+				<span class="terms__panel"></span>
+				<span class="terms__mark" aria-hidden="true">
+					<svg viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="7" fill="#E31E24"/><path d="M28.78 15.7 19.61 24.87 14.22 19.48" stroke="#fff" stroke-width="3" stroke-linejoin="bevel"/></svg>
+				</span>
+				<p class="terms__text">Единоразовая выплата <br>в размере <b>2 300 000 ₽</b> <br>при заключении контракта</p>
+			</li>
+			<li class="terms__card">
+				<span class="terms__panel"></span>
+				<span class="terms__mark" aria-hidden="true">
+					<svg viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="7" fill="#E31E24"/><path d="M28.78 15.7 19.61 24.87 14.22 19.48" stroke="#fff" stroke-width="3" stroke-linejoin="bevel"/></svg>
+				</span>
+				<p class="terms__text">Ежемесячное денежное довольствие <br><b>от 260 000 ₽</b> и выше</p>
+			</li>
+			<li class="terms__card">
+				<span class="terms__panel"></span>
+				<span class="terms__mark" aria-hidden="true">
+					<svg viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="7" fill="#E31E24"/><path d="M28.78 15.7 19.61 24.87 14.22 19.48" stroke="#fff" stroke-width="3" stroke-linejoin="bevel"/></svg>
+				</span>
+				<p class="terms__text">Возможность списания долгов и кредитов <br>на сумму <b>до 10 млн. ₽</b></p>
+			</li>
+			<li class="terms__card">
+				<span class="terms__panel"></span>
+				<span class="terms__mark" aria-hidden="true">
+					<svg viewBox="0 0 42 42" fill="none"><rect width="42" height="42" rx="7" fill="#E31E24"/><path d="M28.78 15.7 19.61 24.87 14.22 19.48" stroke="#fff" stroke-width="3" stroke-linejoin="bevel"/></svg>
+				</span>
+				<p class="terms__text"><b>Гибкие</b> условия контракта: выбери срок службы — <br><b>1, 3 или 5 лет</b></p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="cta" aria-labelledby="cta-title">
+	<div class="container">
+		<div class="cta__panel">
+			<img class="cta__photo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/c1757e045b59787a268300f1ca4f2da2b65b3553.webp" alt="" width="1800" height="630" decoding="async">
+
+			<div class="cta__body">
+				<h2 class="cta__title" id="cta-title">Остались вопросы?</h2>
+				<p class="cta__lead">Оставь заявку — и наши специалисты помогут тебе пройти все этапы оформления контракта, ответят на вопросы и подберут лучшие условия службы.</p>
+			</div>
+
+			<ul class="cta__messengers">
+				<li class="cta__messenger cta__messenger--tg">
+					<a href="https://t.me/" aria-label="Telegram">
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/de6949c7907f53a648adfebf251e62c7c2c5e786.svg" alt="" width="48" height="40" decoding="async">
+					</a>
+				</li>
+				<li class="cta__messenger cta__messenger--max">
+					<a href="https://max.ru/" aria-label="MAX">
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/0e3e6c5ddf001ef1aebf61c4a32155b7943326bd.svg" alt="" width="45" height="45" decoding="async">
+						<img class="cta__cursor" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/fbbff32a6e52ff29305d58cb0127bf5cf5925761.svg" alt="" width="17" height="22" decoding="async">
+						<img class="cta__max-mob" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/social-max-muted.svg" alt="" width="45" height="45" decoding="async">
+					</a>
+				</li>
+				<li class="cta__messenger cta__messenger--wa">
+					<a href="https://wa.me/74954450117" aria-label="WhatsApp">
+						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/7e9bb72c1beceba9e161faa49b724820766f67f2.svg" alt="" width="50" height="50" decoding="async">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="pay" id="payments" aria-labelledby="pay-title">
+	<div class="container">
+		<div class="pay__panel">
+			<h2 class="pay__title" id="pay-title">Дополнительные <br>денежные выплаты</h2>
+
+			<div class="pay__tabs" role="tablist" aria-label="Виды выплат">
+					<button class="pay__tab" type="button" role="tab" id="pay-tab-0" aria-controls="pay-panel-0" aria-selected="true">Ежемесячные выплаты</button>
+					<button class="pay__tab" type="button" role="tab" id="pay-tab-1" aria-controls="pay-panel-1" aria-selected="false" tabindex="-1">За боевые достижения</button>
+					<button class="pay__tab" type="button" role="tab" id="pay-tab-2" aria-controls="pay-panel-2" aria-selected="false" tabindex="-1">При ранении</button>
+					<button class="pay__tab" type="button" role="tab" id="pay-tab-3" aria-controls="pay-panel-3" aria-selected="false" tabindex="-1">Помощь семье</button>
+			</div>
+
+			<!-- Содержимое вкладок «За боевые достижения», «При ранении» и «Помощь семье» —
+			     демо-данные для вёрстки: в макете раскрыта только первая вкладка. -->
+				<div class="pay__grid" role="tabpanel" id="pay-panel-0" aria-labelledby="pay-tab-0">
+						<div class="pay__item">
+							<b class="pay__sum">от 300 000 ₽</b>
+							<span class="pay__role">Заместителю командира взвода — командиру отделения</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 288 000 ₽</b>
+							<span class="pay__role">Командиру отделения</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 284 000 ₽</b>
+							<span class="pay__role">Инструктору штаба</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 282 000 ₽</b>
+							<span class="pay__role">Начальнику радиостанции командно-штабной машины</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 274 000 ₽</b>
+							<span class="pay__role">Старшему телефонисту</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 272 000 ₽</b>
+							<span class="pay__role">Старшему водителю-электрику</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 266 000 ₽</b>
+							<span class="pay__role">Старшему саперу, пулеметчику и водителю</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 261 000 ₽</b>
+							<span class="pay__role">Гранатометчику, повару</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 260 000 ₽</b>
+							<span class="pay__role">Стрелку</span>
+						</div>
+				</div>
+				<div class="pay__grid" role="tabpanel" id="pay-panel-1" aria-labelledby="pay-tab-1" hidden>
+						<div class="pay__item">
+							<b class="pay__sum">от 50 000 ₽</b>
+							<span class="pay__role">За каждые сутки участия в наступательных действиях</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 100 000 ₽</b>
+							<span class="pay__role">За продвижение подразделения вперёд</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 300 000 ₽</b>
+							<span class="pay__role">За уничтожение единицы бронетехники противника</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 500 000 ₽</b>
+							<span class="pay__role">За захват исправной техники противника</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 1 000 000 ₽</b>
+							<span class="pay__role">За сбитый самолёт или вертолёт</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 200 000 ₽</b>
+							<span class="pay__role">За уничтожение артиллерийской установки</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 150 000 ₽</b>
+							<span class="pay__role">За уничтожение беспилотного комплекса</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 120 000 ₽</b>
+							<span class="pay__role">За взятие опорного пункта</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">от 80 000 ₽</b>
+							<span class="pay__role">Разведчику за результативный выход</span>
+						</div>
+				</div>
+				<div class="pay__grid" role="tabpanel" id="pay-panel-2" aria-labelledby="pay-tab-2" hidden>
+						<div class="pay__item">
+							<b class="pay__sum">до 3 000 000 ₽</b>
+							<span class="pay__role">Единовременная выплата при тяжёлом ранении</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">до 1 000 000 ₽</b>
+							<span class="pay__role">При ранении лёгкой степени тяжести</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">до 2 000 000 ₽</b>
+							<span class="pay__role">Страховая выплата по военной травме</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">до 3 000 000 ₽</b>
+							<span class="pay__role">При установлении I группы инвалидности</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">до 2 000 000 ₽</b>
+							<span class="pay__role">При установлении II группы инвалидности</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">до 1 500 000 ₽</b>
+							<span class="pay__role">При установлении III группы инвалидности</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">100 %</b>
+							<span class="pay__role">Сохранение денежного довольствия на время лечения</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">бесплатно</b>
+							<span class="pay__role">Лечение и реабилитация в военных госпиталях</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">бесплатно</b>
+							<span class="pay__role">Санаторно-курортное восстановление</span>
+						</div>
+				</div>
+				<div class="pay__grid" role="tabpanel" id="pay-panel-3" aria-labelledby="pay-tab-3" hidden>
+						<div class="pay__item">
+							<b class="pay__sum">до 5 000 000 ₽</b>
+							<span class="pay__role">Единовременная выплата членам семьи</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">до 3 000 000 ₽</b>
+							<span class="pay__role">Страховая сумма выгодоприобретателям</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">ежемесячно</b>
+							<span class="pay__role">Пенсия по случаю потери кормильца</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">бесплатно</b>
+							<span class="pay__role">Путёвки в детские лагеря и санатории</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">вне конкурса</b>
+							<span class="pay__role">Поступление детей в вузы Минобороны</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">до 100 %</b>
+							<span class="pay__role">Компенсация коммунальных платежей</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">бесплатно</b>
+							<span class="pay__role">Юридическое сопровождение семьи</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">по региону</b>
+							<span class="pay__role">Дополнительные региональные выплаты</span>
+						</div>
+						<div class="pay__item">
+							<b class="pay__sum">постоянно</b>
+							<span class="pay__role">Психологическая поддержка близких</span>
+						</div>
+				</div>
+		</div>
+	</div>
+</section>
+
+<section class="family" id="family" aria-labelledby="family-title">
+	<div class="container family__inner">
+		<h2 class="family__title" id="family-title">Льготы <br>и гарантии <br>семьям</h2>
+
+		<ul class="family__grid">
+			<li class="family__card">
+				<img class="family__photo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/d340af7276e8551e17e178523d7e9d64f49587cd.webp" alt="" width="1600" height="2656" decoding="async">
+				<div class="family__body">
+					<h3 class="family__name">Льготные путёвки в детские лагеря</h3>
+					<p class="family__text">Дети военнослужащих могут бесплатно отдыхать в лучших санаториях и лагерях России.</p>
+				</div>
+			</li>
+			<li class="family__card">
+				<img class="family__photo family__photo--crop2" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/dbd760b4d3219c9a525c2415b73530d9a92da273.webp" alt="" width="1800" height="2234" decoding="async">
+				<div class="family__body">
+					<h3 class="family__name">Приоритетное поступление <br>в вузы для детей контрактников</h3>
+					<p class="family__text">Доступ к специальным квотам и льготам при обучении в государственных высших учебных заведениях.</p>
+				</div>
+			</li>
+			<li class="family__card">
+				<img class="family__photo family__photo--crop3" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/4a91f0425058115a32d587f2f52a369c8bb5d4da.webp" alt="" width="1800" height="2234" decoding="async">
+				<div class="family__body">
+					<h3 class="family__name">Дополнительные выплаты <br>и бонусы</h3>
+					<p class="family__text">Каждый регион предлагает свои меры поддержки: от повышенного довольствия до единовременных выплат.</p>
+				</div>
+			</li>
+			<li class="family__card">
+				<img class="family__photo family__photo--crop4" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/7da624b31b951dcfc0d8ea2410eec8e7d807d1f6.webp" alt="" width="1800" height="2234" decoding="async">
+				<div class="family__body">
+					<h3 class="family__name">Поддержка семей на уровне региона</h3>
+					<p class="family__text">Жёны и дети военнослужащих могут рассчитывать на социальные гарантии и помощь от местных властей.</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="support" id="support" aria-labelledby="support-title">
+	<div class="container support__inner">
+		<div class="support__panel"></div>
+
+		<div class="support__photo">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/47ca99a7e191756a878b815939b760e14fd5e26b.webp" alt="" width="1800" height="1200" decoding="async">
+		</div>
+
+		<h2 class="support__title" id="support-title">Меры поддержки <br>участников СВО</h2>
+
+		<ul class="support__list">
+			<li class="support__item support__item--center">
+				<span class="support__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-support-1.svg" alt="" width="70" height="70" decoding="async"></span>
+				<p class="support__text" style="width:445px">Присвоение <b>статуса ветерана</b> боевых действий и гос. привилегии</p>
+			</li>
+			<li class="support__item support__item--end">
+				<span class="support__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-support-2.svg" alt="" width="70" height="70" decoding="async"></span>
+				<p class="support__text" style="width:449px"><b>Дополнительные выплаты <br>и компенсации</b> от региональных властей</p>
+			</li>
+			<li class="support__item support__item--center">
+				<span class="support__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-support-3.svg" alt="" width="70" height="70" decoding="async"></span>
+				<p class="support__text" style="width:454px"><b>Скидки и субсидии</b> <br>на оплату коммунальных услуг</p>
+			</li>
+			<li class="support__item">
+				<span class="support__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-support-4.svg" alt="" width="70" height="70" decoding="async"></span>
+				<p class="support__text" style="width:454px"><b>Компенсации и помощь</b> <br>по жилищно-коммунальным платежам</p>
+			</li>
+			<li class="support__item support__item--center">
+				<span class="support__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-support-5.svg" alt="" width="70" height="70" decoding="async"></span>
+				<p class="support__text" style="width:453px"><b>Отсрочки</b> по налогам и кредитам <br>для военнослужащих</p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="steps" id="steps" aria-labelledby="steps-title">
+	<div class="container">
+		<h2 class="steps__title" id="steps-title">Этапы подготовки <br>к службе</h2>
+
+		<ol class="steps__grid">
+			<li class="steps__card">
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-step-1.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__num" aria-hidden="true">1</span>
+				<span class="steps__total" aria-hidden="true">/8</span>
+				<div class="steps__body">
+					<h3 class="steps__name"><span class="visually-hidden">Шаг 1 из 8. </span>Свяжитесь с нами</h3>
+					<p class="steps__text">Свяжитесь любым удобным способом, чтобы обсудить важные детали: военную специальность, состояние здоровья, семейное положение и необходимые документы.</p>
+				</div>
+			</li>
+			<li class="steps__card">
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-step-2.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__num" aria-hidden="true">2</span>
+				<span class="steps__total" aria-hidden="true">/8</span>
+				<div class="steps__body">
+					<h3 class="steps__name"><span class="visually-hidden">Шаг 2 из 8. </span>Трансфер до ВВК</h3>
+					<p class="steps__text">Мы обеспечим транспортировку для прохождения военно-врачебной комиссии. Возьмите с собой паспорт и военный билет — все расходы на билеты покрываем мы.</p>
+				</div>
+			</li>
+			<li class="steps__card">
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-step-3.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__num" aria-hidden="true">3</span>
+				<span class="steps__total" aria-hidden="true">/8</span>
+				<div class="steps__body">
+					<h3 class="steps__name"><span class="visually-hidden">Шаг 3 из 8. </span>Встреча <br>и комфортное проживание</h3>
+					<p class="steps__text">Обеспечим удобное размещение с питанием на время прохождения комиссии.</p>
+				</div>
+			</li>
+			<li class="steps__card">
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-step-4.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__num" aria-hidden="true">4</span>
+				<span class="steps__total" aria-hidden="true">/8</span>
+				<div class="steps__body">
+					<h3 class="steps__name"><span class="visually-hidden">Шаг 4 из 8. </span>Прохождение медицинской комиссии</h3>
+					<p class="steps__text">Пройдите медицинский осмотр на пункте отбора для оценки вашей пригодности к службе.</p>
+				</div>
+			</li>
+			<li class="steps__card">
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-step-5.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__num" aria-hidden="true">5</span>
+				<span class="steps__total" aria-hidden="true">/8</span>
+				<div class="steps__body">
+					<h3 class="steps__name"><span class="visually-hidden">Шаг 5 из 8. </span>Оформление карты МИР</h3>
+					<p class="steps__text">Выдается банковская карта для удобного получения всех выплат.</p>
+				</div>
+			</li>
+			<li class="steps__card">
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-step-6.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__num" aria-hidden="true">6</span>
+				<span class="steps__total" aria-hidden="true">/8</span>
+				<div class="steps__body">
+					<h3 class="steps__name"><span class="visually-hidden">Шаг 6 из 8. </span>Подписание контракта</h3>
+					<p class="steps__text">Заключите контракт с возможностью выбрать удобный срок службы.</p>
+				</div>
+			</li>
+			<li class="steps__card">
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-step-7.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__num" aria-hidden="true">7</span>
+				<span class="steps__total" aria-hidden="true">/8</span>
+				<div class="steps__body">
+					<h3 class="steps__name"><span class="visually-hidden">Шаг 7 из 8. </span>Профессиональная подготовка</h3>
+					<p class="steps__text">Отправляйтесь на обучение продолжительностью от 2 недель до 3 месяцев перед началом службы.</p>
+				</div>
+			</li>
+			<li class="steps__card">
+				<span class="steps__icon"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/icon-step-8.svg" alt="" width="34" height="33" decoding="async"></span>
+				<span class="steps__num" aria-hidden="true">8</span>
+				<span class="steps__total" aria-hidden="true">/8</span>
+				<div class="steps__body">
+					<h3 class="steps__name"><span class="visually-hidden">Шаг 8 из 8. </span>Финансовые выплаты</h3>
+					<p class="steps__text">В первые две недели обучения вы получите единовременную выплату в размере 2 300 000 рублей.</p>
+				</div>
+			</li>
+		</ol>
+
+		<div class="steps__nav" hidden>
+			<button class="slider-btn slider-btn--prev" type="button" aria-label="Предыдущий слайд">
+				<svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11.29 3.75 6.04 9l5.25 5.25" stroke="currentColor" stroke-width="2" stroke-linejoin="bevel"/></svg>
+			</button>
+			<button class="slider-btn slider-btn--next" type="button" aria-label="Следующий слайд">
+				<svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M6.71 3.75 11.96 9l-5.25 5.25" stroke="currentColor" stroke-width="2" stroke-linejoin="bevel"/></svg>
+			</button>
+		</div>
+	</div>
+</section>
+
+<section class="know" aria-labelledby="know-title">
+	<div class="container know__inner">
+		<h2 class="know__title" id="know-title">Что важно <br>знать кандидату</h2>
+
+		<span class="know__soldier"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/e7c666d34cc4b697cccef84bd599eb57cf9ffdad.webp" alt="Военнослужащий по контракту" width="1800" height="1565" decoding="async"></span>
+
+		<article class="know__card know__card--red">
+			<h3 class="know__name">Деньги и выплаты</h3>
+			<p class="know__text">На сайте указаны основные условия по выбранному городу: единовременная выплата при заключении контракта, ежемесячное денежное довольствие, боевые выплаты, компенсации при ранении и помощь семье. Итоговая сумма зависит от региона оформления, воинской должности, звания, задач и действующих мер поддержки.</p>
+		</article>
+
+		<article class="know__card know__card--blue">
+			<h3 class="know__name">Долги и документы</h3>
+			<p class="know__text">Кандидату заранее объясняют, какие документы нужны, как проходит военно-врачебная комиссия, когда оформляется банковская карта и какие варианты поддержки доступны при кредитах, исполнительных производствах или сложной финансовой ситуации. Заявка нужна, чтобы специалист проверил исходные данные и подсказал порядок действий.</p>
+		</article>
+
+		<article class="know__card know__card--tall">
+			<span class="know__photo" aria-hidden="true">
+				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/ee43f580e01ba8633f982d97015f66bd265a6929.webp" alt="" width="1800" height="2234" decoding="async">
+			</span>
+			<h3 class="know__name">Переезд и сопровождение</h3>
+			<p class="know__text">Трансфер организуется из любой точки России. На этапе оформления помогают с маршрутом, проживанием, питанием, прохождением комиссии и подписанием контракта. После заявки кандидат получает консультацию, сверяет требования по возрасту и здоровью, выбирает подходящее направление службы и понимает ближайшие шаги без лишней бюрократии.</p>
+		</article>
+	</div>
+</section>
+
+<section class="art" id="articles" aria-labelledby="art-title">
+	<div class="container">
+		<h2 class="art__title" id="art-title">Статьи</h2>
+
+		<ul class="art__grid">
+			<li class="art__card">
+				<a class="art__link" href="./statya.html">
+					<span class="art__photo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/42cb660ec135f319beddf9eb2163e9188eca5946.webp" alt="" width="1800" height="1084" decoding="async"></span>
+					<span class="art__body">
+						<span class="art__date">10 июль 2026</span>
+						<span class="art__name">Где выгоднее подписать контракт в 2026 году: как сравнивать выплаты по регионам</span>
+					</span>
+					<span class="art__more">Смотреть подробнее <span class="btn__arrow"><svg class="icon-arrow-ne" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1.65 10.35 10.35 1.65" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M3.05 1.65h7.3v7.3" stroke="currentColor" stroke-width="1.3" stroke-linejoin="bevel"/></svg></span></span>
+				</a>
+			</li>
+			<li class="art__card">
+				<a class="art__link" href="./statya.html">
+					<span class="art__photo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/a40b59b4c0fb9e18fa04e7d64e0993d2fa531bf2.webp" alt="" width="1800" height="1084" decoding="async"></span>
+					<span class="art__body">
+						<span class="art__date">10 июль 2026</span>
+						<span class="art__name">Выплаты по контракту в Анадыре и на Чукотке в 2026 году</span>
+					</span>
+					<span class="art__more">Смотреть подробнее <span class="btn__arrow"><svg class="icon-arrow-ne" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1.65 10.35 10.35 1.65" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M3.05 1.65h7.3v7.3" stroke="currentColor" stroke-width="1.3" stroke-linejoin="bevel"/></svg></span></span>
+				</a>
+			</li>
+			<li class="art__card">
+				<a class="art__link" href="./statya.html">
+					<span class="art__photo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/42eb6287c3e342b3600a3129b0b1d42b2ac9a9fd.webp" alt="" width="1800" height="1084" decoding="async"></span>
+					<span class="art__body">
+						<span class="art__date">10 июль 2026</span>
+						<span class="art__name">Выплаты по контракту в Балашихе в 2026 году: Подмосковье, документы и пункт отбора</span>
+					</span>
+					<span class="art__more">Смотреть подробнее <span class="btn__arrow"><svg class="icon-arrow-ne" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1.65 10.35 10.35 1.65" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M3.05 1.65h7.3v7.3" stroke="currentColor" stroke-width="1.3" stroke-linejoin="bevel"/></svg></span></span>
+				</a>
+			</li>
+		</ul>
+
+		<a class="btn btn--lg art__more-btn" href="./stati.html">
+			Показать еще
+			<span class="btn__arrow">
+				<svg class="icon-arrow-ne" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+					<path d="M2 14 14 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+					<path d="M3.46 2H14v10.54" stroke="currentColor" stroke-width="2" stroke-linejoin="bevel"/>
+				</svg>
+			</span>
+		</a>
+	</div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-title">
+	<div class="container">
+		<div class="contact__panel">
+			<img class="contact__photo" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/7adf34a019bd1bb1af7dd8da1f9e260bf182c79d.webp" alt="" width="1800" height="823" decoding="async">
+
+			<div class="contact__body">
+				<h2 class="contact__title" id="contact-title">Оставь заявку <br>на контрактную <br>службу в армии РФ</h2>
+				<p class="contact__lead">Оставь заявку — и наши специалисты помогут тебе пройти все этапы оформления контракта, ответят на вопросы и подберут лучшие условия службы.</p>
+			</div>
+
+			<!-- TODO: указать обработчик формы (action) -->
+			<form class="contact__form" action="" method="post">
+				<label class="visually-hidden" for="contact-name">Имя</label>
+				<input class="contact__input" id="contact-name" name="name" type="text" placeholder="Имя" required>
+
+				<label class="visually-hidden" for="contact-phone">Номер телефона</label>
+				<input class="contact__input" id="contact-phone" name="phone" type="tel" placeholder="Номер телефона" required>
+
+				<label class="contact__consent">
+					<input class="contact__check" type="checkbox" name="agree" checked required>
+					<span class="contact__check-box" aria-hidden="true"></span>
+					<span class="contact__consent-text">Согласен на обработку персональных данных и <br>принимаю <a href="https://xn--80ahulok.xn--p1ai/policy.html" target="_blank" rel="noopener">политику конфиденциальности</a></span>
+				</label>
+
+				<button class="btn btn--lg contact__submit" type="submit">
+					Отправить заявку
+					<span class="btn__arrow">
+						<svg class="icon-arrow-ne" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+							<path d="M2 14 14 2" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+							<path d="M3.46 2H14v10.54" stroke="currentColor" stroke-width="2" stroke-linejoin="bevel"/>
+						</svg>
+					</span>
+				</button>
+			</form>
+		</div>
+	</div>
+</section>
+
+<footer class="footer">
+	<div class="container footer__inner">
+		<a class="footer__logo" href="./" aria-label="солдат.рф — на главную">
+			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/e11e938b761fbff026f2e1fc125893e81aef3faa.svg" alt="солдат.рф" width="173" height="30" decoding="async">
+		</a>
+
+		<p class="footer__copy">
+			2026 © Солдат.рф Все права защищены. Не является публичной офертой.
+			<a href="https://xn--80ahulok.xn--p1ai/policy.html" target="_blank" rel="noopener">Политика конфиденциальности</a>
+		</p>
+
+		<ul class="footer__messengers">
+			<li class="footer__messenger footer__messenger--tg">
+				<a href="https://t.me/" aria-label="Telegram"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/080db21598596027d30d9f5af98ca8efbbaa1c3b.svg" alt="" width="29" height="24" decoding="async"></a>
+			</li>
+			<li class="footer__messenger footer__messenger--max">
+				<a href="https://max.ru/" aria-label="MAX">
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/ca7b5356fc8cf41cc282f4259585dcc7e5aa9954.svg" alt="" width="27" height="27" decoding="async">
+					<img class="footer__cursor" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/fbbff32a6e52ff29305d58cb0127bf5cf5925761.svg" alt="" width="17" height="22" decoding="async">
+				</a>
+			</li>
+			<li class="footer__messenger footer__messenger--wa">
+				<a href="https://wa.me/74954450117" aria-label="WhatsApp"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="./images/734d4551fa9e221288b2aee887b03459d8d35482.svg" alt="" width="30" height="30" decoding="async"></a>
+			</li>
+		</ul>
+	</div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body></html>

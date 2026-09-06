@@ -27,6 +27,6 @@ jobs:
         run: python3 build_preview.py
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: templates/zashitnik
+          path: templates/soldat
       - id: deployment
         uses: actions/deploy-pages@v4

@@ -1,0 +1,97 @@
+/* ==========================================================================
+   «Дополнительные денежные выплаты» (нода 694:7171)
+   Белая панель 100…1500 / 4871…5684, вкладки и сетка 4×236 с шагом 330.
+   ========================================================================== */
+.pay{padding-block-start:73px}                  /* макет: панель на y=4871 */
+
+.pay__panel{
+	position:relative;
+	min-height:813px;
+	padding:51px 0 0 53px;
+	border-radius:var(--r-card);
+	background:var(--white);
+}
+
+.pay__title{
+	margin:0;
+	width:677px;
+	font-weight:700;
+	font-size:56px;
+	line-height:62px;
+	color:var(--ink);
+}
+
+/* --- вкладки --- */
+.pay__tabs{
+	position:relative;
+	display:flex;
+	justify-content:space-between;
+	width:1298px;
+	margin:51px 0 0 -3px;                       /* макет: строка вкладок 50/226 */
+}
+.pay__tabs::after{                              /* серая линия 1300×1 на y=266.5 */
+	content:"";
+	position:absolute;
+	left:0;bottom:0;
+	width:1300px;height:1px;
+	background:#e9e8f0;
+}
+.pay__tab{
+	position:relative;
+	padding:0 0 10px;
+	border:0;
+	background:none;
+	font-family:inherit;
+	font-weight:500;
+	font-size:24px;
+	line-height:31px;
+	color:var(--muted);
+	white-space:nowrap;
+	transition:color .2s;
+}
+.pay__tab:hover{color:var(--ink)}
+.pay__tab[aria-selected="true"]{color:var(--ink)}
+.pay__tab[aria-selected="true"]::after{
+	content:"";
+	position:absolute;
+	left:0;right:0;bottom:0;
+	height:2px;
+	background:var(--blue);
+}
+
+/* --- сетка выплат --- */
+.pay__grid{
+	display:grid;
+	grid-template-columns:repeat(4,236px);
+	column-gap:94px;                            /* макет: шаг колонок 330 */
+	grid-template-rows:190px 160px auto;        /* макет: строки на 325 / 515 / 675 */
+	align-items:start;
+	margin:58px 0 0 -2px;                       /* макет: сетка начинается на x=51, y=325 */
+}
+
+.pay__item{position:relative;width:236px}
+.pay__item::before{
+	content:"";
+	position:absolute;
+	left:-1.5px;top:0;
+	width:3px;height:38px;
+	background:var(--red);
+}
+.pay__sum{
+	display:block;
+	margin-inline-start:20px;
+	font-weight:600;
+	font-size:30px;
+	line-height:38px;
+	color:var(--text);
+	white-space:nowrap;
+}
+.pay__role{
+	display:block;
+	margin-block-start:10px;
+	font-size:20px;
+	line-height:26px;
+	color:var(--text);
+}
+
+.pay__grid[hidden]{display:none}

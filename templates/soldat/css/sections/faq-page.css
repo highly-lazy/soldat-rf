@@ -1,0 +1,155 @@
+/* ==========================================================================
+   Страница «Ответы на вопросы» (нода 1036:2864, 1600×3034)
+   Аккордеон 800px слева и синяя карточка вопроса 560×809 справа.
+   ========================================================================== */
+.faq{padding-block-start:42px}                   /* макет: «Назад» на y=163 */
+
+.faq__title{
+	margin:32px 0 0 1px;                         /* макет: заголовок на y=231 */
+	font-weight:700;
+	font-size:56px;
+	line-height:62px;
+	color:var(--ink);
+}
+
+.faq__tabs{
+	position:relative;
+	display:flex;
+	gap:100px;                                   /* макет: вкладки на 0 и 293 при ширине 193 */
+	margin:47px 0 0 1px;
+}
+.faq__tabs::after{
+	content:"";
+	position:absolute;
+	left:0;bottom:0;
+	width:679px;max-width:100%;height:1px;
+	background:#e9e8f0;
+}
+
+.faq__layout{
+	display:grid;
+	grid-template-columns:800px 560px;
+	column-gap:40px;                             /* макет: аккордеон 100…900, карточка с x=940 */
+	align-items:start;
+	margin-block-start:34px;                     /* макет: аккордеон на y=415 */
+}
+
+/* --- аккордеон --- */
+.faq__list{display:flex;flex-direction:column;gap:10px}
+.faq__item{
+	border-radius:var(--r-md);
+	background:var(--white);
+	overflow:hidden;
+}
+.faq__q{margin:0}
+.faq__btn{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	gap:20px;
+	width:100%;
+	min-height:95px;
+	padding:7px 22px 6px 28px;
+	border:0;
+	background:none;
+	font-family:inherit;
+	font-weight:600;
+	font-size:24px;
+	line-height:normal;
+	text-align:left;
+	color:var(--text);
+}
+.faq__btn > span:first-child{max-width:631px}
+.faq__sign{
+	position:relative;
+	flex:0 0 28px;
+	width:28px;height:28px;
+}
+.faq__sign::before,
+.faq__sign::after{
+	content:"";
+	position:absolute;
+	left:50%;top:50%;
+	width:28px;height:3px;
+	margin:-1.5px 0 0 -14px;
+	border-radius:2px;
+	background:var(--blue);
+	transition:transform .2s;
+}
+.faq__sign::after{transform:rotate(90deg)}
+.faq__btn[aria-expanded="true"] .faq__sign::after{transform:rotate(90deg) scaleX(0)}
+
+.faq__a{padding:3px 28px 26px}   /* макет: ответ на y=513 при карточке с 415 */
+.faq__a p{
+	width:674px;
+	max-width:100%;
+	margin:0;
+	font-size:20px;
+	line-height:1.3;
+	color:var(--text);
+}
+.faq__a[hidden]{display:none}
+
+/* --- карточка «Задать свой вопрос» --- */
+.ask{
+	position:relative;
+	width:560px;
+	min-height:809px;
+	margin-block-start:1px;                      /* макет: карточка на y=416 */
+	padding:49px 50px 0;
+	border-radius:var(--r-card);
+	background:var(--blue);
+	color:var(--white);
+}
+.ask__title{
+	margin:0;
+	width:452px;
+	font-weight:700;
+	font-size:56px;
+	line-height:62px;
+}
+.ask__lead{
+	margin-block-start:20px;
+	width:452px;
+	font-size:20px;
+	line-height:26px;
+}
+.ask__form{margin-block-start:33px}              /* макет: первое поле на y=694 */
+.ask__input{
+	display:block;
+	width:460px;
+	height:64px;
+	padding:0 23px;
+	border:0;
+	border-radius:var(--r-md);
+	background:rgba(255,255,255,.3);
+	font-size:20px;
+	line-height:26px;
+	color:var(--white);
+}
+.ask__input::placeholder{color:var(--white);opacity:.7}
+.ask__input ~ .ask__input{margin-block-start:16px}
+.ask__input--area{
+	height:141px;
+	padding-block:18px;
+	resize:vertical;
+}
+.ask__consent{
+	position:relative;
+	display:block;
+	margin-block-start:27px;                     /* макет: чекбокс на y=1022 */
+	padding-inline-start:42px;
+	min-height:28px;
+	cursor:pointer;
+}
+.ask__submit{
+	margin-block-start:33px;                     /* макет: кнопка на y=1103 */
+	height:64px;
+	padding-block:0;
+	border:1px solid var(--white);
+	background:transparent;
+}
+.ask__submit:hover,.ask__submit:focus-visible{background:rgba(255,255,255,.15)}
+
+/* --- стыки секций --- */
+.faq + .contact{padding-block-start:97px}

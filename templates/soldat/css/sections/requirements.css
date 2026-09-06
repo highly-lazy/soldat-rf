@@ -1,0 +1,81 @@
+/* ==========================================================================
+   «Требования к кандидатам» (нода 1034:2861)
+   Белая панель 99…1500 / y 2873…3267, самолёт выходит за правый край кадра.
+   ========================================================================== */
+.req{position:relative;padding-block-start:149px}   /* макет: панель на y=2873 */
+.req__inner{position:relative}
+
+.req__panel{
+	position:relative;
+	z-index:1;
+	width:1401px;
+	max-width:calc(100% + 2px);
+	margin-inline-start:-1px;                        /* макет: панель начинается на x=99 */
+	min-height:394px;
+	padding:34px 0 0 51px;                           /* макет: заголовок 150/2907 */
+	border-radius:var(--r-card);
+	background:var(--white);
+}
+
+.req__title{
+	margin:0;
+	width:849px;
+	max-width:100%;
+	font-weight:700;
+	font-size:56px;
+	line-height:62px;
+	color:var(--ink);
+}
+
+/* Позиции взяты из макета: иконки 149/497/852/1198, тексты 203/555/907/1259 */
+.req__list{
+	position:relative;
+	z-index:3;
+	height:78px;
+	margin-block-start:94px;                         /* макет: тексты на y=3125, иконки на 3131 */
+	margin-inline-start:-1px;                        /* макет: иконки на x=149, заголовок на 150 */
+}
+.req__item{
+	position:absolute;
+	top:0;
+	display:flex;
+	align-items:flex-start;
+}
+.req__item:nth-child(1){left:0px;gap:12px}
+.req__item:nth-child(2){left:348px;gap:16px}
+.req__item:nth-child(3){left:703px;gap:13px}
+.req__item:nth-child(4){left:1049px;gap:19px}
+
+.req__check{
+	flex:0 0 42px;
+	width:42px;height:42px;
+	margin-block-start:6px;                          /* макет: иконка на y=3131, текст на 3125 */
+}
+.req__check svg{width:42px;height:42px}
+
+.req__item p{
+	width:280px;
+	font-size:20px;
+	line-height:26px;
+	color:var(--text);
+}
+
+/* --- самолёт --- */
+.req__jet{
+	position:absolute;
+	left:486px;                                      /* макет: бокс 566…1657 */
+	top:-384px;                                      /* макет: бокс начинается на y=2489 */
+	z-index:2;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:1091.35px;
+	height:1018.35px;
+	pointer-events:none;
+}
+.req__jet img{
+	width:880.88px;
+	height:649.45px;
+	max-width:none;
+	transform:rotate(-32.11deg);
+}

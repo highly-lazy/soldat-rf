@@ -1,0 +1,69 @@
+/* ==========================================================================
+   «Остались вопросы?» (нода 992:2762) — панель 99…1500 / 4404…4798
+   ========================================================================== */
+.cta{padding-block-start:136px}              /* макет: панель на y=4404 */
+
+.cta__panel{
+	position:relative;
+	width:1401px;
+	max-width:calc(100% + 2px);
+	margin-inline-start:-1px;
+	height:394px;
+	border-radius:var(--r-card);
+	background:var(--blue);
+	overflow:hidden;
+}
+.cta__photo{
+	position:absolute;
+	left:-13.61%;
+	top:-49.23%;
+	width:155.39%;
+	height:193.44%;
+	max-width:none;
+}
+
+.cta__body{
+	position:absolute;
+	left:722px;                              /* макет: x=821 при панели с x=99 */
+	top:67px;                                /* макет: y=4471 */
+	width:559px;
+	color:var(--white);
+}
+.cta__title{
+	margin:0;
+	font-weight:700;
+	font-size:56px;
+	line-height:62px;
+}
+.cta__lead{
+	margin-block-start:20px;
+	font-size:20px;
+	line-height:26px;
+}
+
+.cta__messengers{
+	position:absolute;
+	left:721px;                              /* макет: блок иконок на x=820 */
+	top:262px;                               /* макет: y=4666 */
+	width:223px;
+	height:59px;
+}
+.cta__messenger{position:absolute}
+.cta__messenger a{display:block;transition:opacity .2s}
+.cta__messenger a:hover{opacity:.75}
+.cta__messenger--tg{left:0;top:5px}
+.cta__messenger--tg img{width:48px;height:40px}
+.cta__messenger--max{left:92px;top:2px}
+.cta__messenger--max img{width:45px;height:45px}
+.cta__max-mob{display:none}   /* приглушённая иконка MAX для мобильного макета */
+.cta__messenger--wa{left:173px;top:0}
+.cta__messenger--wa img{width:50px;height:50px}
+
+/* курсор поверх иконки MAX (нода 882:7616) */
+.cta__messenger--max a{position:relative}
+.cta__messenger .cta__cursor{
+	position:absolute;
+	left:19px;top:35px;
+	width:17px;height:22px;
+	pointer-events:none;
+}

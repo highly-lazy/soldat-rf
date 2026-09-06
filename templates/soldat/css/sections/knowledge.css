@@ -1,0 +1,88 @@
+/* ==========================================================================
+   «Что важно знать кандидату» (нода 882:7600)
+   Снимок с вырезами 100…1020 / 8959…9759 и три карточки поверх.
+   ========================================================================== */
+.know{padding-block-start:115px}                 /* макет: заголовок на y=8784 */
+.know__inner{position:relative;height:975px}
+
+.know__title{
+	position:absolute;
+	left:20px;top:0;
+	margin:0;
+	width:680px;
+	font-weight:700;
+	font-size:56px;
+	line-height:62px;
+	color:var(--ink);
+}
+
+.know__soldier{
+	position:absolute;
+	left:20px;top:175px;                         /* макет: 100/8959 */
+	display:block;
+	width:920px;height:800px;
+	z-index:1;
+}
+.know__soldier img{width:100%;height:100%}
+
+.know__card{
+	position:absolute;
+	z-index:2;
+	border-radius:var(--r-card);
+	color:var(--white);
+	overflow:hidden;
+}
+.know__card--red{
+	left:20px;top:177px;                         /* макет: 100/8961 */
+	width:400px;height:368px;
+	padding:39px 0 0 41px;
+	background:var(--red);
+}
+.know__card--blue{
+	left:540px;top:607px;                        /* макет: 620/9391 */
+	width:400px;height:368px;
+	padding:40px;
+	background:var(--blue);
+}
+.know__card--tall{
+	left:981px;top:175px;                        /* макет: 1061/8959 */
+	width:441px;height:800px;
+	padding:535px 40px 0;
+	background:var(--blue);
+}
+
+.know__photo{
+	position:absolute;
+	inset:0;
+	border-radius:var(--r-card);
+	overflow:hidden;
+	mix-blend-mode:soft-light;
+	pointer-events:none;
+}
+.know__photo img{
+	position:absolute;
+	left:-41.21%;top:-4.25%;
+	width:152.34%;height:104.25%;
+	max-width:none;
+}
+
+.know__name{
+	position:relative;
+	z-index:1;
+	font-weight:600;
+	font-size:24px;
+	line-height:1.1;
+}
+.know__text{
+	position:relative;
+	z-index:1;
+	margin-block-start:14px;
+	font-size:16px;
+	line-height:21px;
+}
+.know__card--red .know__name,
+.know__card--red .know__text{width:319px}
+.know__card--blue .know__name{width:320px}
+.know__card--blue .know__text{width:312px}
+.know__card--tall .know__name{width:349px}
+.know__card--tall .know__text{width:364px}

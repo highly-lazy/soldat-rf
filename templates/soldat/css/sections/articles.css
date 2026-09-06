@@ -1,0 +1,88 @@
+/* ==========================================================================
+   «Статьи» (нода 971:289) — три карточки 440×432 и кнопка «Показать еще»
+   ========================================================================== */
+.art{padding-block-start:72px}                   /* макет: заголовок на y=9831 */
+
+.art__title{
+	margin:0;
+	font-weight:700;
+	font-size:56px;
+	line-height:62px;
+	color:var(--ink);
+}
+
+.art__grid{
+	display:grid;
+	grid-template-columns:repeat(3,440px);
+	column-gap:40px;
+	margin-block-start:25px;                     /* макет: карточки на y=9918 */
+}
+
+.art__card{width:440px;height:432px}
+.art__link{
+	position:relative;
+	display:block;
+	width:440px;
+	height:432px;
+	border-radius:30px;
+	background:var(--white);
+	overflow:hidden;
+	color:var(--text);
+}
+
+.art__photo{
+	position:absolute;
+	left:0;top:0;
+	display:block;
+	width:440px;height:190px;
+}
+.art__photo img{
+	width:440px;height:190px;
+	object-fit:cover;
+	max-width:none;
+}
+
+.art__body{
+	position:absolute;
+	left:49px;top:221px;                         /* макет: 50% + 5px */
+	display:flex;
+	flex-direction:column;
+	gap:14px;
+	width:341px;
+}
+.art__date{font-size:16px;line-height:normal}
+.art__name{
+	font-weight:600;
+	font-size:24px;
+	line-height:1.1;
+}
+
+.art__more{
+	position:absolute;
+	left:0;top:384px;                            /* макет: 50% + 168px */
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:0;
+	width:440px;
+	height:48px;
+	background:var(--blue);
+	color:var(--white);
+	font-size:16px;
+	line-height:24px;
+	transition:background-color .2s;
+}
+.art__link:hover .art__more{background:var(--blue-dark)}
+.art__more .btn__arrow{
+	flex:0 0 17px;width:17px;height:10px;
+	justify-content:flex-end;
+	margin-block-start:1px;
+}
+.art__more .btn__arrow svg{width:10px;height:10px}
+
+.art__more-btn{
+	margin-block-start:55px;                     /* макет: кнопка на y=10405 */
+	margin-inline-start:582px;                   /* макет: x=682 */
+	height:64px;
+	padding-block:0;
+}

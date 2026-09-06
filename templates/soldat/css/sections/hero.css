@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Первый экран (макет: карточка текста 100/303 560×424, фигура 700/177 800×800)
+   ========================================================================== */
+.hero{position:relative}
+.hero__inner{
+	position:relative;
+	height:856px;                      /* от низа шапки (121) до низа фигуры (977) */
+}
+
+/* --- текст --- */
+.hero__card{
+	position:absolute;
+	left:20px;                         /* контейнер: контент начинается на x=100 */
+	top:182px;                         /* макет: y=303 при старте секции 121 */
+	width:560px;
+}
+.hero__title{
+	margin:0;
+	font-weight:700;
+	font-size:56px;
+	line-height:62px;          /* макет: блок заголовка 248px на 4 строки */
+	color:var(--ink);
+}
+.hero__lead{
+	margin-block-start:20px;
+	width:470px;
+	font-size:20px;
+	line-height:26px;          /* макет: блок 470×52 на 2 строки */
+	color:var(--text);
+}
+.hero__btn{
+	margin-block-start:40px;
+	height:64px;
+	padding-block:0;
+}
+
+/* --- фигура с солдатом --- */
+.hero__figure{
+	position:absolute;
+	left:620px;                        /* макет: x=700 при контейнере от 100 */
+	top:56px;                          /* макет: y=177 */
+	width:800px;
+	height:800px;
+}
+.hero__photo{
+	position:relative;
+	z-index:2;
+	width:800px;
+	height:800px;
+}
+
+/* --- синяя карточка выплат (левый верхний угол выреза) --- */
+.hero__badge{
+	position:absolute;
+	left:0;
+	top:2px;
+	z-index:3;
+	width:308px;
+	height:368px;
+	padding:27px 48px 0;
+	border-radius:var(--r-card);
+	background:var(--blue);
+	color:var(--white);
+}
+.hero__badge-item{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:4px;
+	width:211px;
+}
+.hero__badge-item + .hero__badge-item{margin-block-start:31px}   /* макет: 206 → 381 */
+
+.hero__badge-icon{position:relative;display:block}
+.hero__badge-icon img{
+	position:absolute;
+	max-width:none;
+	transform:scaleY(-1);
+}
+.hero__badge-icon--pay{width:60.89px;height:54.81px}
+.hero__badge-icon--pay img{left:-.37px;top:-1px;width:62.23px;height:56.8px}
+.hero__badge-icon--card{width:58.67px;height:41.33px}
+.hero__badge-icon--card img{left:-1px;top:-1px;width:60.67px;height:43.33px}
+
+.hero__badge-value{
+	width:216px;
+	font-weight:700;
+	font-size:30px;
+	line-height:1.1;
+	text-align:center;
+}
+.hero__badge-label{
+	width:211px;
+	font-size:18px;
+	line-height:1.2;
+	text-align:center;
+}
+
+/* --- красный блок (правый нижний угол выреза) --- */
+.hero__accent{
+	position:absolute;
+	left:492px;
+	top:432px;
+	z-index:1;
+	width:308px;
+	height:368px;
+	border-radius:var(--r-card);
+	background:var(--red);
+	overflow:hidden;
+}
+.hero__accent img{
+	position:absolute;
+	left:-215.1%;
+	top:-125.28%;
+	width:401.02%;
+	height:502.69%;
+	max-width:none;
+}

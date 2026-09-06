@@ -1,0 +1,74 @@
+/* ==========================================================================
+   «Условия службы по контракту» (нода 882:7602)
+   Фон-фото 57…1657 / 3331…4601, поверх — шесть белых карточек 440×202.
+   ========================================================================== */
+.terms{position:relative}
+
+.terms__bg{
+	position:absolute;
+	left:calc(50% - 743px);                  /* макет: бокс фото начинается на x=57 */
+	top:64px;                                /* макет: y=3331 */
+	width:1600px;
+	height:1270px;
+	overflow:hidden;
+	pointer-events:none;
+}
+.terms__bg img{
+	position:absolute;
+	left:-18%;
+	top:-2.22%;
+	width:155.3%;
+	height:136.99%;
+	max-width:none;
+}
+
+.terms__inner{position:relative;z-index:1;padding-block-start:157px}   /* макет: заголовок на y=3424 */
+
+.terms__title{
+	margin:0;
+	width:680px;
+	font-weight:700;
+	font-size:56px;
+	line-height:62px;
+	color:var(--ink);
+}
+
+.terms__grid{
+	display:grid;
+	grid-template-columns:440px 440px;
+	gap:26px 41px;
+	margin-block-start:52px;                 /* макет: первая строка на y=3600 */
+}
+.terms__card{
+	position:relative;
+	width:440px;
+	height:202px;
+}
+.terms__card:nth-child(3),
+.terms__card:nth-child(4){margin-inline-start:-1px}     /* макет: вторая строка на x=99/580 */
+.terms__card:nth-child(5),
+.terms__card:nth-child(6){margin-block-start:10px}      /* макет: третья строка на y=4066 */
+
+.terms__panel{
+	position:absolute;
+	inset:27px 0 0;
+	border-radius:30px;
+	background:var(--white);
+}
+.terms__mark{
+	position:absolute;
+	left:361px;top:18px;
+	width:42px;height:42px;
+}
+.terms__mark svg{width:42px;height:42px}
+
+.terms__text{
+	position:absolute;
+	left:48px;top:73px;
+	width:347px;
+	font-weight:600;
+	font-size:24px;
+	line-height:31px;
+	color:var(--text);
+}
+.terms__text b{font-weight:600;color:var(--blue)}

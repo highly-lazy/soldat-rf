@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Страница «Статьи» (нода 990:651, 1600×2843)
+   Кнопка «Назад», заголовок, фильтры и сетка 3×3 карточек.
+   ========================================================================== */
+.list{padding-block-start:42px}                  /* макет: «Назад» на y=163 */
+
+/* --- кнопка «Назад» (общая для внутренних страниц) --- */
+.back{
+	display:inline-flex;
+	align-items:center;
+	gap:8px;
+	margin-inline-start:1px;
+	font-size:20px;
+	line-height:26px;
+	color:var(--ink);
+}
+.back__icon{
+	flex:0 0 36px;
+	display:grid;
+	place-items:center;
+	width:36px;height:36px;
+	border-radius:50%;
+	background:var(--blue);
+}
+.back__icon svg{width:12px;height:12px}
+.back:hover{opacity:.85}
+
+.list__title{
+	margin:32px 0 0 1px;                         /* макет: заголовок на y=231 */
+	font-weight:700;
+	font-size:56px;
+	line-height:62px;
+	color:var(--ink);
+}
+
+.list__tabs{
+	position:relative;
+	display:flex;
+	justify-content:space-between;
+	width:1400px;
+	max-width:100%;
+	margin:47px 0 0 1px;                         /* макет: фильтры на y=340 */
+}
+.list__tabs::after{
+	content:"";
+	position:absolute;
+	left:0;bottom:0;
+	width:1399px;max-width:100%;height:1px;
+	background:#e9e8f0;
+}
+.list__tab{
+	position:relative;
+	padding:0 0 10px;
+	border:0;
+	background:none;
+	font-family:inherit;
+	font-weight:500;
+	font-size:24px;
+	line-height:31px;
+	color:var(--muted);
+	white-space:nowrap;
+	transition:color .2s;
+}
+.list__tab:hover{color:var(--ink)}
+.list__tab[aria-current="true"]{color:var(--ink)}
+.list__tab[aria-current="true"]::after{
+	content:"";
+	position:absolute;
+	left:0;right:0;bottom:0;
+	height:2px;
+	background:var(--blue);
+}
+
+.list__grid{
+	margin:47px 0 0 1px;                         /* макет: карточки на y=428 */
+	row-gap:38px;
+}
+.list__grid .art__card:nth-child(n+7){margin-block-start:2px}   /* макет: третья строка на y=1370 */
+
+/* --- стыки секций на странице списка --- */
+.list + .contact{padding-block-start:93px}
+.list ~ .footer{padding-block-end:33px}

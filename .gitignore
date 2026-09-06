@@ -1,4 +1,8 @@
 .DS_Store
 .mcp.json
-templates/zashitnik/_pp.html
-templates/zashitnik/_ppw.html
+templates/soldat/_p.html
+templates/soldat/_frame.html
+templates/soldat/_bp.html
+templates/soldat/_cs.html
+templates/soldat/_grid.html
+templates/soldat/_menu.html
