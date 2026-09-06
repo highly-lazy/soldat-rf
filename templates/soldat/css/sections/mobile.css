@@ -256,7 +256,6 @@
 .cta__lead{margin-block-start:20px;font-size:18px;line-height:23px}
 .cta__photo{display:none}                     /* в мобильном макете панель без фото */
 .cta__messengers{left:40px;top:288px;width:223px;height:50px}
-.cta__messenger .cta__cursor{display:none}
 .cta__messenger--max img:not(.cta__max-mob){display:none}
 .cta__messenger--max .cta__max-mob{display:block}
 .cta__messenger--tg{left:0;top:5px}

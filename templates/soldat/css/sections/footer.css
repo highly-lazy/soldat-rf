@@ -42,10 +42,3 @@
 .footer__messenger--max img{width:27.14px;height:27.14px}
 .footer__messenger--wa{left:104.51px;top:0}
 .footer__messenger--wa img{width:30.15px;height:30.15px}
-
-.footer__messenger .footer__cursor{
-	position:absolute;
-	left:9.74px;top:21px;                        /* макет: курсор на 1430/11447 */
-	width:17px;height:22px;
-	pointer-events:none;
-}

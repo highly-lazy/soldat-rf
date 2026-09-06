@@ -16,7 +16,6 @@
 			<li class="footer__messenger footer__messenger--max">
 				<a href="https://max.ru/" aria-label="MAX">
 					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/ca7b5356fc8cf41cc282f4259585dcc7e5aa9954.svg" alt="" width="27" height="27" decoding="async">
-					<img class="footer__cursor" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/fbbff32a6e52ff29305d58cb0127bf5cf5925761.svg" alt="" width="17" height="22" decoding="async">
 				</a>
 			</li>
 			<li class="footer__messenger footer__messenger--wa">

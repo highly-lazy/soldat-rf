@@ -59,11 +59,4 @@
 .cta__messenger--wa{left:173px;top:0}
 .cta__messenger--wa img{width:50px;height:50px}
 
-/* курсор поверх иконки MAX (нода 882:7616) */
 .cta__messenger--max a{position:relative}
-.cta__messenger .cta__cursor{
-	position:absolute;
-	left:19px;top:35px;
-	width:17px;height:22px;
-	pointer-events:none;
-}
