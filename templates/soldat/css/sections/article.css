@@ -232,3 +232,18 @@
 }
 
 /* макет: кадр статьи кончается на 3656 */
+
+/* Список ссылок в последнем вопросе — с маркерами, как в макете */
+.post__faq-list {
+	margin: 0;
+	padding-inline-start: 21px;
+	list-style: disc;
+}
+
+.post__faq-list li {
+	margin: 0;
+}
+
+.post__faq-list li::marker {
+	color: var(--text);
+}
