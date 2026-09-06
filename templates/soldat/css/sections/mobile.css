@@ -345,7 +345,8 @@
 	.benefits__nav {
 		display: flex;
 		gap: 19px;
-		margin: 19px 0 0 91px;
+		margin: 19px 0 0 0px;
+		justify-content: center;
 		/* макет: кнопки на 111/1585; слайды разной высоты */
 	}
 
@@ -561,6 +562,11 @@
 		display: none
 	}
 
+	/* на странице статьи панель с фото — в узкую панель кадрируем чистое небо */
+	.cta--article .cta__photo {
+		object-position: 84% 50%
+	}
+
 	/* в мобильном макете панель без фото */
 	.cta__messengers {
 		left: 40px;
@@ -594,9 +600,8 @@
 	.pay__panel {
 		display: flex;
 		flex-direction: column;
-		min-height: 1093px;
-		padding: 50px 0 0 20px;
-		/* макет: заголовок на 40/4297 */
+		min-height: 100%;
+		padding: 50px 0 20px 20px;
 		border-radius: 30px;
 	}
 
@@ -812,7 +817,8 @@
 		right: 17px;
 		top: 201px;
 		width: auto;
-		gap: 20px
+		gap: 20px;
+		padding-right: 20px;
 	}
 
 	.support__item,
@@ -915,8 +921,8 @@
 	.steps__nav {
 		display: flex;
 		gap: 19px;
-		margin: 22px 0 0 91px;
-		/* макет: кнопки на 111/8771 */
+		margin: 22px 0 0 0px;
+		justify-content: center;
 	}
 
 	/* --- Что важно знать --- */
@@ -1047,7 +1053,14 @@
 		column-gap: 0;
 		row-gap: 20px;
 		margin: 25px -1px 0 1px;
+		width: 100%;
 		/* макет: карточки на 21/10489 */
+	}
+
+	.art .container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.art__card,
@@ -1085,8 +1098,7 @@
 	}
 
 	.art__more-btn {
-		margin: 42px 0 0 47px;
-		/* макет: кнопка на 67/11768 */
+		margin: 42px 0 0 0px;
 	}
 
 	/* --- Форма заявки --- */
