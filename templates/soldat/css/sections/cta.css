@@ -49,14 +49,35 @@
 	height:59px;
 }
 .cta__messenger{position:absolute}
-.cta__messenger a{display:block;transition:opacity .2s}
-.cta__messenger a:hover{opacity:.75}
-.cta__messenger--tg{left:0;top:5px}
-.cta__messenger--tg img{width:48px;height:40px}
-.cta__messenger--max{left:92px;top:2px}
-.cta__messenger--max img{width:45px;height:45px}
-.cta__max-mob{display:none}   /* приглушённая иконка MAX для мобильного макета */
-.cta__messenger--wa{left:173px;top:0}
-.cta__messenger--wa img{width:50px;height:50px}
+.cta__messenger a{display:block}
 
-.cta__messenger--max a{position:relative}
+/* иконки рисуются маской, чтобы перекрашиваться на наведении */
+.cta__icon{
+	display:block;
+	background-color:#bbbbd5;
+	transition:background-color .2s;
+	-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+	-webkit-mask-position:center;mask-position:center;
+	-webkit-mask-size:contain;mask-size:contain;
+}
+.cta__messenger a:hover .cta__icon,
+.cta__messenger a:focus-visible .cta__icon{background-color:var(--red)}
+
+.cta__messenger--tg{left:0;top:5px}
+.cta__messenger--tg .cta__icon{
+	width:48px;height:40px;
+	-webkit-mask-image:url("../../images/de6949c7907f53a648adfebf251e62c7c2c5e786.svg");
+	mask-image:url("../../images/de6949c7907f53a648adfebf251e62c7c2c5e786.svg");
+}
+.cta__messenger--max{left:92px;top:2px}
+.cta__messenger--max .cta__icon{
+	width:45px;height:45px;
+	-webkit-mask-image:url("../../images/0e3e6c5ddf001ef1aebf61c4a32155b7943326bd.svg");
+	mask-image:url("../../images/0e3e6c5ddf001ef1aebf61c4a32155b7943326bd.svg");
+}
+.cta__messenger--wa{left:173px;top:0}
+.cta__messenger--wa .cta__icon{
+	width:50px;height:50px;
+	-webkit-mask-image:url("../../images/7e9bb72c1beceba9e161faa49b724820766f67f2.svg");
+	mask-image:url("../../images/7e9bb72c1beceba9e161faa49b724820766f67f2.svg");
+}

@@ -10,20 +10,13 @@
 
 			<ul class="cta__messengers">
 				<li class="cta__messenger cta__messenger--tg">
-					<a href="https://t.me/" aria-label="Telegram">
-						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/de6949c7907f53a648adfebf251e62c7c2c5e786.svg" alt="" width="48" height="40" decoding="async">
-					</a>
+					<a href="https://t.me/" aria-label="Telegram"><span class="cta__icon" aria-hidden="true"></span></a>
 				</li>
 				<li class="cta__messenger cta__messenger--max">
-					<a href="https://max.ru/" aria-label="MAX">
-						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/0e3e6c5ddf001ef1aebf61c4a32155b7943326bd.svg" alt="" width="45" height="45" decoding="async">
-						<img class="cta__max-mob" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/social-max-muted.svg" alt="" width="45" height="45" decoding="async">
-					</a>
+					<a href="https://max.ru/" aria-label="MAX"><span class="cta__icon" aria-hidden="true"></span></a>
 				</li>
 				<li class="cta__messenger cta__messenger--wa">
-					<a href="https://wa.me/74954450117" aria-label="WhatsApp">
-						<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{theme}/images/7e9bb72c1beceba9e161faa49b724820766f67f2.svg" alt="" width="50" height="50" decoding="async">
-					</a>
+					<a href="https://wa.me/74954450117" aria-label="WhatsApp"><span class="cta__icon" aria-hidden="true"></span></a>
 				</li>
 			</ul>
 		</div>

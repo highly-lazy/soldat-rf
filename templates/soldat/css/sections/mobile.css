@@ -98,23 +98,27 @@
 }
 
 /* --- Первый экран --- */
-.hero__inner{height:753px}                    /* макет: 117…870 */
-.hero__card{left:20px;top:40px;width:330px}   /* макет: текст на y=157 */
+.hero__inner{height:auto;padding-block:40px 0}   /* макет: 117…870 */
+.hero__card{position:static;width:auto}       /* макет: текст на y=157 */
 .hero__title{font-size:34px;line-height:37px}
-.hero__lead{width:330px;margin-block-start:20px;font-size:16px;line-height:20px}
+.hero__lead{width:auto;margin-block-start:20px;font-size:16px;line-height:20px}
 .hero__btn{margin-block-start:40px}
 
 .hero__figure{
-	left:20px;top:424px;                      /* макет: снимок на y=541 */
-	width:329px;height:329px;
+	position:relative;
+	left:auto;top:auto;
+	width:calc(100% - 1px);                   /* макет: снимок 329px на y=541 */
+	height:auto;
+	aspect-ratio:1;
+	margin-block-start:52px;
 }
-.hero__photo{width:329px;height:329px}
+.hero__photo{width:100%;height:100%}
 
 .hero__badge{
-	left:0;top:1px;
-	width:126.665px;height:151.34px;
-	padding:25px 0 0;
-	border-radius:24px;
+	left:0;top:.3%;
+	width:38.5%;height:46%;
+	padding:7.6% 0 0;
+	border-radius:7.3%;
 }
 .hero__badge-item{width:100%;gap:2px}
 .hero__badge-item + .hero__badge-item{display:none}   /* в макете на мобильном одна плашка */
@@ -124,15 +128,15 @@
 .hero__badge-label{width:115px;margin-block-start:4px;font-size:12px;line-height:14px}
 
 .hero__accent{
-	left:202.335px;top:177.66px;              /* макет: красный блок на x=222.3, y=718.7 */
-	width:126.665px;height:151.34px;
-	border-radius:24px;
+	left:61.5%;top:54%;                       /* макет: красный блок на x=222.3, y=718.7 */
+	width:38.5%;height:46%;
+	border-radius:7.3%;
 }
 
 
 /* --- Преимущества: на мобильном слайдер --- */
 .benefits{padding-block-start:80px}           /* макет: заголовок на y=950 */
-.benefits__title{width:325px;font-size:34px;line-height:37px}
+.benefits__title{width:auto;font-size:34px;line-height:37px}
 
 .benefits__slider{
 	margin-inline:-20px;
@@ -145,13 +149,12 @@
 .benefits__grid{
 	display:flex;
 	gap:20px;
-	width:max-content;
 	padding-inline:20px;
 	margin-block-start:27px;                  /* макет: слайд на y=1088 */
 }
 .benefits__item{
-	flex:0 0 329px;
-	width:329px;
+	flex:0 0 calc(100% - 1px);
+	width:auto;
 	gap:20px;
 	scroll-snap-align:start;
 }
@@ -186,14 +189,13 @@
 /* --- Требования --- */
 .req{padding-block-start:70px}                /* макет: панель на y=1719 */
 .req__panel{
-	width:330px;
-	max-width:100%;
+	width:100%;
 	margin-inline-start:0;
 	min-height:617px;
 	padding:25px 0 0 22px;                    /* макет: заголовок на 42/1744 */
 	border-radius:30px;
 }
-.req__title{width:285px;font-size:34px;line-height:37px}
+.req__title{width:auto;font-size:34px;line-height:37px}
 .req__list{
 	height:auto;
 	margin:19px 0 0 -2px;                     /* макет: тексты на 88/1911, иконки на 40/1917 */
@@ -206,58 +208,55 @@
 .req__item:nth-child(3),.req__item:nth-child(4){left:auto;gap:16px}
 .req__check{flex-basis:32px;width:32px;height:32px;margin-block-start:6px}
 .req__check svg{width:32px;height:32px}
-.req__item p{width:224px;font-size:18px;line-height:23px}
+.req__item p{width:auto;font-size:18px;line-height:23px}
 
 .req__jet{
-	left:-151.5px;                            /* центр самолёта в макете ≈ (180, 2296) */
-	top:268px;
-	width:663.02px;height:618.67px;
+	left:-151px;                              /* макет: чернила самолёта ≈ x 12…332, y 2204…2399 */
+	top:359px;
+	width:596.7px;height:556.8px;
 }
-.req__jet img{width:535.2px;height:394.6px}
+.req__jet img{width:481.7px;height:355.1px}
 
 /* --- Условия службы --- */
 .terms{padding-block:147px 386px}             /* макет: заголовок 2483, фото кончается на 3828 */
 .terms__inner{padding-block-start:0}
-.terms__title{width:330px;font-size:34px;line-height:37px}
+.terms__title{width:auto;font-size:34px;line-height:37px}
 
 .terms__bg{
 	left:-194px;
-	top:970px;                                /* макет: фото на y=3453 при заголовке 2483 */
+	top:1117px;                               /* макет: фото на y=3453 */
 	width:564px;height:375px;
 }
-.terms__bg img{left:-229px;top:-34px;width:1110px;height:777px;object-fit:fill}
+.terms__bg img{left:132.5px;top:-15.5px;width:526px;height:368px;object-fit:fill}
 
 .terms__grid{
-	grid-template-columns:330px;
+	grid-template-columns:1fr;
 	gap:0;
 	margin-block-start:9px;                   /* макет: карточки на y=2566 */
 }
-.terms__card{width:330px;height:146px;margin:0!important}
+.terms__card{width:auto;height:146px;margin:0!important}
 .terms__panel{inset:27px 0 0}
-.terms__mark{left:263px;top:17px;width:32px;height:32px}
+.terms__mark{left:auto;right:35px;top:17px;width:32px;height:32px}
 .terms__mark svg{width:32px;height:32px}
 .terms__text{
-	left:20px;top:47px;
-	width:287px;
+	left:20px;right:43px;top:47px;
+	width:auto;
 	font-size:18px;line-height:26px;
 }
 
 /* --- Остались вопросы --- */
 .cta{padding-block-start:0}                   /* макет: панель на y=3828 сразу за фото */
 .cta__panel{
-	width:330px;
-	max-width:100%;
+	width:100%;
 	margin-inline-start:0;
 	height:394px;
 	border-radius:30px;
 }
-.cta__body{left:21px;top:30px;width:266px}    /* макет: текст на 41/3858 */
+.cta__body{left:21px;right:21px;top:30px;width:auto}   /* макет: текст на 41/3858 */
 .cta__title{font-size:34px;line-height:37px}
 .cta__lead{margin-block-start:20px;font-size:18px;line-height:23px}
 .cta__photo{display:none}                     /* в мобильном макете панель без фото */
 .cta__messengers{left:40px;top:288px;width:223px;height:50px}
-.cta__messenger--max img:not(.cta__max-mob){display:none}
-.cta__messenger--max .cta__max-mob{display:block}
 .cta__messenger--tg{left:0;top:5px}
 .cta__messenger--max{left:92px;top:2px}
 .cta__messenger--wa{left:173px;top:0}
@@ -272,7 +271,7 @@
 	padding:50px 0 0 20px;                    /* макет: заголовок на 40/4297 */
 	border-radius:30px;
 }
-.pay__title{order:1;width:287px;font-size:34px;line-height:37px}
+.pay__title{order:1;width:auto;padding-inline-end:20px;font-size:34px;line-height:37px}
 
 .pay__tabs{
 	display:contents;                         /* вкладки становятся детьми панели */
@@ -300,7 +299,7 @@
 	gap:15px;
 	margin:31px 0 36px 2px;                   /* макет: список на 42/4507 */
 }
-.pay__item{width:237px}
+.pay__item{width:auto;padding-inline-end:20px}
 .pay__item::before{height:26px}
 .pay__sum{font-size:20px;line-height:26px}
 .pay__role{margin-block-start:6px;font-size:14px;line-height:18px}
@@ -321,11 +320,11 @@
 .family__title{font-size:34px;line-height:37px}
 .family__title br:first-of-type{display:none}   /* макет: две строки */
 .family__grid{
-	grid-template-columns:329px;
+	grid-template-columns:1fr;
 	gap:20px;
-	margin:15px 0 0 1px;                      /* макет: карточки на 21/5504 */
+	margin:15px 1px 0 1px;                    /* макет: карточки на 21/5504 */
 }
-.family__card{width:329px;height:400px;margin-inline-start:0!important}
+.family__card{width:auto;height:400px;margin-inline-start:0!important}
 .family__body{
 	left:19px;right:19px;
 	top:auto;bottom:20px;
@@ -338,22 +337,22 @@
 /* --- Меры поддержки --- */
 .support{padding-block-start:31px}            /* макет: панель на y=7195 */
 .support__inner{min-height:1055px}
-.support__panel{left:20px;top:0;width:330px;height:1055px;border-radius:30px}
+.support__panel{left:20px;right:20px;top:0;width:auto;height:1055px;border-radius:30px}
 .support__photo{
-	left:20px;top:622px;                      /* макет: фото на y=7817 */
-	width:330px;height:433px;
+	left:20px;right:20px;top:622px;           /* макет: фото на y=7817 */
+	width:auto;height:433px;
 	border-radius:0 0 30px 30px;
 }
 .support__photo img{left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
-.support__title{left:40px;top:55px;width:287px;font-size:34px;line-height:37px}
-.support__list{left:33px;top:201px;width:300px;gap:20px}
+.support__title{left:40px;right:40px;top:55px;width:auto;font-size:34px;line-height:37px}
+.support__list{left:33px;right:17px;top:201px;width:auto;gap:20px}
 .support__item,.support__item--center,.support__item--end{align-items:flex-start;gap:20px}
 .support__item--center{align-items:center}
 .support__text{font-size:18px;line-height:20px}
 
 /* --- Этапы подготовки: слайдер --- */
 .steps{padding-block:76px 0}                  /* макет: заголовок на y=8326 */
-.steps__title{width:330px;font-size:34px;line-height:37px}
+.steps__title{width:auto;font-size:34px;line-height:37px}
 .steps__grid{
 	display:flex;
 	grid-template-columns:none;
@@ -367,8 +366,8 @@
 }
 .steps__grid::-webkit-scrollbar{display:none}
 .steps__card{
-	flex:0 0 329px;
-	width:329px;
+	flex:0 0 calc(100% - 1px);
+	width:auto;
 	height:327px;
 	margin:0!important;
 	top:0!important;
@@ -378,9 +377,9 @@
 .steps__icon{left:40px;top:28px;width:70px;height:68px}
 .steps__num{left:211px;top:34px;width:34px;font-size:50px;line-height:57px}
 .steps__total{left:248px;top:41px;width:22px;font-size:18px;line-height:20px}
-.steps__body{left:39px;top:113px;width:241px;gap:14px}
+.steps__body{left:39px;right:39px;top:113px;width:auto;gap:14px}
 .steps__name{font-size:20px;line-height:22px}
-.steps__text{width:241px;font-size:16px;line-height:20px}
+.steps__text{width:auto;font-size:16px;line-height:20px}
 .steps__nav{
 	display:flex;
 	gap:19px;
@@ -394,46 +393,49 @@
 	flex-direction:column;
 	height:auto;
 }
-.know__title{position:static;width:330px;font-size:34px;line-height:37px}
+.know__title{position:static;width:auto;font-size:34px;line-height:37px}
 .know__soldier{
 	position:static;
 	left:auto;top:auto;
 	order:3;
-	width:328px;height:309px;
+	width:calc(100% - 2px);height:auto;
+	aspect-ratio:328/309;
 	margin-block-start:20px;
+	border-radius:30px;
+	background:var(--white);
 	overflow:hidden;
 }
-/* в мобильном макете снимок увеличен и обрезан по карточке */
+/* в мобильном макете это отдельная белая карточка с фото */
 .know__soldier img{
-	width:559px;height:486px;
+	width:492px;height:428px;
 	max-width:none;
-	margin:-61px 0 0 -231px;
+	margin:-11px 0 0 -142px;
 }
 .know__card{position:relative;left:auto;top:auto;order:2;margin-block-start:23px}   /* макет: карточки с y=9010 */
-.know__card--red{left:auto;top:auto;width:328px;height:309px;padding:27px 0 0 18px;border-radius:30px}
-.know__card--blue{left:auto;top:auto;order:4;width:330px;height:325px;margin-block-start:20px;padding:26px 0 0 18px;border-radius:30px}
-.know__card--tall{left:auto;top:auto;order:5;width:328px;height:345px;margin-block-start:20px;padding:25px 0 0 18px;border-radius:30px}
+.know__card--red{left:auto;top:auto;width:100%;height:309px;padding:27px 18px 0;border-radius:30px}
+.know__card--blue{left:auto;top:auto;order:4;width:100%;height:325px;margin-block-start:20px;padding:26px 18px 0;border-radius:30px}
+.know__card--tall{left:auto;top:auto;order:5;width:100%;height:345px;margin-block-start:20px;padding:25px 18px 0;border-radius:30px}
 .know__name{width:auto!important;font-size:20px;line-height:22px}
 .know__text{width:auto!important;margin-block-start:14px;font-size:16px;line-height:21px}
-.know__card--red .know__text{width:289px!important}
-.know__card--blue .know__text{width:290px!important}
-.know__card--tall .know__text{width:292px!important}
+.know__card--red .know__text{width:auto!important}
+.know__card--blue .know__text{width:auto!important}
+.know__card--tall .know__text{width:auto!important}
 
 /* --- Статьи --- */
 .art{padding-block-start:69px}                /* макет: заголовок на y=10427 */
 .art__title{font-size:34px;line-height:37px}
 .art__grid{
-	grid-template-columns:331px;
+	grid-template-columns:1fr;
 	column-gap:0;
 	row-gap:20px;
-	margin:25px 0 0 1px;                      /* макет: карточки на 21/10489 */
+	margin:25px -1px 0 1px;                   /* макет: карточки на 21/10489 */
 }
-.art__card,.art__link{width:331px;height:399px}
-.art__photo,.art__photo img{width:331px;height:190px}
-.art__body{left:20px;top:214px;width:291px;gap:14px}
+.art__card,.art__link{width:auto;height:399px}
+.art__photo,.art__photo img{width:100%;height:190px}
+.art__body{left:20px;right:20px;top:214px;width:auto;gap:14px}
 .art__date{font-size:14px}
 .art__name{font-size:20px;line-height:22px}
-.art__more{top:351px;width:331px}
+.art__more{top:351px;width:100%}
 .art__more-btn{
 	margin:42px 0 0 47px;                     /* макет: кнопка на 67/11768 */
 }
@@ -442,14 +444,14 @@
 .contact{padding-block-start:84px}            /* макет: панель на y=11916 */
 .contact__panel{height:718px;border-radius:30px}
 .contact__photo{left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:20% 40%}
-.contact__body{left:20px;top:29px;width:286px}
+.contact__body{left:20px;right:24px;top:29px;width:auto}
 .contact__title{font-size:34px;line-height:37px}
-.contact__lead{margin-block-start:20px;width:281px;font-size:16px;line-height:20px}
-.contact__form{left:20px;top:322px;width:286px}
-.contact__input{width:286px}
+.contact__lead{margin-block-start:20px;width:auto;font-size:16px;line-height:20px}
+.contact__form{left:20px;right:24px;top:322px;width:auto}
+.contact__input{width:100%}
 .contact__consent{margin-block-start:24px}
-.contact__consent-text{width:239px;font-size:16px;line-height:21px}
-.contact__submit{width:286px;margin-block-start:28px;justify-content:center}
+.contact__consent-text{width:auto;font-size:16px;line-height:21px}
+.contact__submit{width:100%;margin-block-start:28px;justify-content:center}
 
 /* --- Подвал --- */
 .footer{padding-block:39px 33px}              /* макет: линия на y=12673 */
@@ -475,7 +477,7 @@
 .footer__messenger--max a{position:relative}
 .footer__copy{
 	order:3;
-	width:330px;
+	width:100%;
 	margin-block-start:21px;                  /* макет: копирайт на y=12800 */
 	text-align:center;
 }
@@ -490,7 +492,7 @@
 
 /* --- Страница «Статьи» --- */
 .list{padding-block-start:39px}               /* макет: «Назад» на y=156 */
-.list__title{margin:32px 0 0 2px;font-size:34px;line-height:37px}
+.list__title{width:auto;margin:32px 0 0 2px;font-size:34px;line-height:37px}
 .list__tabs{
 	width:auto;
 	margin:26px -20px 0;                      /* макет: полоса фильтров на y=287 */
@@ -504,7 +506,7 @@
 .list__tabs::after{content:none}
 .list__tab{font-size:20px;line-height:26px;padding-block-end:10px}
 .list__grid{
-	grid-template-columns:331px;
+	grid-template-columns:1fr;
 	column-gap:0;
 	row-gap:20px;
 	margin:41px 0 0 2px;                      /* макет: карточки на 22/364 */
@@ -515,13 +517,13 @@
 
 /* --- Страница «Статья» --- */
 .post{padding-block-start:25px}               /* макет: обложка на y=142 */
-.post__cover{width:330px;margin-inline-start:0;height:438px;border-radius:30px}
+.post__cover{width:100%;margin-inline-start:0;height:438px;border-radius:30px}
 .post__back{left:20px;top:14px;font-size:20px}
-.post__date{left:19px;top:103px;width:290px;font-size:16px;line-height:20px}
-.post__title{left:20px;top:149px;width:289px;font-size:34px;line-height:37px}
+.post__date{left:19px;right:19px;top:103px;width:auto;font-size:16px;line-height:20px}
+.post__title{left:20px;right:20px;top:149px;width:auto;font-size:34px;line-height:37px}
 
 .post__body{
-	width:329px;
+	width:calc(100% - 1px);
 	margin:42px 0 0;                          /* макет: текст на y=622 */
 	font-size:16px;
 	line-height:21px;
@@ -530,8 +532,8 @@
 .post__lead{gap:16px}
 .post__body h2{font-size:24px}
 .post__block{gap:10px}
-.post__faq-title{width:331px;margin:102px 0 0;font-size:34px;line-height:37px}   /* макет: y=1851 */
-.post__faq{width:331px;margin-block-start:24px;gap:16px}
+.post__faq-title{width:100%;margin:102px 0 0;font-size:34px;line-height:37px}   /* макет: y=1851 */
+.post__faq{width:100%;margin-block-start:24px;gap:16px}
 .post__faq-row{flex-direction:column;align-items:flex-start;gap:8px}
 .post__faq-row + .post__faq-row{padding-block-start:16px}
 .post__faq dt{flex:none;width:100%;font-size:20px;line-height:26px}
@@ -542,7 +544,7 @@
 
 /* --- Страница «Ответы на вопросы» --- */
 .faq{padding-block-start:39px}                /* макет: «Назад» на y=156 */
-.faq__title{margin:32px 0 0 2px;font-size:34px;line-height:37px}
+.faq__title{width:auto;margin:32px 0 0 2px;font-size:34px;line-height:37px}
 .faq__tabs{
 	width:auto;
 	gap:20px;
@@ -555,7 +557,7 @@
 .faq__tabs::after{content:none}
 
 .faq__layout{
-	grid-template-columns:330px;
+	grid-template-columns:1fr;
 	column-gap:0;
 	row-gap:27px;
 	margin-block-start:19px;                  /* макет: аккордеон на y=372 */
@@ -570,20 +572,20 @@
 .faq__btn > span:first-child{max-width:270px}
 .faq__sign{flex-basis:36px;width:36px;height:36px}
 .faq__sign::before,.faq__sign::after{width:36px;height:4px;margin:-2px 0 0 -18px}
-.faq__a{padding:6px 20px 17px}
-.faq__a p{width:262px;font-size:16px;line-height:21px}
+.faq__a{padding:6px 48px 17px 20px}   /* макет: ответ шириной 262px */
+.faq__a p{width:auto;font-size:16px;line-height:21px}
 
 .ask{
-	width:330px;
+	width:100%;
 	min-height:777px;
 	margin-block-start:0;
 	padding:31px 0 0 19px;                    /* макет: заголовок на 39/1495 */
 	border-radius:30px;
 }
-.ask__title{width:287px;font-size:34px;line-height:37px}
-.ask__lead{width:278px;margin-block-start:20px;font-size:18px;line-height:20px}
+.ask__title{width:auto;font-size:34px;line-height:37px}
+.ask__lead{width:auto;margin-block-start:20px;font-size:18px;line-height:20px}
 .ask__form{margin-block-start:30px}           /* макет: первое поле на y=1679 */
-.ask__input{width:287px;padding-inline:14px}
+.ask__input{width:calc(100% - 19px);padding-inline:14px}
 .ask__input--area{height:141px}
 .ask__consent{margin-block-start:24px}
 .ask__submit{margin-block-start:28px}
