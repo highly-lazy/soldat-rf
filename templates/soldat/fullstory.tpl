@@ -1,7 +1,7 @@
 <article class="post">
 	<div class="container">
 		<div class="post__cover">
-			<img class="post__cover-img" src="{thumb-url}" alt="{title}" width="1397" height="438" decoding="async">
+			<img class="post__cover-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy-src="{thumb-url}" alt="{title}" width="1397" height="438" decoding="async">
 			<span class="post__veil" aria-hidden="true"></span>
 
 			<a class="post__back" href="{home}/stati.html">
