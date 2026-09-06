@@ -90,3 +90,15 @@
 	height: 100%;
 	object-fit: cover;
 }
+
+/* На странице статьи фон светлый: лид тёмный, иконки белые (нода 992:2763).
+   На мобильном фото скрыто и панель синяя — там остаются исходные цвета. */
+@media (min-width: 601px) {
+	.cta--article .cta__lead {
+		color: var(--text);
+	}
+
+	.cta--article .cta__icon {
+		background-color: var(--white);
+	}
+}
