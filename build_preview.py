@@ -21,7 +21,7 @@ PAGES = {
     },
     "statya.html": {
         "title": "Где выгоднее подписать контракт в 2026 году — солдат.рф",
-        "sections": ["header", "article", "cta", "contact", "footer"],
+        "sections": ["header", "article", "cta-article", "contact", "footer"],
         "body_class": "is-inner is-article",
     },
     "otvety.html": {

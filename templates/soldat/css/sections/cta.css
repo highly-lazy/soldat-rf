@@ -81,3 +81,12 @@
 	-webkit-mask-image:url("../../images/7e9bb72c1beceba9e161faa49b724820766f67f2.svg");
 	mask-image:url("../../images/7e9bb72c1beceba9e161faa49b724820766f67f2.svg");
 }
+
+/* На странице статьи — своя картинка, вписанная в панель 1401×394 */
+.cta--article .cta__photo {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

@@ -21,5 +21,5 @@
 	</div>
 </article>
 
-{include file="sections/cta.tpl"}
+{include file="sections/cta-article.tpl"}
 {include file="sections/contact.tpl"}
