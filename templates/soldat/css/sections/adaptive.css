@@ -30,7 +30,7 @@
 .family__title{max-width:440px}
 
 /* Первый экран */
-.hero__inner{height:auto;min-height:0;padding-block:40px 0}
+.hero__inner{height:auto;min-height:calc(96px + min(800px, 100vw - 620px));padding-block:40px 0}
 .hero__card{position:static;width:min(560px,52%)}
 .hero__figure{
 	position:absolute;
@@ -241,13 +241,14 @@
 .family__inner{grid-template-columns:1fr}
 .family__grid{margin-block-start:32px}
 .hero__card{width:min(560px,58%)}
+.hero__inner{min-height:calc(96px + min(800px, 100vw - 520px))}
 .hero__figure{width:min(800px,calc(100vw - 520px))}
 }
 
 /* --------------------------------------------------------------- ≤900 ---- */
 @media (min-width:601px) and (max-width:900px){
 .header__city{display:none}
-.hero__inner{padding-block:32px 0}
+.hero__inner{min-height:0;padding-block:32px 0}
 .hero__card{position:static;width:100%}
 .hero__figure{position:static;width:min(560px,100%);margin:32px auto 0}
 .hero__title{font-size:clamp(34px,5.5vw,56px);line-height:1.12}
