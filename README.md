@@ -1,5 +1,9 @@
 # Защитник.рус — DLE шаблон
 
+**Онлайн-превью:** https://highly-lazy.github.io/zashitnik-rus/ (и `/article.html`)
+Публикуется автоматически при пуше в `main` — workflow `.github/workflows/pages.yml`
+запускает `build_preview.py` и отдаёт папку `templates/zashitnik` в GitHub Pages.
+
 Вёрстка лендинга «Контракт на СВО — Гражданину Беларуси» под DataLife Engine.
 
 ## Структура
