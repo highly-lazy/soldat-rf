@@ -1570,7 +1570,10 @@
 	.support__title {
 		top: 35px;
 	}
+}
 
+
+@media (max-width: 375px) {
 	.support__text {
 		font-size: 17px;
 		line-height: 20px;

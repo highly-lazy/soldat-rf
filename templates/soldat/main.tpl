@@ -8,9 +8,9 @@
 	<link rel="icon" href="{theme}/images/main-favicon.svg" type="image/svg+xml">
 	<link rel="preload" href="{theme}/fonts/Onest-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="{theme}/fonts/Onest-700-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="stylesheet" href="{theme}/css/style.css?ver=1.2.5">
-	<link rel="stylesheet" href="{theme}/css/sections.css?ver=1.2.5">
-	<link rel="stylesheet" href="{theme}/css/engine.css?ver=1.2.5">
+	<link rel="stylesheet" href="{theme}/css/style.css?ver=1.2.6">
+	<link rel="stylesheet" href="{theme}/css/sections.css?ver=1.2.6">
+	<link rel="stylesheet" href="{theme}/css/engine.css?ver=1.2.6">
 </head>
 <body>
 
@@ -50,6 +50,6 @@
 
 {include file="sections/footer.tpl"}
 
-<script src="{theme}/js/main.js?ver=1.2.5" defer></script>
+<script src="{theme}/js/main.js?ver=1.2.6" defer></script>
 </body>
 </html>
