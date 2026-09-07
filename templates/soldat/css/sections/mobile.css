@@ -1340,12 +1340,13 @@
 		left: 20px;
 		right: 20px;
 		top: auto;
-		width: 82vw;
+		width: calc(100vw - 90px);
 		font-size: 34px;
 		line-height: 37px;
 		/* bottom: 20px; */
 		padding-bottom: 30px;
 		margin-top: 140px;
+		
 	}
 
 	.post__body {
