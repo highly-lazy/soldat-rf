@@ -1570,4 +1570,13 @@
 	.support__title {
 		top: 35px;
 	}
+
+	.support__text {
+		font-size: 17px;
+		line-height: 20px;
+	}
+
+	.support__text br {
+		display: none;
+	}
 }
