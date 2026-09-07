@@ -1,0 +1,14 @@
+<!doctype html><meta charset=utf-8><style>html,body{margin:0}iframe{border:0;display:block;width:1600px;height:3000px}</style>
+<iframe id=f src="index.html" scrolling="no"></iframe>
+<script>
+document.getElementById('f').onload=function(){setTimeout(function(){
+ var d=f.contentDocument,w=f.contentWindow,o=[];
+ var box=d.querySelector('.header__city'); var rb=box.getBoundingClientRect();
+ var cb=w.getComputedStyle(box);
+ o.push('city x'+rb.x.toFixed(1)+' y'+rb.y.toFixed(1)+' '+rb.width.toFixed(1)+'x'+rb.height.toFixed(1)+' lh:'+cb.lineHeight+' align:'+cb.alignItems);
+ ['.header__city-pin','.header__city-label','.header__city-value','.header__city-caret'].forEach(function(s){
+  var e=box.querySelector(s),r=e.getBoundingClientRect(),cs=w.getComputedStyle(e);
+  o.push(s.replace('.header__city-','')+' x'+r.x.toFixed(1)+' y'+r.y.toFixed(1)+' '+r.width.toFixed(1)+'x'+r.height.toFixed(1)+' mt:'+cs.marginTop+' ms:'+cs.marginInlineStart+' lh:'+cs.lineHeight);});
+ document.title=o.join(' | ');
+},2500)}
+</script>

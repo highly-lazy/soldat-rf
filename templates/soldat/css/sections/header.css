@@ -25,12 +25,13 @@
 	background:none;
 	line-height:23px;
 }
-.header__city-pin{flex:0 0 15px;width:15px;height:21px;color:var(--muted)}
+.header__city-pin{flex:0 0 15px;width:15px;height:21px;margin-block-start:-5px;color:var(--muted)}
 .header__city-label{font-size:18px;color:var(--muted)}
 .header__city-value{font-size:18px;color:var(--ink)}
 .header__city-caret{
 	flex:0 0 18px;width:18px;height:18px;
 	margin-inline-start:-4px;          /* макет: зазор 4px внутри чипа «Москва» */
+	margin-block-start:-4px;           /* иконки по кэпхайту текста, а не по line-box */
 	color:var(--ink);
 	transform:rotate(90deg);
 }
