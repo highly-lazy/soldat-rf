@@ -629,10 +629,10 @@
 
 	.pay__title {
 		order: 1;
-        width: auto;
-        padding-inline-end: 20px;
-        font-size: 32px;
-        line-height: 37px;
+		width: auto;
+		padding-inline-end: 20px;
+		font-size: 32px;
+		line-height: 37px;
 	}
 
 	.pay__tabs {
@@ -1007,9 +1007,9 @@
 		left: auto;
 		top: auto;
 		width: 100%;
-		height: 309px;
-		padding: 27px 18px 0;
-		border-radius: 30px
+		height: 100%;
+		padding: 27px 18px 20px;
+		border-radius: 30px;
 	}
 
 	.know__card--blue {
@@ -1017,10 +1017,10 @@
 		top: auto;
 		order: 4;
 		width: 100%;
-		height: 325px;
+		height: auto;
 		margin-block-start: 20px;
-		padding: 26px 18px 0;
-		border-radius: 30px
+		padding: 26px 18px 20px;
+		border-radius: 30px;
 	}
 
 	.know__card--tall {
@@ -1028,10 +1028,11 @@
 		top: auto;
 		order: 5;
 		width: 100%;
-		height: 345px;
+		height: auto;
 		margin-block-start: 20px;
-		padding: 25px 18px 0;
-		border-radius: 30px
+		padding: 25px 18px 20px;
+		border-radius: 30px;
+		right: auto;
 	}
 
 	.know__name {
@@ -1532,7 +1533,7 @@
 	/* макет: первое поле на y=1679 */
 	.ask__input {
 		width: 100%;
-        padding-inline: 14px;
+		padding-inline: 14px;
 	}
 
 	.ask__input--area {
