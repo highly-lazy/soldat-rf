@@ -13,11 +13,12 @@
 	width: 1397px;
 	max-width: 100%;
 	margin-inline-start: 1px;
-	/* макет: обложка с x=101 */
-	height: 438px;
+	min-height: 438px;
 	border-radius: var(--r-card);
 	overflow: hidden;
 	background: var(--navy, #0257d5);
+	display: flex;
+	flex-direction: column;
 }
 
 .post__cover-img {
@@ -30,15 +31,14 @@
 }
 
 .post__veil {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 396px;
-	/* макет: вуаль с y=194 */
-	border-radius: 0 0 var(--r-card) var(--r-card);
-	background: linear-gradient(180deg, rgba(2, 87, 213, 0) 32.309%, rgba(2, 87, 213, .89) 72.338%);
-	pointer-events: none;
+position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 110%;
+    border-radius: 0 0 var(--r-card) var(--r-card);
+    background: linear-gradient(180deg, rgba(2, 87, 213, 0) 32.309%, rgba(2, 87, 213, .89) 72.338%);
+    pointer-events: none;
 }
 
 @media (max-width: 600px) {
@@ -95,17 +95,18 @@
 }
 
 .post__title {
-	position: absolute;
+	position: relative;
 	left: 49px;
-	top: 269px;
-	/* макет: 150/421 */
+	margin-top: 269px;
 	z-index: 2;
-	margin: 0;
+	/* margin: 0; */
 	width: 1277px;
 	font-weight: 700;
 	font-size: 56px;
 	line-height: 62px;
 	color: var(--white);
+	display: block;
+	padding-bottom: 45px;
 }
 
 /* --- текст статьи --- */

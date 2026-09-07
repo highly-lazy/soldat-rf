@@ -590,10 +590,10 @@
 	}
 
 	.post__title {
-		width: auto;
-		right: 49px;
+		width: 84vw;
+		/* right: 49px; */
 		font-size: clamp(34px, 4vw, 56px);
-		line-height: 1.12
+		line-height: 1.12;
 	}
 
 	.post__body,
@@ -988,10 +988,12 @@
 
 	.post__title {
 		/* position: static; */
-		margin: 24px 0 0;
-		top: unset;
-		bottom: 46px;
-		right: 20px;
+		/* margin: 24px 0 0; */
+		top: auto;
+		bottom: auto;
+		/* right: 20px; */
+		margin-top: 269px;
+		width: 84vw;
 	}
 
 	.post__cover {
@@ -1002,9 +1004,10 @@
 	.post__date {
 		/* position: static; */
 		margin: 16px 0 0;
-		bottom: 175px;
-		top: unset;
+		/* bottom: 175px; */
+		/* top: unset; */
 		right: 20px;
+		top: 223px;
 	}
 
 	.post__cover+.post__date {

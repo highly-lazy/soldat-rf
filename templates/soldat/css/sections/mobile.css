@@ -1317,8 +1317,8 @@
 	.post__cover {
 		width: 100%;
 		margin-inline-start: 0;
-		height: 438px;
-		border-radius: 30px
+		min-height: 438px;
+		border-radius: 30px;
 	}
 
 	.post__back {
@@ -1340,10 +1340,12 @@
 		left: 20px;
 		right: 20px;
 		top: auto;
-		width: auto;
+		width: 82vw;
 		font-size: 34px;
 		line-height: 37px;
-		bottom: 20px;
+		/* bottom: 20px; */
+		padding-bottom: 30px;
+		margin-top: 140px;
 	}
 
 	.post__body {
