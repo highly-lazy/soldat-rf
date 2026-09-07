@@ -1192,7 +1192,8 @@
 	.contact__submit {
 		width: 100%;
 		margin-block-start: 28px;
-		justify-content: center
+		justify-content: center;
+		padding: 20px 10px;
 	}
 
 	/* --- Подвал --- */
@@ -1556,4 +1557,17 @@
 		padding-block-end: 50px
 	}
 
+}
+
+
+
+@media (max-width: 370px) {
+	.contact__title {
+		font-size: 28px;
+		line-height: 1.2;
+	}
+
+	.support__title {
+		top: 35px;
+	}
 }
