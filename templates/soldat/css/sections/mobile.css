@@ -493,10 +493,10 @@
 
 	.terms__bg {
 		left: -194px;
-		top: 1117px;
-		/* макет: фото на y=3453 */
+		top: auto;
 		width: 564px;
 		height: 375px;
+		bottom: 0px;
 	}
 
 	.terms__bg img {
@@ -517,6 +517,7 @@
 	.terms__card {
 		min-height: 146px;
 		height: auto;
+		width: auto;
 	}
 
 	.terms__panel {
@@ -628,10 +629,10 @@
 
 	.pay__title {
 		order: 1;
-		width: auto;
-		padding-inline-end: 20px;
-		font-size: 34px;
-		line-height: 37px
+        width: auto;
+        padding-inline-end: 20px;
+        font-size: 32px;
+        line-height: 37px;
 	}
 
 	.pay__tabs {
@@ -1530,8 +1531,8 @@
 
 	/* макет: первое поле на y=1679 */
 	.ask__input {
-		width: calc(100% - 19px);
-		padding-inline: 14px
+		width: 100%;
+        padding-inline: 14px;
 	}
 
 	.ask__input--area {

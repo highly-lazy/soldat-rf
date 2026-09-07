@@ -1,186 +1,284 @@
 /* ==========================================================================
    Шапка — верхняя строка (макет y 0…50) + панель навигации (y 51…121)
    ========================================================================== */
-.header{
-	position:relative;
-	z-index:20;
+.header {
+	position: relative;
+	z-index: 20;
 }
 
 /* --- верхняя строка --- */
-.header__top{background:var(--bg)}
-.header__top-inner{
-	display:flex;
-	align-items:flex-start;
-	height:51px;                       /* линия-разделитель на y=50 */
-	border-bottom:1px solid rgba(140,141,185,.35);
+.header__top {
+	background: var(--bg)
 }
 
-.header__city{
-	display:inline-flex;
-	align-items:center;
-	gap:8px;
-	margin:15px 0 0 1px;               /* макет: иконка на x=101/y=15 при контейнере 100 */
-	padding:0;
-	border:0;
-	background:none;
-	line-height:23px;
+.header__top-inner {
+	display: flex;
+	align-items: flex-start;
+	height: 51px;
+	/* линия-разделитель на y=50 */
+	border-bottom: 1px solid rgba(140, 141, 185, .35);
 }
-.header__city-pin{flex:0 0 15px;width:15px;height:21px;margin-block-start:-5px;color:var(--muted)}
-.header__city-label{font-size:18px;color:var(--muted)}
-.header__city-value{font-size:18px;color:var(--ink)}
-.header__city-caret{
-	flex:0 0 18px;width:18px;height:18px;
-	margin-inline-start:-4px;          /* макет: зазор 4px внутри чипа «Москва» */
-	margin-block-start:-4px;           /* иконки по кэпхайту текста, а не по line-box */
-	color:var(--ink);
-	transform:rotate(90deg);
+
+.header__city {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin: 15px 0 0 1px;
+	/* макет: иконка на x=101/y=15 при контейнере 100 */
+	padding: 0;
+	border: 0;
+	background: none;
+	line-height: 23px;
+}
+
+.header__city-pin {
+	flex: 0 0 15px;
+	width: 15px;
+	height: 21px;
+	margin-block-start: -5px;
+	color: var(--muted)
+}
+
+.header__city-label {
+	font-size: 18px;
+	color: var(--muted)
+}
+
+.header__city-value {
+	font-size: 18px;
+	color: var(--ink)
+}
+
+.header__city-caret {
+	flex: 0 0 18px;
+	width: 18px;
+	height: 18px;
+	margin-inline-start: -4px;
+	/* макет: зазор 4px внутри чипа «Москва» */
+	margin-block-start: -4px;
+	/* иконки по кэпхайту текста, а не по line-box */
+	color: var(--ink);
+	transform: rotate(90deg);
 }
 
 /* --- выбор города (выпадающий список) --- */
-.city{position:relative}
+.city {
+	position: relative
+}
 
 .header__city,
-.header__nav-city{
-	border:0;
-	background:none;
-	font:inherit;
-	color:inherit;
+.header__nav-city {
+	border: 0;
+	background: none;
+	font: inherit;
+	color: inherit;
 }
+
 .header__city-value,
-.header__city-caret{transition:color .2s,transform .2s}
+.header__city-caret {
+	transition: color .2s, transform .2s
+}
+
 .header__city:hover .header__city-value,
 .header__city:hover .header__city-caret,
 .header__nav-city:hover .header__city-value,
 .header__nav-city:hover .header__city-caret,
 [aria-expanded="true"] .header__city-value,
-[aria-expanded="true"] .header__city-caret{color:var(--red)}
-[aria-expanded="true"] .header__city-caret{transform:rotate(-90deg)}
+[aria-expanded="true"] .header__city-caret {
+	color: var(--red)
+}
 
-.city__list{
-	position:absolute;
-	left:0;
-	top:calc(100% + 8px);
-	z-index:40;
-	width:262px;
-	max-height:320px;
-	overflow-y:auto;
-	margin:0;
-	padding:10px 0;
-	border-radius:var(--r-md);
-	background:var(--white);
-	box-shadow:0 20px 40px rgba(69,69,85,.18);
+[aria-expanded="true"] .header__city-caret {
+	transform: rotate(-90deg)
 }
-.city__item{
-	display:block;
-	width:100%;
-	padding:7px 22px;
-	border:0;
-	background:none;
-	font-size:18px;
-	line-height:23px;
-	text-align:left;
-	color:var(--ink);
-	transition:color .2s;
+
+.city__list {
+	position: absolute;
+	left: 0;
+	top: calc(100% + 8px);
+	z-index: 40;
+	width: 262px;
+	max-height: 320px;
+	overflow-y: auto;
+	margin: 0;
+	padding: 10px 0;
+	border-radius: var(--r-md);
+	background: var(--white);
+	box-shadow: 0 20px 40px rgba(69, 69, 85, .18);
 }
+
+.city__item {
+	display: block;
+	width: 100%;
+	padding: 7px 22px;
+	border: 0;
+	background: none;
+	font-size: 18px;
+	line-height: 23px;
+	text-align: left;
+	color: var(--ink);
+	transition: color .2s;
+}
+
 .city__item:hover,
-.city__item:focus-visible{color:var(--red)}
-.city__item[aria-selected="true"]{color:var(--blue)}
-
-.header__contacts{
-	display:flex;
-	align-items:flex-start;
-	margin-inline-start:auto;
-	margin-inline-end:1px;             /* макет: правый край блока на x=1499 */
+.city__item:focus-visible {
+	color: var(--red)
 }
 
-.header__phone{
-	display:inline-flex;
-	align-items:center;
-	gap:9px;
-	margin-block-start:15px;
-	font-size:18px;
-	line-height:23px;
-	color:var(--ink);
-	white-space:nowrap;
-	transition:color .2s;
-}
-.header__phone:hover{color:var(--red)}
-.header__phone-icon{flex:0 0 21px;width:21px;height:21px}
-
-.header__hint{
-	margin-block-start:14px;
-	font-size:12px;
-	line-height:1;
-	color:var(--muted);
-}
-.header__hint:first-of-type{margin-inline-start:18px}
-
-.header__divider{
-	width:1px;height:23px;
-	margin-block-start:15px;
-	margin-inline:28px 30px;
-	background:rgba(140,141,185,.5);
+.city__item[aria-selected="true"] {
+	color: var(--blue)
 }
 
-.header__messengers{
-	display:flex;
-	align-items:center;
-	gap:16px;
-	margin-block-start:16px;
-	margin-inline-start:15px;
+.header__contacts {
+	display: flex;
+	align-items: flex-start;
+	margin-inline-start: auto;
+	margin-inline-end: 1px;
+	/* макет: правый край блока на x=1499 */
 }
-.header__messengers a{
-	display:grid;
-	place-items:center;
-	transition:opacity .2s;
+
+.header__phone {
+	display: inline-flex;
+	align-items: center;
+	gap: 9px;
+	margin-block-start: 15px;
+	font-size: 18px;
+	line-height: 23px;
+	color: var(--ink);
+	white-space: nowrap;
+	transition: color .2s;
 }
-.header__messengers li:nth-child(1) a{width:22px;height:18px}
-.header__messengers li:nth-child(2) a{width:20px;height:19px}
-.header__messengers li:nth-child(3) a{width:20px;height:20px}
-.header__messengers a:hover{opacity:.7}
+
+.header__phone:hover {
+	color: var(--red)
+}
+
+.header__phone-icon {
+	flex: 0 0 21px;
+	width: 21px;
+	height: 21px
+}
+
+.header__hint {
+	margin-block-start: 14px;
+	font-size: 12px;
+	line-height: 1;
+	color: var(--muted);
+}
+
+.header__hint:first-of-type {
+	margin-inline-start: 18px
+}
+
+.header__divider {
+	width: 1px;
+	height: 23px;
+	margin-block-start: 15px;
+	margin-inline: 28px 30px;
+	background: rgba(140, 141, 185, .5);
+}
+
+.header__messengers {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-block-start: 16px;
+	margin-inline-start: 15px;
+}
+
+.header__messengers a {
+	display: grid;
+	place-items: center;
+	transition: opacity .2s;
+}
+
+.header__messengers li:nth-child(1) a {
+	width: 22px;
+	height: 18px
+}
+
+.header__messengers li:nth-child(2) a {
+	width: 20px;
+	height: 19px
+}
+
+.header__messengers li:nth-child(3) a {
+	width: 20px;
+	height: 20px
+}
+
+.header__messengers a:hover {
+	opacity: .7
+}
 
 /* --- панель навигации --- */
-.header__bar{
-	position:sticky;
-	top:0;
-	z-index:30;
-	background:rgba(233,232,240,.7);
-	backdrop-filter:blur(4px);
-	-webkit-backdrop-filter:blur(4px);
-}
-.header__bar-inner{
-	display:flex;
-	align-items:flex-start;
-	height:70px;
+.header__bar {
+	position: sticky;
+	top: 0;
+	z-index: 30;
+	background: rgba(233, 232, 240, .7);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
 }
 
-.header__logo{flex:0 0 173px;width:173px;margin-block-start:21px}
-.header__logo img{width:173px;height:30px}
-
-.header__nav{margin-block-start:25px;margin-inline-start:auto}
-.header__menu{
-	display:flex;
-	align-items:center;
-	gap:30px;
+.header__bar-inner {
+	display: flex;
+	align-items: flex-start;
+	height: 70px;
 }
-.header__menu a{
-	font-size:18px;
-	line-height:23px;
-	color:var(--ink);
-	transition:color .2s;
-}
-.header__menu a:hover{color:var(--red)}
 
-.header__cta{
-	flex:0 0 auto;
-	margin-block-start:13px;
-	margin-inline-start:36px;          /* макет: кнопка 1245…1500, меню кончается на 1209 */
-	height:48px;
-	padding:0 26px;
-	white-space:nowrap;
+.header__logo {
+	flex: 0 0 173px;
+	width: 173px;
+	margin-block-start: 21px
+}
+
+.header__logo img,
+.header__logo svg {
+	width: 173px;
+	height: 30px;
+	display: block;
+}
+
+.header__nav {
+	margin-block-start: 25px;
+	margin-inline-start: auto
+}
+
+.header__menu {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.header__menu a {
+	font-size: 18px;
+	line-height: 23px;
+	color: var(--ink);
+	transition: color .2s;
+}
+
+.header__menu a:hover {
+	color: var(--red)
+}
+
+.header__cta {
+	flex: 0 0 auto;
+	margin-block-start: 13px;
+	margin-inline-start: 36px;
+	/* макет: кнопка 1245…1500, меню кончается на 1209 */
+	height: 48px;
+	padding: 0 26px;
+	white-space: nowrap;
 }
 
 .city--nav,
-.header__nav-cta{display:none}   /* только в мобильном меню */
+.header__nav-cta {
+	display: none
+}
 
-.header__burger{display:none}
+/* только в мобильном меню */
+
+.header__burger {
+	display: none
+}

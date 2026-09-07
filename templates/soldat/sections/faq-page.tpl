@@ -15,7 +15,6 @@
 		</div>
 
 		<div class="faq__layout">
-			<!-- Ответы на вопросы 2–14 — демо-текст для вёрстки: в макете раскрыт только первый. -->
 			<ul class="faq__list" id="faq-list-ru">
 				<li class="faq__item is-open">
 					<h3 class="faq__q">
@@ -145,7 +144,6 @@
 				</li>
 			</ul>
 
-			<!-- Вкладка «Для иностранцев»: тексты демонстрационные, требуют согласования с клиентом. -->
 			<ul class="faq__list" id="faq-list-foreign" hidden>
 				<li class="faq__item is-open">
 					<h3 class="faq__q">
@@ -225,7 +223,6 @@
 				<h2 class="ask__title">Задать свой вопрос</h2>
 				<p class="ask__lead">Наши специалисты ответят на вопросы и подберут лучшие условия службы.</p>
 
-				<!-- TODO: указать обработчик формы (action) -->
 				<form class="ask__form" action="" method="post">
 					<label class="visually-hidden" for="ask-name">Имя</label>
 					<input class="ask__input" id="ask-name" name="name" type="text" placeholder="Имя" required>

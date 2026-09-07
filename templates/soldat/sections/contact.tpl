@@ -8,7 +8,6 @@
 				<p class="contact__lead">Оставь заявку — и наши специалисты помогут тебе пройти все этапы оформления контракта, ответят на вопросы и подберут лучшие условия службы.</p>
 			</div>
 
-			<!-- TODO: указать обработчик формы (action) -->
 			<form class="contact__form" action="" method="post">
 				<label class="visually-hidden" for="contact-name">Имя</label>
 				<input class="contact__input" id="contact-name" name="name" type="text" placeholder="Имя" required>

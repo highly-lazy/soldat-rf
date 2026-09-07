@@ -10,8 +10,6 @@
 					<button class="pay__tab" type="button" role="tab" id="pay-tab-3" aria-controls="pay-panel-3" aria-selected="false" tabindex="-1">Помощь семье</button>
 			</div>
 
-			<!-- Содержимое вкладок «За боевые достижения», «При ранении» и «Помощь семье» —
-			     демо-данные для вёрстки: в макете раскрыта только первая вкладка. -->
 				<div class="pay__grid" role="tabpanel" id="pay-panel-0" aria-labelledby="pay-tab-0">
 						<div class="pay__item">
 							<b class="pay__sum">от 300 000 ₽</b>
