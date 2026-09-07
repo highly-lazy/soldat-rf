@@ -36,11 +36,12 @@
 
 /* --- фигура с солдатом --- */
 .hero__figure{
-	position:absolute;
-	left:620px;                        /* макет: x=700 при контейнере от 100 */
-	top:56px;                          /* макет: y=177 */
-	width:800px;
-	height:800px;
+	position: absolute;
+    left: auto;
+    top: 56px;
+    width: 800px;
+    height: 800px;
+    right: 20px;
 }
 .hero__photo{
 	position:relative;
