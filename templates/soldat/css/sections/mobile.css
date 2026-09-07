@@ -55,12 +55,16 @@
 		place-items: center;
 		width: 42px;
 		height: 42px;
-		margin: 8px 0 0 auto;
+		margin: 10px 0 0 auto;
 		/* макет: бургер на x=308, y=65 */
 		padding: 0;
 		border: 0;
-		border-radius: var(--r-md);
+		border-radius: 7px;
 		background: var(--blue);
+	}
+
+	.contact__consent-text br {
+		display: none;
 	}
 
 	.header__burger-lines {
@@ -1490,9 +1494,9 @@
 
 	.ask {
 		width: 100%;
-		min-height: 777px;
+		min-height: auto;
 		margin-block-start: 0;
-		padding: 31px 0 0 19px;
+		padding: 31px 24px 44px 19px;
 		/* макет: заголовок на 39/1495 */
 		border-radius: 30px;
 	}

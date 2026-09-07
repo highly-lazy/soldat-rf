@@ -70,7 +70,7 @@
 					<li><a href="{home}/#terms">Условия</a></li>
 					<li><a href="{home}/#benefits">Льготы</a></li>
 					<li><a href="{home}/#support">Поддержка</a></li>
-					<li><a href="{home}/#articles">Статьи</a></li>
+					<li><a href="{home}/stati.html">Статьи</a></li>
 					<li><a href="{home}/otvety.html">Ответы на вопросы</a></li>
 					<li><a href="{home}/#contact">Контакты</a></li>
 				</ul>

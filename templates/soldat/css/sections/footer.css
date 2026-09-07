@@ -2,67 +2,119 @@
    Подвал (нода 882:7597) — линия на y=11401, логотип и копирайт слева,
    мессенджеры справа.
    ========================================================================== */
-.footer{padding-block:59px 14px}                 /* макет: линия на 11401, кадр кончается на 11518 */
-
-.footer__inner{
-	position:relative;
-	min-height:103px;
-	padding-block-start:23px;                    /* макет: логотип на y=11425 (плюс 1px линии) */
-	border-block-start:1px solid #bbbbd5;
+.footer {
+	padding-block: 59px 14px
 }
 
-.footer__logo{
-	display:block;
-	width:173px;
-	margin-inline-start:1px;                     /* макет: логотип на x=101 */
-}
-.footer__logo img{width:173px;height:30px}
+/* макет: линия на 11401, кадр кончается на 11518 */
 
-.footer__copy{
-	margin-block-start:13px;                     /* макет: текст на y=11468 */
-	font-size:14px;
-	line-height:normal;
-	color:var(--muted);
+.footer__inner {
+	position: relative;
+	min-height: 103px;
+	padding-block-start: 23px;
+	/* макет: логотип на y=11425 (плюс 1px линии) */
+	border-block-start: 1px solid #bbbbd5;
 }
-.footer__copy a{display:block;text-decoration:underline;transition:color .2s}
-.footer__copy a:hover,.footer__copy a:focus-visible{color:var(--red)}
 
-.footer__messengers{
-	position:absolute;
-	left:1285px;top:23px;                        /* макет: блок иконок на x=1365 */
-	width:135px;
-	height:44px;
+.footer__logo {
+	display: block;
+	width: 173px;
+	margin-inline-start: 1px;
+	/* макет: логотип на x=101 */
 }
-.footer__messenger{position:absolute}
-.footer__messenger a{display:block}
+
+.footer__logo img {
+	width: 173px;
+	height: 30px
+}
+
+.footer__copy {
+	margin-block-start: 13px;
+	/* макет: текст на y=11468 */
+	font-size: 14px;
+	line-height: normal;
+	color: var(--muted);
+}
+
+.footer__copy a {
+	display: block;
+	text-decoration: underline;
+	transition: color .2s
+}
+
+.footer__copy a:hover,
+.footer__copy a:focus-visible {
+	color: var(--red)
+}
+
+.footer__messengers {
+	position: absolute;
+	left: auto;
+	right: 0px;
+	top: 23px;
+	/* макет: блок иконок на x=1365 */
+	width: 135px;
+	height: 44px;
+}
+
+.footer__messenger {
+	position: absolute
+}
+
+.footer__messenger a {
+	display: block
+}
 
 /* иконки рисуются маской, чтобы перекрашиваться на наведении */
-.footer__icon{
-	display:block;
-	background-color:#bbbbd5;
-	transition:background-color .2s;
-	-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
-	-webkit-mask-position:center;mask-position:center;
-	-webkit-mask-size:contain;mask-size:contain;
+.footer__icon {
+	display: block;
+	background-color: #bbbbd5;
+	transition: background-color .2s;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+	-webkit-mask-size: contain;
+	mask-size: contain;
 }
-.footer__messenger a:hover .footer__icon,
-.footer__messenger a:focus-visible .footer__icon{background-color:var(--red)}
 
-.footer__messenger--tg{left:0;top:3px}
-.footer__messenger--tg .footer__icon{
-	width:29.15px;height:24.12px;
-	-webkit-mask-image:url("../../images/080db21598596027d30d9f5af98ca8efbbaa1c3b.svg");
-	mask-image:url("../../images/080db21598596027d30d9f5af98ca8efbbaa1c3b.svg");
+.footer__messenger a:hover .footer__icon,
+.footer__messenger a:focus-visible .footer__icon {
+	background-color: var(--red)
 }
-.footer__messenger--max{left:55.26px;top:1px}
-.footer__messenger--max .footer__icon{
-	width:27.14px;height:27.14px;
-	-webkit-mask-image:url("../../images/ca7b5356fc8cf41cc282f4259585dcc7e5aa9954.svg");
-	mask-image:url("../../images/ca7b5356fc8cf41cc282f4259585dcc7e5aa9954.svg");
+
+.footer__messenger--tg {
+	left: 0;
+	top: 3px
 }
-.footer__messenger--wa{left:104.51px;top:0}
-.footer__messenger--wa .footer__icon{
-	width:30.15px;height:30.15px;
-	-webkit-mask-image:url("../../images/734d4551fa9e221288b2aee887b03459d8d35482.svg");
-	mask-image:url("../../images/734d4551fa9e221288b2aee887b03459d8d35482.svg");
+
+.footer__messenger--tg .footer__icon {
+	width: 29.15px;
+	height: 24.12px;
+	-webkit-mask-image: url("../../images/080db21598596027d30d9f5af98ca8efbbaa1c3b.svg");
+	mask-image: url("../../images/080db21598596027d30d9f5af98ca8efbbaa1c3b.svg");
+}
+
+.footer__messenger--max {
+	left: 55.26px;
+	top: 1px
+}
+
+.footer__messenger--max .footer__icon {
+	width: 27.14px;
+	height: 27.14px;
+	-webkit-mask-image: url("../../images/ca7b5356fc8cf41cc282f4259585dcc7e5aa9954.svg");
+	mask-image: url("../../images/ca7b5356fc8cf41cc282f4259585dcc7e5aa9954.svg");
+}
+
+.footer__messenger--wa {
+	left: 104.51px;
+	top: 0
+}
+
+.footer__messenger--wa .footer__icon {
+	width: 30.15px;
+	height: 30.15px;
+	-webkit-mask-image: url("../../images/734d4551fa9e221288b2aee887b03459d8d35482.svg");
+	mask-image: url("../../images/734d4551fa9e221288b2aee887b03459d8d35482.svg");
 }

@@ -644,7 +644,8 @@
 	}
 
 	.header__cta {
-		margin-inline-start: auto
+		margin-inline-start: auto;
+		margin-block-start: 10px;
 	}
 
 	.header__burger {
@@ -845,7 +846,7 @@
 		max-width: 450px;
 		margin-left: auto;
 	}
-	
+
 	.cta__messengers {
 		position: relative;
 		inset: auto;
@@ -1096,5 +1097,13 @@
 
 	.contact__photo {
 		object-position: 32% 40%
+	}
+}
+
+
+
+@media (max-width:410px) {
+	.faq__tabs button.list__tab {
+		font-size: 4.8vw;
 	}
 }
