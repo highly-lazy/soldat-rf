@@ -215,13 +215,13 @@
 
 	.hero__figure {
 		position: relative;
-        left: auto;
-        top: auto;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1;
-        margin-block-start: 52px;
-        right: 0;
+		left: auto;
+		top: auto;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1;
+		margin-block-start: 52px;
+		right: 0;
 	}
 
 	.hero__photo {
@@ -401,8 +401,7 @@
 		width: 100%;
 		margin-inline-start: 0;
 		min-height: 617px;
-		padding: 25px 0 0 22px;
-		/* макет: заголовок на 42/1744 */
+		padding: 25px 25px 20px 22px;
 		border-radius: 30px;
 	}
 
@@ -516,9 +515,8 @@
 	}
 
 	.terms__card {
-		width: auto;
-		height: 146px;
-		margin: 0 !important
+		min-height: 146px;
+		height: auto;
 	}
 
 	.terms__panel {
@@ -542,9 +540,11 @@
 		left: 20px;
 		right: 43px;
 		top: 47px;
-		width: auto;
-		font-size: 18px;
+		width: calc(100% - 40px);
+		font-size: 20px;
 		line-height: 26px;
+		position: relative;
+		padding-bottom: 55px;
 	}
 
 	/* --- Остались вопросы --- */
@@ -661,8 +661,8 @@
 
 	.pay__tab[aria-selected="true"]::after {
 		bottom: -1px;
-		width: 287px;
-		right: auto
+		width: 100%;
+		right: auto;
 	}
 
 	.pay__grid {

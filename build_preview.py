@@ -66,12 +66,12 @@ for name, cfg in PAGES.items():
     html = """<!DOCTYPE html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>%s</title>
-<link rel="stylesheet" href="css/style.css?ver=1.2.1">
-<link rel="stylesheet" href="css/sections.css?ver=1.2.1">
-<link rel="stylesheet" href="css/engine.css?ver=1.2.1">
+<link rel="stylesheet" href="css/style.css?ver=1.2.2">
+<link rel="stylesheet" href="css/sections.css?ver=1.2.2">
+<link rel="stylesheet" href="css/engine.css?ver=1.2.2">
 </head><body class="%s">
 %s
-<script src="js/main.js?ver=1.2.1" defer></script>
+<script src="js/main.js?ver=1.2.2" defer></script>
 </body></html>""" % (cfg["title"], cfg["body_class"], body)
     html = html.replace("{theme}", ".").replace("{home}", ".")
     html = re.sub(r"\{include file=\"[^\"]+\"\}", "", html)

@@ -193,8 +193,8 @@
 	.req__jet {
 		left: auto;
 		right: -12%;
-		top: -120px;
-		width: 60%;
+		top: -260px;
+		width: 630px;
 		height: auto;
 		aspect-ratio: 1091/1018
 	}
@@ -1103,6 +1103,11 @@
 
 	.contact__photo {
 		object-position: 32% 40%
+	}
+
+	.terms__mark {
+		left: auto;
+		right: 35px;
 	}
 }
 

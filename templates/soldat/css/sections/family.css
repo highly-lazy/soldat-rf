@@ -2,77 +2,116 @@
    «Льготы и гарантии семьям» (нода 882:7601)
    Заголовок 100…540, карточки 440×537 в двух колонках (581 и 1061).
    ========================================================================== */
-.family{padding-block-start:101px}              /* макет: заголовок на y=5785 */
+.family {
+	padding-block-start: 101px
+}
 
-.family__inner{
-	display:grid;
-	grid-template-columns:440px 920px;
+/* макет: заголовок на y=5785 */
+
+.family__inner {
+	display: grid;
+	grid-template-columns: 440px 920px;
 	justify-content: space-between;
 }
 
-.family__title{
-	margin:0;
-	font-weight:700;
-	font-size:56px;
-	line-height:62px;
-	color:var(--ink);
+.family__title {
+	margin: 0;
+	font-weight: 700;
+	font-size: 56px;
+	line-height: 62px;
+	color: var(--ink);
 }
 
-.family__grid{
-	display:grid;
-	grid-template-columns:440px 440px;
-	gap:40px;
+.family__grid {
+	display: grid;
+	grid-template-columns: 440px 440px;
+	gap: 40px;
 }
-.family__card{
-	position:relative;
-	width:440px;
-	height:537px;
-	border-radius:30px;
-	overflow:hidden;
-	background:var(--blue);
-	color:var(--white);
-}
-.family__card:nth-child(3){margin-inline-start:-1px}   /* макет: вторая строка на x=580 */
 
-.family__photo{
-	position:absolute;
-	inset:0;
-	width:100%;height:100%;
-	object-fit:cover;
-	max-width:none;
+.family__card {
+	position: relative;
+	width: 440px;
+	height: 537px;
+	border-radius: 30px;
+	overflow: hidden;
+	background: var(--blue);
+	color: var(--white);
 }
+
+.family__card:nth-child(3) {
+	margin-inline-start: -1px
+}
+
+/* макет: вторая строка на x=580 */
+
+.family__photo {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	max-width: none;
+}
+
 /* индивидуальные кропы из макета */
-.family__photo--crop2{inset:auto;left:0;top:-55.3%;width:152.73%;height:155.35%;object-fit:fill}
-.family__photo--crop3{inset:auto;left:-8.55%;top:-23.41%;width:127.95%;height:130.15%;object-fit:fill}
-.family__photo--crop4{inset:auto;left:-15.13%;top:-8.57%;width:115.23%;height:117.2%;object-fit:fill}
-
-.family__card::after{                            /* синяя вуаль снизу */
-	content:"";
-	position:absolute;
-	inset:0;
-	background:linear-gradient(180deg,rgba(2,87,213,0) 32.309%,rgba(2,87,213,.89) 72.338%);
-	pointer-events:none;
+.family__photo--crop2 {
+	inset: auto;
+	left: 0;
+	top: -55.3%;
+	width: 152.73%;
+	height: 155.35%;
+	object-fit: fill
 }
 
-.family__body{
-	position:absolute;
-	left:9.01%;
-	right:9.18%;
-	top:430px;                                   /* макет: центр блока на 75% + 27.25px */
-	z-index:2;
-	transform:translateY(-50%);
-	display:flex;
-	flex-direction:column;
-	gap:14px;
+.family__photo--crop3 {
+	inset: auto;
+	left: -8.55%;
+	top: -23.41%;
+	width: 127.95%;
+	height: 130.15%;
+	object-fit: fill
 }
-.family__name{
-	width:360px;
-	font-weight:600;
-	font-size:24px;
-	line-height:1.1;
+
+.family__photo--crop4 {
+	inset: auto;
+	left: -15.13%;
+	top: -8.57%;
+	width: 115.23%;
+	height: 117.2%;
+	object-fit: cover;
 }
-.family__text{
-	width:360px;
-	font-size:18px;
-	line-height:1.3;
+
+.family__card::after {
+	/* синяя вуаль снизу */
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, rgba(2, 87, 213, 0) 32.309%, rgba(2, 87, 213, .89) 72.338%);
+	pointer-events: none;
+}
+
+.family__body {
+	position: absolute;
+	left: 9.01%;
+	right: 9.18%;
+	top: 430px;
+	/* макет: центр блока на 75% + 27.25px */
+	z-index: 2;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.family__name {
+	width: 360px;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.1;
+}
+
+.family__text {
+	width: 360px;
+	font-size: 18px;
+	line-height: 1.3;
 }
