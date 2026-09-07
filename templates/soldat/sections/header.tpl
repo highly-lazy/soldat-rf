@@ -1,7 +1,9 @@
 <header class="header">
 	<!-- верхняя строка: город, телефон, мессенджеры (макет y 0…50) -->
 	<div class="header__top">
-		<div class="container header__top-inner">
+		<div class="container ">
+		<div class="header__top-inner ">
+
 			<div class="city">
 			<button class="header__city" type="button" aria-label="Выбрать город" aria-haspopup="listbox" aria-expanded="false">
 				<svg class="header__city-pin" viewBox="0 0 15 21" fill="none" aria-hidden="true">
@@ -31,6 +33,8 @@
 				</ul>
 			</div>
 		</div>
+		</div>
+		
 	</div>
 
 	<!-- панель навигации (макет y 51…121, полупрозрачная с размытием) -->
