@@ -38,7 +38,7 @@
 
 .faq__layout {
 	display: grid;
-	grid-template-columns: 800px 560px;
+	grid-template-columns: 2fr 1fr;
 	column-gap: 40px;
 	/* макет: аккордеон 100…900, карточка с x=940 */
 	align-items: start;
@@ -185,7 +185,7 @@
 /* макет: первое поле на y=694 */
 .ask__input {
 	display: block;
-	width: 460px;
+	width: 100%;
 	height: 64px;
 	padding: 0 23px;
 	border: 0;
