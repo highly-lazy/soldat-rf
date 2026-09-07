@@ -7,7 +7,7 @@
 .family__inner{
 	display:grid;
 	grid-template-columns:440px 920px;
-	column-gap:41px;
+	justify-content: space-between;
 }
 
 .family__title{
