@@ -4,6 +4,9 @@
    Файл подключается последним, поэтому переопределяет десктопные правила.
    ========================================================================== */
 @media (max-width:600px) {
+	header.header {
+		box-shadow: 0px 5px 10px 0px #00000014;
+	}
 
 	/* --- Шапка --- */
 	.header__top-inner {
@@ -231,8 +234,10 @@
 		top: .3%;
 		width: 38.5%;
 		height: 46%;
-		padding: 7.6% 0 0;
-		border-radius: 7.3%;
+		padding: 0;
+		border-radius: 30px;
+		display: flex;
+		align-items: center;
 	}
 
 	.hero__badge-item {

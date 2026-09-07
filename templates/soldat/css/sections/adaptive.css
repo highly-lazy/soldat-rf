@@ -83,7 +83,7 @@
 		height: auto;
 		min-height: 46%;
 		padding: 3.4% 4% 3.4%;
-		border-radius: 7.5%;
+		border-radius: 30px;
 	}
 
 	.hero__badge-item {
