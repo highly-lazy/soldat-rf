@@ -841,15 +841,19 @@
 		inset: auto;
 		z-index: 1;
 		width: auto;
-		margin-inline: clamp(20px, 4vw, 50px)
+		margin-inline: clamp(20px, 4vw, 50px);
+		max-width: 450px;
+		margin-left: auto;
 	}
-
+	
 	.cta__messengers {
 		position: relative;
 		inset: auto;
 		width: auto;
 		height: 60px;
 		margin: 32px clamp(20px, 4vw, 50px) 0;
+		max-width: 450px;
+		margin-left: auto;
 	}
 
 	/* как в мобильном макете: под текстом просто синяя панель, фото убираем */
@@ -928,6 +932,31 @@
 		grid-template-columns: 1fr
 	}
 
+	.art__more {
+		bottom: 0;
+		top: unset;
+	}
+
+	.art__photo img {
+		height: 100%;
+	}
+
+	.art__photo {
+		height: 273px;
+	}
+
+	.art__body {
+		top: 61%;
+	}
+
+	.art__link {
+		height: 100%;
+	}
+
+	.art__card {
+		height: 477px;
+	}
+
 	.contact__panel {
 		height: auto;
 		padding-block: 40px
@@ -957,9 +986,11 @@
 	}
 
 	.post__title {
-		position: static;
+		/* position: static; */
 		margin: 24px 0 0;
-		color: var(--ink)
+		top: unset;
+		bottom: 46px;
+		right: 20px;
 	}
 
 	.post__cover {
@@ -968,9 +999,11 @@
 	}
 
 	.post__date {
-		position: static;
+		/* position: static; */
 		margin: 16px 0 0;
-		color: var(--ink)
+		bottom: 175px;
+		top: unset;
+		right: 20px;
 	}
 
 	.post__cover+.post__date {
