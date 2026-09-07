@@ -57,6 +57,13 @@
 	line-height:1.1;
 }
 
+span.art__name {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .art__more{
 	position:absolute;
 	left:0;top:384px;                            /* макет: 50% + 168px */
