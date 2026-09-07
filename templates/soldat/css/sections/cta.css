@@ -1,85 +1,125 @@
 /* ==========================================================================
    «Остались вопросы?» (нода 992:2762) — панель 99…1500 / 4404…4798
    ========================================================================== */
-.cta{padding-block-start:136px}              /* макет: панель на y=4404 */
-
-.cta__panel{
-	position:relative;
-	width:1401px;
-	max-width:calc(100% + 2px);
-	margin-inline-start:-1px;
-	height:394px;
-	border-radius:var(--r-card);
-	background:var(--blue);
-	overflow:hidden;
-}
-.cta__photo{
-	position:absolute;
-	left:-13.61%;
-	top:-49.23%;
-	width:155.39%;
-	height:193.44%;
-	max-width:none;
+.cta {
+	padding-block-start: 136px
 }
 
-.cta__body{
-	position:absolute;
-	left:722px;                              /* макет: x=821 при панели с x=99 */
-	top:67px;                                /* макет: y=4471 */
-	width:559px;
-	color:var(--white);
-}
-.cta__title{
-	margin:0;
-	font-weight:700;
-	font-size:56px;
-	line-height:62px;
-}
-.cta__lead{
-	margin-block-start:20px;
-	font-size:20px;
-	line-height:26px;
+/* макет: панель на y=4404 */
+
+.cta__panel {
+	position: relative;
+	width: 1401px;
+	max-width: calc(100% + 2px);
+	margin-inline-start: -1px;
+	height: 394px;
+	border-radius: var(--r-card);
+	background: var(--blue);
+	overflow: hidden;
 }
 
-.cta__messengers{
-	position:absolute;
-	left:721px;                              /* макет: блок иконок на x=820 */
-	top:262px;                               /* макет: y=4666 */
-	width:223px;
-	height:59px;
+.cta__photo {
+	position: absolute;
+	left: -13.61%;
+	top: -49.23%;
+	width: 155.39%;
+	height: 193.44%;
+	max-width: none;
 }
-.cta__messenger{position:absolute}
-.cta__messenger a{display:block}
+
+.cta__body {
+	position: absolute;
+	left: 722px;
+	/* макет: x=821 при панели с x=99 */
+	top: 67px;
+	/* макет: y=4471 */
+	width: 559px;
+	color: var(--white);
+}
+
+.cta__title {
+	margin: 0;
+	font-weight: 700;
+	font-size: 56px;
+	line-height: 62px;
+}
+
+.cta__lead {
+	margin-block-start: 20px;
+	font-size: 20px;
+	line-height: 26px;
+}
+
+.cta__messengers {
+	position: absolute;
+	left: 721px;
+	/* макет: блок иконок на x=820 */
+	top: 262px;
+	/* макет: y=4666 */
+	width: 223px;
+	height: 59px;
+}
+
+.cta__messenger {
+	position: absolute
+}
+
+.cta__messenger a {
+	display: block
+}
 
 /* иконки рисуются маской, чтобы перекрашиваться на наведении */
-.cta__icon{
-	display:block;
-	background-color:#bbbbd5;
-	transition:background-color .2s;
-	-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
-	-webkit-mask-position:center;mask-position:center;
-	-webkit-mask-size:contain;mask-size:contain;
+.cta__icon {
+	display: block;
+	background-color: #bbbbd5;
+	transition: background-color .2s;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+	-webkit-mask-size: contain;
+	mask-size: contain;
 }
-.cta__messenger a:hover .cta__icon,
-.cta__messenger a:focus-visible .cta__icon{background-color:var(--red)}
 
-.cta__messenger--tg{left:0;top:5px}
-.cta__messenger--tg .cta__icon{
-	width:48px;height:40px;
-	-webkit-mask-image:url("../../images/de6949c7907f53a648adfebf251e62c7c2c5e786.svg");
-	mask-image:url("../../images/de6949c7907f53a648adfebf251e62c7c2c5e786.svg");
+.cta__messenger a:hover .cta__icon,
+.cta__messenger a:focus-visible .cta__icon {
+	background-color: var(--red)
 }
-.cta__messenger--max{left:92px;top:2px}
-.cta__messenger--max .cta__icon{
-	width:45px;height:45px;
-	-webkit-mask-image:url("../../images/0e3e6c5ddf001ef1aebf61c4a32155b7943326bd.svg");
-	mask-image:url("../../images/0e3e6c5ddf001ef1aebf61c4a32155b7943326bd.svg");
+
+.cta__messenger--tg {
+	left: 0;
+	top: 5px
 }
-.cta__messenger--wa{left:173px;top:0}
-.cta__messenger--wa .cta__icon{
-	width:50px;height:50px;
-	-webkit-mask-image:url("../../images/7e9bb72c1beceba9e161faa49b724820766f67f2.svg");
-	mask-image:url("../../images/7e9bb72c1beceba9e161faa49b724820766f67f2.svg");
+
+.cta__messenger--tg .cta__icon {
+	width: 48px;
+	height: 40px;
+	-webkit-mask-image: url("../../images/de6949c7907f53a648adfebf251e62c7c2c5e786.svg");
+	mask-image: url("../../images/de6949c7907f53a648adfebf251e62c7c2c5e786.svg");
+}
+
+.cta__messenger--max {
+	left: 92px;
+	top: 2px
+}
+
+.cta__messenger--max .cta__icon {
+	width: 45px;
+	height: 45px;
+	-webkit-mask-image: url("../../images/0e3e6c5ddf001ef1aebf61c4a32155b7943326bd.svg");
+	mask-image: url("../../images/0e3e6c5ddf001ef1aebf61c4a32155b7943326bd.svg");
+}
+
+.cta__messenger--wa {
+	left: 173px;
+	top: 0
+}
+
+.cta__messenger--wa .cta__icon {
+	width: 50px;
+	height: 50px;
+	-webkit-mask-image: url("../../images/7e9bb72c1beceba9e161faa49b724820766f67f2.svg");
+	mask-image: url("../../images/7e9bb72c1beceba9e161faa49b724820766f67f2.svg");
 }
 
 /* На странице статьи — своя картинка, вписанная в панель (нода 992:2763 / 1192:5121).
