@@ -11,391 +11,1057 @@
    ========================================================================== */
 
 /* --------------------------------------------------- 1024…1439: масштаб --- */
-@media (min-width:1024px) and (max-width:1439px){
-	body{zoom:calc((100vw - 40px) / 1400px)}
+@media (min-width:1024px) and (max-width:1439px) {
+	body {
+		zoom: calc((100vw - 40px) / 1400px)
+	}
 }
 
 /* --------------------------------------------------------------- ≤1023 --- */
-@media (min-width:601px) and (max-width:1023px){
+@media (min-width:601px) and (max-width:1023px) {
 
-/* Заголовки секций тянутся по ширине контейнера */
-.hero__title,
-.benefits__title,
-.terms__title,
-.steps__title,
-.family__title,
-.cta__title,
-.contact__title,
-.art__title,
-.list__title,
-.faq__title,
-.post__faq-title,
-.ask__title,
-.know__title{
-	width:auto;
-	max-width:680px;
-	font-size:clamp(30px,4vw,56px);
-	line-height:1.12;
-}
-.family__title{max-width:440px}
+	/* Заголовки секций тянутся по ширине контейнера */
+	.hero__title,
+	.benefits__title,
+	.terms__title,
+	.steps__title,
+	.family__title,
+	.cta__title,
+	.contact__title,
+	.art__title,
+	.list__title,
+	.faq__title,
+	.post__faq-title,
+	.ask__title,
+	.know__title {
+		width: auto;
+		max-width: 680px;
+		font-size: clamp(30px, 4vw, 56px);
+		line-height: 1.12;
+	}
 
-/* Первый экран: две колонки в потоке — так текст никогда не заезжает под фото */
-.hero__inner{
-	height:auto;
-	min-height:0;
-	display:flex;
-	align-items:flex-start;
-	gap:clamp(20px,3vw,40px);
-	padding-block:40px 0;
-}
-.hero__card{position:static;flex:1 1 0;min-width:0;width:auto}
-.hero__figure{
-	position:relative;
-	inset:auto;
-	flex:0 0 46%;
-	width:46%;
-	height:auto;
-	margin:0;
-	aspect-ratio:1;
-}
-.hero__photo{width:100%;height:100%}
-.hero__badge{
-	left:0;top:.25%;
-	width:38.5%;height:auto;min-height:46%;
-	padding:3.4% 4% 3.4%;
-	border-radius:7.5%;
-}
-.hero__badge-item{width:100%}
-.hero__badge-item + .hero__badge-item{margin-block-start:clamp(14px,7%,31px)}
-.hero__badge-icon--pay,
-.hero__badge-icon--card{width:34%;height:auto}
-.hero__badge-icon--pay{aspect-ratio:60.89/54.81}
-.hero__badge-icon--card{aspect-ratio:58.67/41.33}
-.hero__badge-icon--pay img,
-.hero__badge-icon--card img{position:static;width:100%;height:100%;transform:scaleY(-1)}
-.hero__badge-value{width:100%;font-size:clamp(16px,2vw,30px);line-height:1.2}
-.hero__badge-label{width:100%;padding-inline:6%;font-size:clamp(12px,1.2vw,18px);line-height:1.2}
-.hero__accent{left:61.5%;top:54%;width:38.5%;height:46%;border-radius:7.5%}
+	.family__title {
+		max-width: 440px
+	}
 
-/* Преимущества */
-.benefits__grid{grid-template-columns:repeat(3,1fr);column-gap:clamp(20px,3vw,41px)}
-.benefits__item{width:auto}
-.benefits__text--narrow{width:auto}
+	/* Первый экран: две колонки в потоке — так текст никогда не заезжает под фото */
+	.hero__inner {
+		height: auto;
+		min-height: 0;
+		display: flex;
+		align-items: flex-start;
+		gap: clamp(20px, 3vw, 40px);
+		padding-block: 40px 0;
+	}
 
-/* Требования */
-.req__panel{width:100%;max-width:100%;margin-inline-start:0;padding-inline:clamp(24px,4vw,51px)}
-.req__title{width:auto;max-width:640px;font-size:clamp(34px,4vw,56px);line-height:1.12}
-.req__list{
-	position:static;
-	display:grid;
-	grid-template-columns:repeat(2,1fr);
-	gap:24px 32px;
-	height:auto;
-	margin:40px 0 0;
-}
-.req__item{position:static!important;left:auto!important;gap:14px!important}
-.req__item p{width:auto}
-.req__jet{left:auto;right:-12%;top:-120px;width:60%;height:auto;aspect-ratio:1091/1018}
-.req__jet img{width:81%;height:64%}
+	.hero__card {
+		position: static;
+		flex: 1 1 0;
+		min-width: 0;
+		width: auto
+	}
 
-/* Условия службы */
-.terms__bg{left:0;right:0;width:100%}
-/* фон-фото кадрируется, а не растягивается: у бокса меняется пропорция */
-.terms__bg img{left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:36% 50%}
-.terms__grid{grid-template-columns:repeat(2,minmax(0,440px));gap:26px clamp(20px,3vw,41px)}
-.terms__card{width:auto}
-.terms__text{width:auto;right:45px}
+	.hero__figure {
+		position: relative;
+		inset: auto;
+		flex: 0 0 46%;
+		width: 46%;
+		height: auto;
+		margin: 0;
+		aspect-ratio: 1;
+	}
 
-/* CTA и формы */
-.cta__panel,.contact__panel{width:100%;max-width:100%;margin-inline-start:0}
-.cta__body{left:auto;right:4%;width:min(559px,48%)}
-.cta__messengers{left:auto;right:4%}
-.contact__body,.contact__form{left:clamp(24px,4vw,50px)}
+	.hero__photo {
+		width: 100%;
+		height: 100%
+	}
 
-/* Выплаты */
-.pay__panel{padding-inline:clamp(24px,4vw,53px);padding-block-end:clamp(32px,4vw,53px)}
-.pay__title{width:auto;max-width:680px;font-size:clamp(34px,4vw,56px);line-height:1.12}
-.pay__tabs{width:100%;margin-inline:0}
-.pay__tabs::after{width:100%}
-.pay__grid{grid-template-columns:repeat(4,1fr);column-gap:clamp(24px,6vw,94px);margin-inline:0}
-.pay__item{width:auto}
+	.hero__badge {
+		left: 0;
+		top: .25%;
+		width: 38.5%;
+		height: auto;
+		min-height: 46%;
+		padding: 3.4% 4% 3.4%;
+		border-radius: 7.5%;
+	}
 
-/* Льготы семьям */
-.family__inner{grid-template-columns:minmax(240px,440px) 1fr;column-gap:clamp(20px,3vw,41px)}
-.family__grid{grid-template-columns:repeat(2,1fr);gap:clamp(20px,3vw,40px)}
-.family__card{width:auto;margin-inline-start:0!important}
-.family__name,.family__text{width:auto}
+	.hero__badge-item {
+		width: 100%
+	}
 
-/* Меры поддержки: белая панель становится самим контейнером, содержимое — в потоке
+	.hero__badge-item+.hero__badge-item {
+		margin-block-start: clamp(14px, 7%, 31px)
+	}
+
+	.hero__badge-icon--pay,
+	.hero__badge-icon--card {
+		width: 34%;
+		height: auto
+	}
+
+	.hero__badge-icon--pay {
+		aspect-ratio: 60.89/54.81
+	}
+
+	.hero__badge-icon--card {
+		aspect-ratio: 58.67/41.33
+	}
+
+	.hero__badge-icon--pay img,
+	.hero__badge-icon--card img {
+		position: static;
+		width: 100%;
+		height: 100%;
+		transform: scaleY(-1)
+	}
+
+	.hero__badge-value {
+		width: 100%;
+		font-size: clamp(16px, 2vw, 30px);
+		line-height: 1.2
+	}
+
+	.hero__badge-label {
+		width: 100%;
+		padding-inline: 6%;
+		font-size: clamp(12px, 1.2vw, 18px);
+		line-height: 1.2
+	}
+
+	.hero__accent {
+		left: 61.5%;
+		top: 54%;
+		width: 38.5%;
+		height: 46%;
+		border-radius: 7.5%
+	}
+
+	/* Преимущества */
+	.benefits__grid {
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: clamp(20px, 3vw, 41px)
+	}
+
+	.benefits__item {
+		width: auto
+	}
+
+	.benefits__text--narrow {
+		width: auto
+	}
+
+	/* Требования */
+	.req__panel {
+		width: 100%;
+		max-width: 100%;
+		margin-inline-start: 0;
+		padding-inline: clamp(24px, 4vw, 51px);
+		padding-block-end: clamp(32px, 4vw, 48px)
+	}
+
+	.req__title {
+		width: auto;
+		max-width: 640px;
+		font-size: clamp(34px, 4vw, 56px);
+		line-height: 1.12
+	}
+
+	.req__list {
+		position: static;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px 32px;
+		height: auto;
+		margin: 40px 0 0;
+	}
+
+	.req__item {
+		position: static !important;
+		left: auto !important;
+		gap: 14px !important
+	}
+
+	.req__item p {
+		width: auto
+	}
+
+	.req__jet {
+		left: auto;
+		right: -12%;
+		top: -120px;
+		width: 60%;
+		height: auto;
+		aspect-ratio: 1091/1018
+	}
+
+	.req__jet img {
+		width: 81%;
+		height: 64%
+	}
+
+	/* Условия службы */
+	.terms__bg {
+		left: 0;
+		right: 0;
+		width: 100%
+	}
+
+	/* фон-фото кадрируется, а не растягивается: у бокса меняется пропорция */
+	.terms__bg img {
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 36% 50%
+	}
+
+	.terms__grid {
+		grid-template-columns: repeat(2, minmax(0, 440px));
+		gap: 26px clamp(20px, 3vw, 41px)
+	}
+
+	.terms__card {
+		width: auto
+	}
+
+	.terms__text {
+		width: auto;
+		right: 45px
+	}
+
+	/* CTA и формы */
+	.cta__panel,
+	.contact__panel {
+		width: 100%;
+		max-width: 100%;
+		margin-inline-start: 0
+	}
+
+	.cta__body {
+		left: auto;
+		right: 4%;
+		width: min(559px, 48%)
+	}
+
+	.cta__messengers {
+		left: auto;
+		right: 4%
+	}
+
+	.contact__body,
+	.contact__form {
+		left: clamp(24px, 4vw, 50px)
+	}
+
+	/* Выплаты */
+	.pay__panel {
+		padding-inline: clamp(24px, 4vw, 53px);
+		padding-block-end: clamp(32px, 4vw, 53px)
+	}
+
+	.pay__title {
+		width: auto;
+		max-width: 680px;
+		font-size: clamp(34px, 4vw, 56px);
+		line-height: 1.12
+	}
+
+	.pay__tabs {
+		width: 100%;
+		margin-inline: 0
+	}
+
+	.pay__tabs::after {
+		width: 100%
+	}
+
+	.pay__grid {
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: clamp(24px, 6vw, 94px);
+		margin-inline: 0
+	}
+
+	.pay__item {
+		width: auto
+	}
+
+	/* Льготы семьям */
+	.family__inner {
+		grid-template-columns: minmax(240px, 440px) 1fr;
+		column-gap: clamp(20px, 3vw, 41px)
+	}
+
+	.family__grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: clamp(20px, 3vw, 40px)
+	}
+
+	.family__card {
+		width: auto;
+		margin-inline-start: 0 !important
+	}
+
+	.family__name,
+	.family__text {
+		width: auto
+	}
+
+	/* Меры поддержки: белая панель становится самим контейнером, содержимое — в потоке
    (иначе секция схлопывалась в ноль и «Этапы» наезжали на неё) */
-.support__inner{
-	position:relative;
-	min-height:0;
-	display:grid;
-	grid-template-columns:minmax(0,1fr) minmax(0,42%);
-	column-gap:clamp(20px,3vw,40px);
-	padding:55px clamp(24px,4vw,50px);
-	border-radius:var(--r-card);
-	background:var(--white);
-}
-.support__panel{display:none}
-.support__title{
-	position:relative;
-	inset:auto;
-	grid-area:1/1;
-	width:auto;max-width:none;
-	font-size:clamp(34px,4vw,56px);line-height:1.12;
-}
-.support__photo{
-	position:relative;
-	inset:auto;
-	grid-area:2/1;
-	width:100%;height:auto;
-	margin-block-start:36px;
-	aspect-ratio:861/574;
-	border-radius:var(--r-lg);
-}
-.support__list{position:relative;inset:auto;grid-area:1/2/3/3;width:auto;align-self:start}
-.support__text{font-size:clamp(18px,1.8vw,24px);line-height:1.15}
+	.support__inner {
+		position: relative;
+		min-height: 0;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 42%);
+		column-gap: clamp(20px, 3vw, 40px);
+		padding: 55px clamp(24px, 4vw, 50px);
+		border-radius: var(--r-card);
+		background: var(--white);
+	}
 
-/* Этапы */
-.steps__grid{grid-template-columns:repeat(4,1fr);column-gap:clamp(16px,2.5vw,40px)}
-/* в макете белая подложка через одну — это читается только в сетке 4×2,
+	.support__panel {
+		display: none
+	}
+
+	.support__title {
+		position: relative;
+		inset: auto;
+		grid-area: 1/1;
+		width: auto;
+		max-width: none;
+		font-size: clamp(34px, 4vw, 56px);
+		line-height: 1.12;
+	}
+
+	.support__photo {
+		position: relative;
+		inset: auto;
+		grid-area: 2/1;
+		width: 100%;
+		height: auto;
+		margin-block-start: 36px;
+		aspect-ratio: 861/574;
+		border-radius: var(--r-lg);
+	}
+
+	.support__list {
+		position: relative;
+		inset: auto;
+		grid-area: 1/2/3/3;
+		width: auto;
+		align-self: start
+	}
+
+	.support__text {
+		font-size: clamp(18px, 1.8vw, 24px);
+		line-height: 1.15
+	}
+
+	/* Этапы */
+	.steps__grid {
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: clamp(16px, 2.5vw, 40px)
+	}
+
+	/* в макете белая подложка через одну — это читается только в сетке 4×2,
    на двух и одной колонке шахматка выглядит случайной, поэтому все белые */
-.steps__card{width:auto;background:var(--white)}
-.steps__card:nth-child(4n){margin-inline-start:0}
-.steps__body{left:clamp(20px,3vw,39px);width:auto;right:clamp(20px,3vw,39px)}
-.steps__text{width:auto}
-.steps__icon{left:clamp(20px,3vw,39px)}
-.steps__num{left:auto;right:clamp(46px,7vw,63px)}
-.steps__total{left:auto;right:clamp(20px,3vw,39px)}
+	.steps__card {
+		width: auto;
+		background: var(--white)
+	}
 
-/* Что важно знать */
-.know__inner{
-	position:relative;
-	display:grid;
-	grid-template-columns:repeat(3,1fr);
-	gap:clamp(20px,3vw,41px);
-	height:auto;
-}
-.know__title{position:static;grid-column:1/-1;width:auto;max-width:680px;font-size:clamp(34px,4vw,56px);line-height:1.12}
-.know__soldier{position:static;grid-column:1/3;width:100%;height:auto;aspect-ratio:920/800;overflow:hidden}
-.know__soldier img{width:100%;height:100%}
-/* карточкам нужен свой контекст: внутри абсолютное фото с overflow:hidden */
-.know__card{position:relative;inset:auto}
-.know__card--red{grid-column:1;grid-row:2;width:auto;height:auto;min-height:368px;padding:39px 30px}
-.know__card--blue{grid-column:2;grid-row:3;width:auto;height:auto;min-height:368px;padding:40px 30px}
-.know__card--tall{grid-column:3;grid-row:2/4;width:auto;height:auto;padding:clamp(40px,20vw,535px) 30px 40px}
-.know__name,.know__text{width:auto!important}
+	.steps__card:nth-child(4n) {
+		margin-inline-start: 0
+	}
 
-/* Статьи */
-.art__grid{grid-template-columns:repeat(3,1fr);column-gap:clamp(20px,3vw,40px)}
-.art__card,.art__link{width:auto}
-.art__photo,.art__photo img{width:100%}
-.art__body{left:clamp(20px,3vw,49px);right:clamp(20px,3vw,49px);width:auto}
-.art__more{width:100%}
-.art__more-btn{margin-inline-start:0;align-self:center}
-.art .container{display:flex;flex-direction:column}
-.art__grid{width:100%}
+	.steps__body {
+		left: clamp(20px, 3vw, 39px);
+		width: auto;
+		right: clamp(20px, 3vw, 39px)
+	}
 
-/* Страницы «Статьи» и «Ответы» */
-.list__tabs{width:100%}
-.list__tabs::after{width:100%}
-.list__grid{grid-template-columns:repeat(3,1fr);column-gap:clamp(20px,3vw,40px)}
-.faq__layout{grid-template-columns:minmax(0,1fr) minmax(280px,560px);column-gap:clamp(20px,3vw,40px)}
-.faq__btn > span:first-child{max-width:none}
-.faq__a p{width:auto}
-.ask{width:auto;padding-inline:clamp(24px,3vw,50px)}
-.ask__title,.ask__lead,.ask__input{width:100%}
+	.steps__text {
+		width: auto
+	}
 
-/* Подвал */
-.footer__inner{display:flex;flex-wrap:wrap;align-items:flex-start;padding-block-end:24px}
-.footer__logo{flex:0 0 auto}
-.footer__copy{flex:1 0 100%;order:3}
-.footer__messengers{
-	position:static;
-	order:2;
-	display:flex;
-	align-items:center;
-	gap:22px;
-	width:auto;height:auto;
-	margin:3px 0 0 auto;
-}
-.footer__messenger{position:static}
-.footer__messenger--max a{position:relative}
+	.steps__icon {
+		left: clamp(20px, 3vw, 39px)
+	}
 
-/* Статья */
-.post__cover{width:100%;margin-inline-start:0}
-.post__title{width:auto;right:49px;font-size:clamp(34px,4vw,56px);line-height:1.12}
-.post__body,.post__faq-title,.post__faq{width:min(920px,100%)}
-.post__faq-row{gap:clamp(24px,8vw,165px)}
-.post__faq dt{flex:0 1 319px}
-.post__faq dd{flex:1 1 auto}
+	.steps__num {
+		left: auto;
+		right: clamp(46px, 7vw, 63px)
+	}
+
+	.steps__total {
+		left: auto;
+		right: clamp(20px, 3vw, 39px)
+	}
+
+	/* Что важно знать */
+	.know__inner {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: clamp(20px, 3vw, 41px);
+		height: auto;
+	}
+
+	.know__title {
+		position: static;
+		grid-column: 1/-1;
+		width: auto;
+		max-width: 680px;
+		font-size: clamp(34px, 4vw, 56px);
+		line-height: 1.12
+	}
+
+	.know__soldier {
+		position: static;
+		grid-column: 1/3;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 920/800;
+		overflow: hidden
+	}
+
+	.know__soldier img {
+		width: 100%;
+		height: 100%
+	}
+
+	/* карточкам нужен свой контекст: внутри абсолютное фото с overflow:hidden */
+	.know__card {
+		position: relative;
+		inset: auto
+	}
+
+	.know__card--red {
+		grid-column: 1;
+		grid-row: 2;
+		width: auto;
+		height: auto;
+		min-height: 368px;
+		padding: 39px 30px
+	}
+
+	.know__card--blue {
+		grid-column: 2;
+		grid-row: 3;
+		width: auto;
+		height: auto;
+		min-height: 368px;
+		padding: 40px 30px
+	}
+
+	.know__card--tall {
+		grid-column: 3;
+		grid-row: 2/4;
+		width: auto;
+		height: auto;
+		padding: clamp(40px, 20vw, 535px) 30px 40px
+	}
+
+	.know__name,
+	.know__text {
+		width: auto !important
+	}
+
+	/* Статьи */
+	.art__grid {
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: clamp(20px, 3vw, 40px)
+	}
+
+	.art__card,
+	.art__link {
+		width: auto
+	}
+
+	.art__photo,
+	.art__photo img {
+		width: 100%
+	}
+
+	.art__body {
+		left: clamp(20px, 3vw, 49px);
+		right: clamp(20px, 3vw, 49px);
+		width: auto
+	}
+
+	.art__more {
+		width: 100%
+	}
+
+	.art__more-btn {
+		margin-inline-start: 0;
+		align-self: center
+	}
+
+	.art .container {
+		display: flex;
+		flex-direction: column
+	}
+
+	.art__grid {
+		width: 100%
+	}
+
+	/* Страницы «Статьи» и «Ответы» */
+	.list__tabs {
+		width: 100%
+	}
+
+	.list__tabs::after {
+		width: 100%
+	}
+
+	.list__grid {
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: clamp(20px, 3vw, 40px)
+	}
+
+	.faq__layout {
+		grid-template-columns: minmax(0, 1fr) minmax(280px, 560px);
+		column-gap: clamp(20px, 3vw, 40px)
+	}
+
+	.faq__btn>span:first-child {
+		max-width: none
+	}
+
+	.faq__a p {
+		width: auto
+	}
+
+	.ask {
+		width: auto;
+		padding-inline: clamp(24px, 3vw, 50px)
+	}
+
+	.ask__title,
+	.ask__lead,
+	.ask__input {
+		width: 100%
+	}
+
+	/* Подвал */
+	.footer__inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		padding-block-end: 24px
+	}
+
+	.footer__logo {
+		flex: 0 0 auto
+	}
+
+	.footer__copy {
+		flex: 1 0 100%;
+		order: 3
+	}
+
+	.footer__messengers {
+		position: static;
+		order: 2;
+		display: flex;
+		align-items: center;
+		gap: 22px;
+		width: auto;
+		height: auto;
+		margin: 3px 0 0 auto;
+	}
+
+	.footer__messenger {
+		position: static
+	}
+
+	.footer__messenger--max a {
+		position: relative
+	}
+
+	/* Статья */
+	.post__cover {
+		width: 100%;
+		margin-inline-start: 0
+	}
+
+	.post__title {
+		width: auto;
+		right: 49px;
+		font-size: clamp(34px, 4vw, 56px);
+		line-height: 1.12
+	}
+
+	.post__body,
+	.post__faq-title,
+	.post__faq {
+		width: min(920px, 100%)
+	}
+
+	.post__faq-row {
+		gap: clamp(24px, 8vw, 165px)
+	}
+
+	.post__faq dt {
+		flex: 0 1 319px
+	}
+
+	.post__faq dd {
+		flex: 1 1 auto
+	}
 }
 
 /* --------------------------------------------------------------- ≤1199 --- */
-@media (min-width:601px) and (max-width:1023px){
-/* шапка сворачивается в бургер */
-.header__nav{
-	position:absolute;
-	left:20px;right:20px;top:67px;
-	display:none;
-	padding:24px 0;
-	border-radius:var(--r-lg);
-	background:var(--white);
-	box-shadow:0 20px 40px rgba(69,69,85,.12);
-	z-index:5;
-}
-.is-menu-open .header__nav{display:block}
-.header__menu{flex-direction:column;align-items:flex-start;gap:16px;margin-inline-start:32px}
-.header__cta{margin-inline-start:auto}
-.header__burger{
-	display:grid;
-	place-items:center;
-	width:42px;height:42px;
-	margin-inline-start:20px;
-	padding:0;border:0;
-	border-radius:var(--r-md);
-	background:var(--blue);
-}
-.header__burger-lines{display:grid;gap:4.35px;width:18.7px}
-.header__burger-lines span{display:block;height:2px;border-radius:1px;background:var(--white)}
+@media (min-width:601px) and (max-width:1023px) {
 
-/* верхняя строка: прячем подписи */
-.header__hint,.header__divider{display:none}
-.pay__grid{grid-template-rows:none;row-gap:40px}
-.pay__sum{white-space:normal}
+	/* шапка сворачивается в бургер */
+	.header__nav {
+		position: absolute;
+		left: 20px;
+		right: 20px;
+		top: 67px;
+		display: none;
+		padding: 24px 0;
+		border-radius: var(--r-lg);
+		background: var(--white);
+		box-shadow: 0 20px 40px rgba(69, 69, 85, .12);
+		z-index: 5;
+	}
 
-/* две колонки вместо трёх */
-.benefits__grid{grid-template-columns:repeat(2,1fr);row-gap:60px}
-.benefits__item:nth-child(3n+2){position:static;top:auto;flex-direction:column}
-.steps__grid{grid-template-columns:repeat(2,1fr);row-gap:40px}
-.steps__card:nth-child(2n){top:0}
-.art__grid,.list__grid{grid-template-columns:repeat(2,1fr);row-gap:32px}
-/* фильтры прокручиваются по горизонтали */
-.list__tabs,.faq__tabs,.pay__tabs{
-	justify-content:flex-start;
-	gap:32px;
-	margin-inline:-20px;
-	padding-inline:20px;
-	overflow-x:auto;
-	scrollbar-width:none;
-}
-.list__tabs::-webkit-scrollbar,.faq__tabs::-webkit-scrollbar,.pay__tabs::-webkit-scrollbar{display:none}
-.list__tabs::after,.faq__tabs::after{width:100%}
-.list__tab,.pay__tab{white-space:nowrap}
-.know__inner{grid-template-columns:repeat(2,1fr)}
-.know__soldier{grid-column:1/-1}
-.know__card--red{grid-column:1;grid-row:3}
-.know__card--blue{grid-column:2;grid-row:3}
-.know__card--tall{grid-column:1/-1;grid-row:4;padding-block:60px 40px}
-.family__inner{grid-template-columns:1fr}
-.family__grid{margin-block-start:32px}
-/* вкладки выплат переносятся, а не обрезаются */
-.pay__tabs{flex-wrap:wrap;gap:16px 32px;overflow:visible;margin-inline:0;padding-inline:0}
+	.is-menu-open .header__nav {
+		display: block
+	}
+
+	.header__menu {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+		margin-inline-start: 32px
+	}
+
+	.header__cta {
+		margin-inline-start: auto
+	}
+
+	.header__burger {
+		display: grid;
+		place-items: center;
+		align-self: center;
+		width: 42px;
+		height: 42px;
+		margin-inline-start: 20px;
+		padding: 0;
+		border: 0;
+		border-radius: var(--r-md);
+		background: var(--blue);
+	}
+
+	.header__burger-lines {
+		display: grid;
+		gap: 4.35px;
+		width: 18.7px
+	}
+
+	.header__burger-lines span {
+		display: block;
+		height: 2px;
+		border-radius: 1px;
+		background: var(--white)
+	}
+
+	/* верхняя строка: прячем подписи */
+	.header__hint,
+	.header__divider {
+		display: none
+	}
+
+	.pay__grid {
+		grid-template-rows: none;
+		row-gap: 40px
+	}
+
+	.pay__sum {
+		white-space: normal
+	}
+
+	/* две колонки вместо трёх */
+	.benefits__grid {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 60px
+	}
+
+	.benefits__item:nth-child(3n+2) {
+		position: static;
+		top: auto;
+		flex-direction: column
+	}
+
+	.steps__grid {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 40px
+	}
+
+	.steps__card:nth-child(2n) {
+		top: 0
+	}
+
+	.art__grid,
+	.list__grid {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 32px
+	}
+
+	/* фильтры прокручиваются по горизонтали */
+	.list__tabs,
+	.faq__tabs,
+	.pay__tabs {
+		justify-content: flex-start;
+		gap: 32px;
+		margin-inline: -20px;
+		padding-inline: 20px;
+		overflow-x: auto;
+		scrollbar-width: none;
+	}
+
+	.list__tabs::-webkit-scrollbar,
+	.faq__tabs::-webkit-scrollbar,
+	.pay__tabs::-webkit-scrollbar {
+		display: none
+	}
+
+	.list__tabs::after,
+	.faq__tabs::after {
+		display: none
+	}
+
+	.list__tab,
+	.pay__tab {
+		white-space: nowrap
+	}
+
+	.know__inner {
+		grid-template-columns: repeat(2, 1fr)
+	}
+
+	.know__soldier {
+		grid-column: 1/-1
+	}
+
+	.know__card--red {
+		grid-column: 1;
+		grid-row: 3
+	}
+
+	.know__card--blue {
+		grid-column: 2;
+		grid-row: 3
+	}
+
+	.know__card--tall {
+		grid-column: 1/-1;
+		grid-row: 4;
+		padding-block: 60px 40px
+	}
+
+	.family__inner {
+		grid-template-columns: 1fr
+	}
+
+	.family__grid {
+		margin-block-start: 32px
+	}
+
+	/* вкладки выплат переносятся, а не обрезаются */
+	.pay__tabs {
+		flex-wrap: wrap;
+		gap: 16px 32px;
+		overflow: visible;
+		margin-inline: 0;
+		padding-inline: 0
+	}
 }
 
 /* --------------------------------------------------------------- ≤900 ---- */
-@media (min-width:601px) and (max-width:900px){
-.header__city{display:none}
-.hero__inner{flex-direction:column;padding-block:32px 0}
-.hero__card{width:100%;flex:0 0 auto}
-.hero__figure{position:relative;inset:auto;flex:0 0 auto;width:min(560px,100%);margin:32px auto 0}
-.hero__title{font-size:clamp(34px,5.5vw,56px);line-height:1.12}
+@media (min-width:601px) and (max-width:900px) {
+	.hero__inner {
+		flex-direction: column;
+		padding-block: 32px 0
+	}
 
-.req__list{grid-template-columns:1fr}
-.req__jet{right:-3%;top:-80px;width:min(360px,48%);height:auto;aspect-ratio:1091/1018;margin:0}
+	.hero__card {
+		width: 100%;
+		flex: 0 0 auto
+	}
 
-.terms__grid{grid-template-columns:1fr}
-.terms__bg{opacity:.5}
+	.hero__figure {
+		position: relative;
+		inset: auto;
+		flex: 0 0 auto;
+		width: min(560px, 100%);
+		margin: 32px auto 0
+	}
 
-.cta__panel{height:auto;padding-block:40px}
-.cta__body{position:relative;inset:auto;z-index:1;width:auto;margin-inline:clamp(20px,4vw,50px)}
-.cta__messengers{
-	position:relative;
-	inset:auto;
-	width:auto;height:60px;
-	margin:32px clamp(20px,4vw,50px) 0;
-}
-/* как в мобильном макете: под текстом просто синяя панель, фото убираем */
-.cta__photo{display:none}
+	.hero__title {
+		font-size: clamp(34px, 5.5vw, 56px);
+		line-height: 1.12
+	}
 
-.pay__grid{grid-template-columns:repeat(2,1fr);row-gap:40px;grid-template-rows:none}
-.pay__tabs{flex-wrap:wrap;gap:16px 32px}
+	.req__list {
+		grid-template-columns: 1fr
+	}
 
-.family__grid{grid-template-columns:1fr}
-.support__inner{display:flex;flex-direction:column;padding:40px clamp(20px,4vw,50px)}
-.support__title{order:-1;inset:auto;margin-block-end:32px}
-.support__list{inset:auto;margin-block-end:40px}
-.support__photo{inset:auto;width:100%;height:min(433px,60vw);margin-block-start:0;aspect-ratio:auto}
+	.req__jet {
+		right: -3%;
+		top: -80px;
+		width: min(360px, 48%);
+		height: auto;
+		aspect-ratio: 1091/1018;
+		margin: 0
+	}
 
-.steps__grid{grid-template-columns:1fr;row-gap:20px}
-.steps__card{height:auto;min-height:327px}
+	.terms__grid {
+		grid-template-columns: 1fr
+	}
 
-.know__inner{grid-template-columns:1fr}
-.know__soldier,
-.know__card--red,.know__card--blue,.know__card--tall{grid-column:1;grid-row:auto}
-.know__card--tall{padding-block:40px}
+	.terms__bg {
+		opacity: .5
+	}
 
-.art__grid,.list__grid{grid-template-columns:1fr}
+	.cta__panel {
+		height: auto;
+		padding-block: 40px
+	}
 
-.contact__panel{height:auto;padding-block:40px}
-/* текст поверх фото: фото абсолютное, поэтому контенту нужен свой слой */
-.contact__body,.contact__form{position:relative;inset:auto;z-index:1;width:auto;margin-inline:clamp(20px,4vw,50px)}
-.contact__form{margin-block-start:32px}
-.contact__input{width:100%}
-/* фото кадрируем как в мобильном макете — приглушать его не нужно */
-.contact__photo{object-position:32% 40%}
+	.cta__body {
+		position: relative;
+		inset: auto;
+		z-index: 1;
+		width: auto;
+		margin-inline: clamp(20px, 4vw, 50px)
+	}
 
-.post__title{position:static;margin:24px 0 0;color:var(--ink)}
-.post__cover{height:auto;aspect-ratio:330/240}
-.post__date{position:static;margin:16px 0 0;color:var(--ink)}
-.post__cover + .post__date{margin-inline:0}
-.post__faq-row{flex-direction:column;align-items:flex-start;gap:8px}
-.post__faq dt,.post__faq dd{flex:none;width:100%}
+	.cta__messengers {
+		position: relative;
+		inset: auto;
+		width: auto;
+		height: 60px;
+		margin: 32px clamp(20px, 4vw, 50px) 0;
+	}
 
-.faq__layout{grid-template-columns:1fr;row-gap:32px}
-.ask{min-height:0;padding-block:40px}
+	/* как в мобильном макете: под текстом просто синяя панель, фото убираем */
+	.cta__photo {
+		display: none
+	}
+
+	.pay__grid {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 40px;
+		grid-template-rows: none
+	}
+
+	.pay__tabs {
+		flex-wrap: wrap;
+		gap: 16px 32px
+	}
+
+	.family__grid {
+		grid-template-columns: 1fr
+	}
+
+	.support__inner {
+		display: flex;
+		flex-direction: column;
+		padding: 40px clamp(20px, 4vw, 50px)
+	}
+
+	.support__title {
+		order: -1;
+		inset: auto;
+		margin-block-end: 32px
+	}
+
+	.support__list {
+		inset: auto;
+		margin-block-end: 40px
+	}
+
+	.support__photo {
+		inset: auto;
+		width: 100%;
+		height: min(433px, 60vw);
+		margin-block-start: 0;
+		aspect-ratio: auto
+	}
+
+	.steps__grid {
+		grid-template-columns: 1fr;
+		row-gap: 20px
+	}
+
+	.steps__card {
+		height: auto;
+		min-height: 327px
+	}
+
+	.know__inner {
+		grid-template-columns: 1fr
+	}
+
+	.know__soldier,
+	.know__card--red,
+	.know__card--blue,
+	.know__card--tall {
+		grid-column: 1;
+		grid-row: auto
+	}
+
+	.know__card--tall {
+		padding-block: 40px
+	}
+
+	.art__grid,
+	.list__grid {
+		grid-template-columns: 1fr
+	}
+
+	.contact__panel {
+		height: auto;
+		padding-block: 40px
+	}
+
+	/* текст поверх фото: фото абсолютное, поэтому контенту нужен свой слой */
+	.contact__body,
+	.contact__form {
+		position: relative;
+		inset: auto;
+		z-index: 1;
+		width: auto;
+		margin-inline: clamp(20px, 4vw, 50px)
+	}
+
+	.contact__form {
+		margin-block-start: 32px
+	}
+
+	.contact__input {
+		width: 100%
+	}
+
+	/* фото кадрируем как в мобильном макете — приглушать его не нужно */
+	.contact__photo {
+		object-position: 32% 40%
+	}
+
+	.post__title {
+		position: static;
+		margin: 24px 0 0;
+		color: var(--ink)
+	}
+
+	.post__cover {
+		height: auto;
+		aspect-ratio: 330/240
+	}
+
+	.post__date {
+		position: static;
+		margin: 16px 0 0;
+		color: var(--ink)
+	}
+
+	.post__cover+.post__date {
+		margin-inline: 0
+	}
+
+	.post__faq-row {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px
+	}
+
+	.post__faq dt,
+	.post__faq dd {
+		flex: none;
+		width: 100%
+	}
+
+	.faq__layout {
+		grid-template-columns: 1fr;
+		row-gap: 32px
+	}
+
+	.ask {
+		min-height: 0;
+		padding-block: 40px
+	}
 }
 
 /* ------------------------------------------- 601…1023: пропорции фото ----
    На промежуточных ширинах пропорции боксов не совпадают с макетными,
    поэтому все фотографии кадрируются (object-fit:cover), а не растягиваются.
    ------------------------------------------------------------------------ */
-@media (min-width:601px) and (max-width:1023px){
-.family__photo,
-.art__photo img,
-.post__cover-img,
-.hero__photo img{object-fit:cover}
+@media (min-width:601px) and (max-width:1023px) {
 
-/* индивидуальные кропы из макета отменяем — бокс уже другой пропорции */
-.benefits__photo--crop2 img,
-.benefits__photo--crop5 img,
-.know__photo img{
-	inset:0;
-	left:0;top:0;
-	width:100%;height:100%;
-	object-fit:cover;
-}
-.benefits__photo--crop2 img{object-position:50% 30%}
-.benefits__photo--crop5 img{object-position:50% 32%}
-.know__photo img{object-position:32% 50%}
+	.family__photo,
+	.art__photo img,
+	.post__cover-img,
+	.hero__photo img {
+		object-fit: cover
+	}
 
-/* самолёт: высота от ширины, поворот и пропорции сохраняются */
-.req__jet img{width:81%;height:auto}
+	/* индивидуальные кропы из макета отменяем — бокс уже другой пропорции */
+	.benefits__photo--crop2 img,
+	.benefits__photo--crop5 img,
+	.know__photo img {
+		inset: 0;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 
-.support__photo img{
-	left:0;top:0;
-	width:100%;height:100%;
-	object-fit:cover;
-	object-position:50% 42%;
-}
+	.benefits__photo--crop2 img {
+		object-position: 50% 30%
+	}
 
-.cta__photo,
-.contact__photo{
-	left:0;top:0;
-	width:100%;height:100%;
-	object-fit:cover;
-}
-.contact__photo{object-position:32% 40%}
+	.benefits__photo--crop5 img {
+		object-position: 50% 32%
+	}
+
+	.know__photo img {
+		object-position: 32% 50%
+	}
+
+	/* самолёт: высота от ширины, поворот и пропорции сохраняются */
+	.req__jet img {
+		width: 81%;
+		height: auto
+	}
+
+	.support__photo img {
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 50% 42%;
+	}
+
+	.cta__photo,
+	.contact__photo {
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.contact__photo {
+		object-position: 32% 40%
+	}
 }
