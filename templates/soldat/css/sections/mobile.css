@@ -215,13 +215,13 @@
 
 	.hero__figure {
 		position: relative;
-		left: auto;
-		top: auto;
-		width: calc(100% - 1px);
-		/* макет: снимок 329px на y=541 */
-		height: auto;
-		aspect-ratio: 1;
-		margin-block-start: 52px;
+        left: auto;
+        top: auto;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        margin-block-start: 52px;
+        right: 0;
 	}
 
 	.hero__photo {
@@ -303,6 +303,7 @@
 		scroll-snap-type: x mandatory;
 		scroll-padding-inline-start: 20px;
 		scrollbar-width: none;
+		margin-inline-end: 0px;
 	}
 
 	.benefits__slider::-webkit-scrollbar {

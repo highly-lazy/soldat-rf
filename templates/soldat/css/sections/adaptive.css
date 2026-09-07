@@ -71,6 +71,10 @@
 		aspect-ratio: 1;
 	}
 
+	.benefits__name br {
+		display: none;
+	}
+
 	.hero__photo {
 		width: 100%;
 		height: 100%
@@ -131,10 +135,10 @@
 
 	.hero__accent {
 		left: 61.5%;
-        top: 54%;
-        width: 38.5%;
-        height: 46%;
-        border-radius: 30px;
+		top: 54%;
+		width: 38.5%;
+		height: 46%;
+		border-radius: 30px;
 	}
 
 	/* Преимущества */
