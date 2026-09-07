@@ -1071,7 +1071,12 @@
 	.art .container {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: stretch;
+	}
+
+	/* по центру только кнопка «Показать ещё» — заголовок в макете слева */
+	.art__more-btn {
+		align-self: center
 	}
 
 	.art__card,
