@@ -47,6 +47,10 @@
 }
 
 /* --- аккордеон --- */
+.faq__list[hidden] {
+	display: none
+}
+
 .faq__list {
 	display: flex;
 	flex-direction: column;
@@ -79,6 +83,20 @@
 	line-height: normal;
 	text-align: left;
 	color: var(--text);
+	transition: color .2s;
+}
+
+/* ховер вопроса (компонент 1036:3326): текст и «+» становятся красными */
+.faq__btn:hover,
+.faq__btn:focus-visible {
+	color: var(--red)
+}
+
+.faq__btn:hover .faq__sign::before,
+.faq__btn:hover .faq__sign::after,
+.faq__btn:focus-visible .faq__sign::before,
+.faq__btn:focus-visible .faq__sign::after {
+	background: var(--red)
 }
 
 .faq__btn>span:first-child {
@@ -103,7 +121,7 @@
 	margin: -1.5px 0 0 -14px;
 	border-radius: 2px;
 	background: var(--blue);
-	transition: transform .2s;
+	transition: transform .2s, background-color .2s;
 }
 
 .faq__sign::after {
@@ -181,6 +199,22 @@
 .ask__input::placeholder {
 	color: var(--white);
 	opacity: .7
+}
+
+/* состояние active из компонента Input (988:640) */
+.ask__input {
+	transition: background-color .2s, color .2s
+}
+
+.ask__input:focus,
+.ask__input:not(:placeholder-shown) {
+	background: var(--white);
+	color: var(--text)
+}
+
+.ask__input:focus::placeholder,
+.ask__input:not(:placeholder-shown)::placeholder {
+	color: var(--text)
 }
 
 .ask__input~.ask__input {

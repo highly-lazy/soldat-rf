@@ -35,6 +35,56 @@
 	transform:rotate(90deg);
 }
 
+/* --- выбор города (выпадающий список) --- */
+.city{position:relative}
+
+.header__city,
+.header__nav-city{
+	border:0;
+	background:none;
+	font:inherit;
+	color:inherit;
+}
+.header__city-value,
+.header__city-caret{transition:color .2s,transform .2s}
+.header__city:hover .header__city-value,
+.header__city:hover .header__city-caret,
+.header__nav-city:hover .header__city-value,
+.header__nav-city:hover .header__city-caret,
+[aria-expanded="true"] .header__city-value,
+[aria-expanded="true"] .header__city-caret{color:var(--red)}
+[aria-expanded="true"] .header__city-caret{transform:rotate(-90deg)}
+
+.city__list{
+	position:absolute;
+	left:0;
+	top:calc(100% + 8px);
+	z-index:40;
+	width:262px;
+	max-height:320px;
+	overflow-y:auto;
+	margin:0;
+	padding:10px 0;
+	border-radius:var(--r-md);
+	background:var(--white);
+	box-shadow:0 20px 40px rgba(69,69,85,.18);
+}
+.city__item{
+	display:block;
+	width:100%;
+	padding:7px 22px;
+	border:0;
+	background:none;
+	font-size:18px;
+	line-height:23px;
+	text-align:left;
+	color:var(--ink);
+	transition:color .2s;
+}
+.city__item:hover,
+.city__item:focus-visible{color:var(--red)}
+.city__item[aria-selected="true"]{color:var(--blue)}
+
 .header__contacts{
 	display:flex;
 	align-items:flex-start;
@@ -53,7 +103,7 @@
 	white-space:nowrap;
 	transition:color .2s;
 }
-.header__phone:hover{color:var(--blue)}
+.header__phone:hover{color:var(--red)}
 .header__phone-icon{flex:0 0 21px;width:21px;height:21px}
 
 .header__hint{
@@ -118,7 +168,7 @@
 	color:var(--ink);
 	transition:color .2s;
 }
-.header__menu a:hover{color:var(--blue)}
+.header__menu a:hover{color:var(--red)}
 
 .header__cta{
 	flex:0 0 auto;
@@ -129,7 +179,7 @@
 	white-space:nowrap;
 }
 
-.header__nav-city,
+.city--nav,
 .header__nav-cta{display:none}   /* только в мобильном меню */
 
 .header__burger{display:none}

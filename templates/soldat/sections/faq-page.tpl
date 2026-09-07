@@ -10,13 +10,13 @@
 		<h1 class="faq__title" id="faq-title">Ответы на вопросы</h1>
 
 		<div class="faq__tabs">
-			<button class="list__tab" type="button" aria-current="true">Для граждан РФ</button>
-			<button class="list__tab" type="button">Для иностранцев</button>
+			<button class="list__tab" type="button" aria-current="true" aria-controls="faq-list-ru">Для граждан РФ</button>
+			<button class="list__tab" type="button" aria-controls="faq-list-foreign">Для иностранцев</button>
 		</div>
 
 		<div class="faq__layout">
 			<!-- Ответы на вопросы 2–14 — демо-текст для вёрстки: в макете раскрыт только первый. -->
-			<ul class="faq__list">
+			<ul class="faq__list" id="faq-list-ru">
 				<li class="faq__item is-open">
 					<h3 class="faq__q">
 						<button class="faq__btn" type="button" aria-controls="faq-a-0" aria-expanded="true">
@@ -142,6 +142,82 @@
 						</button>
 					</h3>
 					<div class="faq__a" id="faq-a-13" hidden><p>Да. Кандидаты без опыта проходят профессиональную подготовку продолжительностью от 2 недель до 3 месяцев перед началом службы.</p></div>
+				</li>
+			</ul>
+
+			<!-- Вкладка «Для иностранцев»: тексты демонстрационные, требуют согласования с клиентом. -->
+			<ul class="faq__list" id="faq-list-foreign" hidden>
+				<li class="faq__item is-open">
+					<h3 class="faq__q">
+						<button class="faq__btn" type="button" aria-controls="faq-f-0" aria-expanded="true">
+							<span>Могут ли иностранные граждане служить по контракту в армии РФ?</span>
+							<span class="faq__sign" aria-hidden="true"></span>
+						</button>
+					</h3>
+					<div class="faq__a" id="faq-f-0"><p>Да. Иностранные граждане, законно находящиеся на территории России, вправе заключить контракт о прохождении военной службы. Условия и порядок отбора уточняются в пункте отбора по месту обращения.</p></div>
+				</li>
+				<li class="faq__item">
+					<h3 class="faq__q">
+						<button class="faq__btn" type="button" aria-controls="faq-f-1" aria-expanded="false">
+							<span>Какие документы нужны иностранному гражданину?</span>
+							<span class="faq__sign" aria-hidden="true"></span>
+						</button>
+					</h3>
+					<div class="faq__a" id="faq-f-1" hidden><p>Паспорт иностранного гражданина с нотариально заверенным переводом, документ, подтверждающий законное нахождение в России, миграционная карта, сведения об образовании и медицинские документы. Точный список подтвердят в пункте отбора.</p></div>
+				</li>
+				<li class="faq__item">
+					<h3 class="faq__q">
+						<button class="faq__btn" type="button" aria-controls="faq-f-2" aria-expanded="false">
+							<span>Нужно ли владеть русским языком?</span>
+							<span class="faq__sign" aria-hidden="true"></span>
+						</button>
+					</h3>
+					<div class="faq__a" id="faq-f-2" hidden><p>Да. Требуется владение русским языком на уровне, достаточном для понимания приказов, документов и общения в подразделении.</p></div>
+				</li>
+				<li class="faq__item">
+					<h3 class="faq__q">
+						<button class="faq__btn" type="button" aria-controls="faq-f-3" aria-expanded="false">
+							<span>Нужен ли вид на жительство или РВП?</span>
+							<span class="faq__sign" aria-hidden="true"></span>
+						</button>
+					</h3>
+					<div class="faq__a" id="faq-f-3" hidden><p>Достаточно законного нахождения на территории России. Вид на жительство не является обязательным условием, но упрощает оформление документов.</p></div>
+				</li>
+				<li class="faq__item">
+					<h3 class="faq__q">
+						<button class="faq__btn" type="button" aria-controls="faq-f-4" aria-expanded="false">
+							<span>Можно ли получить гражданство РФ после службы по контракту?</span>
+							<span class="faq__sign" aria-hidden="true"></span>
+						</button>
+					</h3>
+					<div class="faq__a" id="faq-f-4" hidden><p>Для иностранных граждан, проходящих военную службу по контракту, предусмотрен упрощённый порядок приёма в гражданство Российской Федерации. Условия уточняются при оформлении.</p></div>
+				</li>
+				<li class="faq__item">
+					<h3 class="faq__q">
+						<button class="faq__btn" type="button" aria-controls="faq-f-5" aria-expanded="false">
+							<span>На какой срок заключается контракт с иностранным гражданином?</span>
+							<span class="faq__sign" aria-hidden="true"></span>
+						</button>
+					</h3>
+					<div class="faq__a" id="faq-f-5" hidden><p>Первый контракт заключается на срок от одного года. Дальнейшие сроки обсуждаются при продлении контракта.</p></div>
+				</li>
+				<li class="faq__item">
+					<h3 class="faq__q">
+						<button class="faq__btn" type="button" aria-controls="faq-f-6" aria-expanded="false">
+							<span>Отличаются ли выплаты от выплат граждан РФ?</span>
+							<span class="faq__sign" aria-hidden="true"></span>
+						</button>
+					</h3>
+					<div class="faq__a" id="faq-f-6" hidden><p>Денежное довольствие, единовременные и боевые выплаты начисляются на общих основаниях — так же, как военнослужащим-гражданам России.</p></div>
+				</li>
+				<li class="faq__item">
+					<h3 class="faq__q">
+						<button class="faq__btn" type="button" aria-controls="faq-f-7" aria-expanded="false">
+							<span>Куда обращаться иностранному гражданину?</span>
+							<span class="faq__sign" aria-hidden="true"></span>
+						</button>
+					</h3>
+					<div class="faq__a" id="faq-f-7" hidden><p>В любой пункт отбора на военную службу по контракту. Оставьте заявку на сайте — специалист подберёт ближайший пункт и подскажет, какие документы взять с собой.</p></div>
 				</li>
 			</ul>
 

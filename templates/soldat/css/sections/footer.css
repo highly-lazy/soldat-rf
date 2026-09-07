@@ -24,7 +24,8 @@
 	line-height:normal;
 	color:var(--muted);
 }
-.footer__copy a{display:block;text-decoration:underline}
+.footer__copy a{display:block;text-decoration:underline;transition:color .2s}
+.footer__copy a:hover,.footer__copy a:focus-visible{color:var(--red)}
 
 .footer__messengers{
 	position:absolute;

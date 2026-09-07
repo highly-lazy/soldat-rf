@@ -122,8 +122,19 @@
 	}
 
 	/* город и кнопка внутри меню */
+	.city--nav {
+		display: block
+	}
+
+	.city--nav .city__list {
+		left: 20px;
+		right: 20px;
+		width: auto
+	}
+
 	.header__nav-city {
 		display: flex;
+		width: 100%;
 		align-items: center;
 		justify-content: center;
 		gap: 8px;

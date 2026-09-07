@@ -53,6 +53,13 @@
 	color:var(--white);
 }
 .contact__input::placeholder{color:var(--white);opacity:.7}
+
+/* состояние active из компонента Input (988:640): поле становится белым */
+.contact__input{transition:background-color .2s,color .2s}
+.contact__input:focus,
+.contact__input:not(:placeholder-shown){background:var(--white);color:var(--text)}
+.contact__input:focus::placeholder,
+.contact__input:not(:placeholder-shown)::placeholder{color:var(--text)}
 .contact__input ~ .contact__input{margin-block-start:16px}   /* макет: 10957 → 11037 */
 
 .contact__consent{

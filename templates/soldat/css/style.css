@@ -17,7 +17,7 @@
 
 	--font-body:'Onest','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
 
-	--container:1440px;     /* 1400 контента + 2×20 поля */
+	--container:1400px;     /* ширина контента из макета (100…1500) */
 	--r-sm:8px;
 	--r-md:12px;
 	--r-lg:24px;
@@ -73,11 +73,12 @@ ul,ol{padding:0;list-style:none}
 /* ==========================================================================
    Контейнер
    ========================================================================== */
+/* Контейнер задан точной шириной из макета (1400), а не резиновыми полями:
+   поля 20px появляются только тогда, когда 1400 уже не помещается. */
 .container{
-	width:100%;
-	max-width:var(--container);
+	width:1400px;
+	max-width:calc(100% - 40px);
 	margin-inline:auto;
-	padding-inline:20px;
 }
 
 /* ==========================================================================
@@ -107,7 +108,13 @@ ul,ol{padding:0;list-style:none}
 	text-align:left;
 	transition:background-color .2s;
 }
-.btn:hover,.btn:focus-visible{background:var(--blue-dark)}
+.btn:hover,.btn:focus-visible{background:var(--red)}
+
+/* обводочные варианты кнопки из библиотеки макета (644:6901 / 644:6921) */
+.btn--outline{background:transparent;box-shadow:inset 0 0 0 1px var(--blue)}
+.btn--outline-white{background:transparent;box-shadow:inset 0 0 0 1px var(--white)}
+.btn--outline:hover,.btn--outline:focus-visible,
+.btn--outline-white:hover,.btn--outline-white:focus-visible{background:var(--red);box-shadow:none}
 .btn--lg{padding:20px 36px}
 .btn--sm{padding:12px 26px;border-radius:var(--r-sm);font-size:16px}
 

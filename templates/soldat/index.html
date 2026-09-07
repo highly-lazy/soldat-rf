@@ -9,7 +9,8 @@
 	<!-- верхняя строка: город, телефон, мессенджеры (макет y 0…50) -->
 	<div class="header__top">
 		<div class="container header__top-inner">
-			<button class="header__city" type="button" aria-label="Выбрать город">
+			<div class="city">
+			<button class="header__city" type="button" aria-label="Выбрать город" aria-haspopup="listbox" aria-expanded="false">
 				<svg class="header__city-pin" viewBox="0 0 15 21" fill="none" aria-hidden="true">
 					<path d="M7.5 20s6.5-7.2 6.5-12.2A6.5 6.5 0 0 0 1 7.8C1 12.8 7.5 20 7.5 20Z" stroke="currentColor" stroke-width="1.6"/>
 					<circle cx="7.5" cy="7.8" r="2.4" stroke="currentColor" stroke-width="1.6"/>
@@ -20,6 +21,7 @@
 					<path d="M7.71 3.75 12.96 9l-5.25 5.25" stroke="currentColor" stroke-width="1.6" stroke-linejoin="bevel"/>
 				</svg>
 			</button>
+			</div>
 
 			<div class="header__contacts">
 				<a class="header__phone" href="tel:+74954450117">
@@ -47,7 +49,8 @@
 
 			<nav class="header__nav" id="site-nav" aria-label="Основная навигация">
 				<!-- город и кнопка показываются только в мобильном меню -->
-				<span class="header__nav-city">
+				<div class="city city--nav">
+				<button class="header__nav-city" type="button" aria-label="Выбрать город" aria-haspopup="listbox" aria-expanded="false">
 					<svg class="header__city-pin" viewBox="0 0 15 21" fill="none" aria-hidden="true">
 						<path d="M7.5 20s6.5-7.2 6.5-12.2A6.5 6.5 0 0 0 1 7.8C1 12.8 7.5 20 7.5 20Z" stroke="currentColor" stroke-width="1.6"/>
 						<circle cx="7.5" cy="7.8" r="2.4" stroke="currentColor" stroke-width="1.6"/>
@@ -57,7 +60,8 @@
 					<svg class="header__city-caret" viewBox="0 0 18 18" fill="none" aria-hidden="true">
 						<path d="M7.71 3.75 12.96 9l-5.25 5.25" stroke="currentColor" stroke-width="1.6" stroke-linejoin="bevel"/>
 					</svg>
-				</span>
+				</button>
+				</div>
 
 				<a class="btn btn--sm header__nav-cta" href="#contact">
 					Получить консультацию

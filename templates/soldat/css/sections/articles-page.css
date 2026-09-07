@@ -83,7 +83,7 @@
 }
 
 .list__tab:hover {
-	color: var(--ink)
+	color: var(--red)
 }
 
 .list__tab[aria-current="true"] {

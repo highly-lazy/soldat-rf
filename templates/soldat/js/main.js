@@ -135,6 +135,111 @@
 		window.addEventListener('resize', toggle);
 	});
 
+	/* ---------- Выбор города ---------- */
+	(function () {
+		var CITIES = [
+			'Москва', 'Санкт-Петербург', 'Новосибирск', 'Екатеринбург', 'Казань',
+			'Нижний Новгород', 'Челябинск', 'Красноярск', 'Самара', 'Уфа',
+			'Ростов-на-Дону', 'Омск', 'Краснодар', 'Воронеж', 'Пермь', 'Волгоград'
+		];
+		var STORE = 'soldat-city';
+		var wraps = Array.prototype.slice.call(document.querySelectorAll('.city'));
+		if (!wraps.length) { return; }
+
+		function closeAll() {
+			document.querySelectorAll('.city__list').forEach(function (l) { l.hidden = true; });
+			document.querySelectorAll('.city [aria-expanded]').forEach(function (b) {
+				b.setAttribute('aria-expanded', 'false');
+			});
+		}
+
+		function apply(name) {
+			document.querySelectorAll('.header__city-value').forEach(function (el) { el.textContent = name; });
+			document.querySelectorAll('.city__item').forEach(function (b) {
+				b.setAttribute('aria-selected', String(b.textContent === name));
+			});
+			try { localStorage.setItem(STORE, name); } catch (e) { /* приватный режим */ }
+		}
+
+		wraps.forEach(function (wrap) {
+			var btn = wrap.querySelector('button');
+			if (!btn) { return; }
+			var list = document.createElement('ul');
+			list.className = 'city__list';
+			list.setAttribute('role', 'listbox');
+			list.hidden = true;
+			CITIES.forEach(function (name) {
+				var li = document.createElement('li');
+				var b = document.createElement('button');
+				b.type = 'button';
+				b.className = 'city__item';
+				b.setAttribute('role', 'option');
+				b.textContent = name;
+				li.appendChild(b);
+				list.appendChild(li);
+			});
+			wrap.appendChild(list);
+
+			btn.addEventListener('click', function (e) {
+				e.stopPropagation();
+				var wasOpen = !list.hidden;
+				closeAll();
+				if (!wasOpen) {
+					list.hidden = false;
+					btn.setAttribute('aria-expanded', 'true');
+				}
+			});
+			list.addEventListener('click', function (e) {
+				var item = e.target.closest('.city__item');
+				if (!item) { return; }
+				apply(item.textContent);
+				closeAll();
+			});
+		});
+
+		document.addEventListener('click', closeAll);
+		document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeAll(); } });
+
+		var saved = 'Москва';
+		try { saved = localStorage.getItem(STORE) || saved; } catch (e) { /* приватный режим */ }
+		if (CITIES.indexOf(saved) < 0) { saved = 'Москва'; }
+		apply(saved);
+	})();
+
+	/* ---------- Вкладки «Для граждан РФ / Для иностранцев» ---------- */
+	document.querySelectorAll('.faq__tabs').forEach(function (box) {
+		var tabs = Array.prototype.slice.call(box.querySelectorAll('.list__tab'));
+		box.addEventListener('click', function (e) {
+			var tab = e.target.closest('.list__tab');
+			if (!tab) { return; }
+			tabs.forEach(function (t) {
+				var on = t === tab;
+				if (on) { t.setAttribute('aria-current', 'true'); } else { t.removeAttribute('aria-current'); }
+				var panel = document.getElementById(t.getAttribute('aria-controls'));
+				if (panel) { panel.hidden = !on; }
+			});
+		});
+	});
+
+	/* ---------- Фильтр статей по рубрикам ---------- */
+	(function () {
+		var box = document.querySelector('.list__tabs');
+		if (!box) { return; }
+		var tabs = Array.prototype.slice.call(box.querySelectorAll('.list__tab'));
+		var cards = Array.prototype.slice.call(document.querySelectorAll('.list__grid .art__card'));
+		box.addEventListener('click', function (e) {
+			var tab = e.target.closest('.list__tab');
+			if (!tab) { return; }
+			tabs.forEach(function (t) {
+				if (t === tab) { t.setAttribute('aria-current', 'true'); } else { t.removeAttribute('aria-current'); }
+			});
+			var cat = tab.getAttribute('data-cat') || '';
+			cards.forEach(function (card) {
+				card.hidden = !!cat && card.getAttribute('data-cat') !== cat;
+			});
+		});
+	})();
+
 	/* ---------- Маска телефона ---------- */
 	document.querySelectorAll('input[type="tel"]').forEach(function (input) {
 		input.addEventListener('input', function () {
