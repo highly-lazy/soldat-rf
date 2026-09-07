@@ -66,6 +66,7 @@ for name, cfg in PAGES.items():
     html = """<!DOCTYPE html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>%s</title>
+<link rel="icon" href="images/main-favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css?ver=1.2.3">
 <link rel="stylesheet" href="css/sections.css?ver=1.2.3">
 <link rel="stylesheet" href="css/engine.css?ver=1.2.3">

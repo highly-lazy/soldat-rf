@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#0257d5">
 	<title>{headers}</title>
-	<link rel="icon" href="{theme}/images/favicon.svg" type="image/svg+xml">
+	<link rel="icon" href="{theme}/images/main-favicon.svg" type="image/svg+xml">
 	<link rel="preload" href="{theme}/fonts/Onest-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="{theme}/fonts/Onest-700-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" href="{theme}/css/style.css?ver=1.2.3">
