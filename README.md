@@ -1,8 +1,8 @@
 # солдат.рф — вёрстка под DataLife Engine
 
-**Онлайн-превью:** https://highly-lazy.github.io/soldat-rf/ (и `/stati.html`, `/statya.html`, `/otvety.html`)
-Публикуется автоматически при пуше в `main` — workflow `.github/workflows/pages.yml`
-запускает `build_preview.py` и отдаёт папку `templates/soldat` в GitHub Pages.
+**Локальное превью:** `python3 build_preview.py`, затем
+`python3 -m http.server` из `templates/soldat` — страницы `index.html`,
+`stati.html`, `statya.html`, `otvety.html`.
 
 Вёрстка лендинга «Военная служба по контракту» (домен солдат.рф) под DataLife Engine.
 Макет: Figma «Защитник.рус (Copy)», страница **солдат.рф**.
