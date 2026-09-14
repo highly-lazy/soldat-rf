@@ -1,0 +1,92 @@
+/* ==========================================================================
+   «Преимущества контрактной службы» (нода 1033:2820)
+   Три колонки 439/439/440 с шагом 41; средняя поднята на 120px.
+   ========================================================================== */
+.benefits{padding-block-start:76px}          /* макет: заголовок на y=1053 */
+
+.benefits__title{width:680px;font-size:56px;line-height:62px}
+
+.benefits__grid{
+	display:grid;
+	grid-template-columns:439px 439px 1fr;   /* макет: 439/439/440 */
+	column-gap:41px;
+	row-gap:190px;                           /* макет: 1334 → 2124 при высоте карточки 600 */
+	align-items:start;
+	margin-block-start:157px;                /* макет: первый ряд на y=1334 */
+}
+
+.benefits__item{
+	display:flex;
+	flex-direction:column;
+	gap:20px;
+}
+/* средняя колонка в макете поднята на 120px и начинается с фото */
+.benefits__item:nth-child(3n+2){
+	position:relative;
+	top:-120px;
+	flex-direction:column-reverse;
+}
+
+.benefits__nav{display:none}
+
+.benefits__body{
+	display:flex;
+	flex-direction:column;
+	gap:14px;
+}
+
+.benefits__num{
+	display:block;
+	width:98px;
+	height:105px;
+	font-weight:800;
+	font-size:100px;
+	line-height:105px;
+	color:transparent;
+	-webkit-text-stroke:2px var(--red);
+}
+
+.benefits__name{
+	font-weight:600;
+	font-size:30px;
+	line-height:normal;
+	color:var(--text);
+}
+
+.benefits__text{
+	font-size:20px;
+	line-height:26px;
+	color:var(--text);
+}
+
+/* макет: у первой карточки текст уже колонки */
+.benefits__text--narrow{width:428px}
+
+.benefits__photo{
+	position:relative;
+	margin:0;
+	height:293px;
+	border-radius:30px;
+	overflow:hidden;
+}
+.benefits__photo img{
+	position:absolute;
+	inset:0;
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	max-width:none;
+}
+/* индивидуальные кропы из макета */
+.benefits__photo--crop2 img{
+	inset:auto;
+	left:-40.91%;top:-39.25%;
+	width:140.91%;height:170.07%;
+	object-fit:fill;
+}
+.benefits__photo--crop5 img{
+	inset:auto;
+	left:-.01%;top:-40.05%;
+	width:123.66%;height:149.26%;
+	object-fit:fill;
+}
